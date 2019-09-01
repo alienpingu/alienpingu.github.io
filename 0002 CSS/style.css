@@ -1,0 +1,62 @@
+* {
+	font-family: 'Dosis', sans-serif;
+	}
+body {
+	background-image: url(background.jpg);
+	text-align: center;
+}
+
+h1 {
+	color: green;
+	border: 5px solid rgba(5, 26, 56, 0.5);
+	background-color: blue;
+}
+
+p {
+	color: white;
+}
+
+nav {
+	background-color: #1CAFFD;
+	color: #1B6685;
+}
+
+nav li {
+	list-style: none;
+	display: inline-block;
+	
+	
+	width: 100px;
+	height: 50px;
+}
+
+nav li:hover {
+	background: purple;
+	color: white;
+}
+
+footer {
+	border: 5px solid yellow;
+	background-color: gray;
+	clear:both;
+}
+
+.ftitle {
+	font-size: 20px;
+	color: purple;
+}
+#div1 {
+	border: 5px solid red;
+	background-color: rgba(255, 116, 0, 0.5);
+}
+#div2 {
+	border: 5px solid rgb(255, 116, 0);
+	background-color: rgba(255, 0, 0, 0.5);
+}
+img {
+	border: 5px solid #00EFEF;
+}
+
+#img1 {
+	float: left;
+}
