@@ -47,3 +47,26 @@ checkDriverAge2(Number(age))
 //BONUS: Instead of using the prompt. Now, only use console.log and make the checkDriverAge() function accept an argument of age, so that if you enter:
 //checkDriverAge2(92);
 //"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
