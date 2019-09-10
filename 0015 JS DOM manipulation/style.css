@@ -1,63 +1,86 @@
-body{
-   overflow:hidden;
-   background:lime;
+/* Box superiore */
+
+div {
+   display: block;
+   text-align: center;
 }
-.CoolTitle{
-   font-family:arial;
-   font-weight:900;
-   font-size:19em;
-   text-align:center;
-   background:repeating-linear-gradient(45deg, black, lime 5px);
-   position:relative;
-   -webkit-background-clip:text;
-   -webkit-text-stroke:7px black;
-   color:transparent;
-   bottom:200px;
-   animation:float 2s ease-in-out infinite;
+
+div input {
+   vertical-align: middle;
+   margin: 5px 0 5px 0;
+   padding: 10px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+
 }
-.CoolTitle::before{
-   content:"CSS";
-   z-index:2;
-   position:absolute;
-   width:100%;
-   height:100%;
-   top:0;
-   left:0;
-    background:repeating-linear-gradient(-45deg, black, transparent 5px);
-   -webkit-background-clip:text;
-   -webkit-text-stroke:12px lightgreen;
+div button {
+   padding: 10px 20px;
+   background-color: dodgerblue;
+   border: 1px solid #ddd;
+   color: white;
 }
-.CoolTitle::after{
-   content:"CSS";
-   z-index:2;
-   position:absolute;
-   width:100%;
-   height:100%;
-   top:0;
-   left:0;
-   background:radial-gradient(circle at 0 0, transparent 40%, rgba(255,255, 255, 0.6), transparent 60%);
-   -webkit-background-clip:text;
-   animation:shine 2s ease-in-out infinite;
+
+div button:hover {
+   background-color: royalblue;
+   cursor: pointer;
 }
-@keyframes float{
-   0%{
-      transform:perspective(500px)rotatey(30deg);
-   }
-   50%{
-      transform:perspective(500px)rotatey(-30deg);
-   }
-   100%{
-      transform:perspective(500px)rotatey(30deg);
-   }
+
+@media (max-width: 800px) {
+  div input {
+    margin: 10px 0;
+  }
+
+  div {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
-@keyframes shine {
-   0%{
-      background-position:-300px;
-   }
-   50%{
-      background-position:300px;
-   }
-   100%{
-      background-position:-300px;
-   }
+
+/* Lista */
+
+ul {
+  background: dodgerblue;
+  padding: 20px;
+  list-style: none;
+
 }
+
+ul li {
+   background: #cce5ff;
+   margin: 5px;
+   position: relative;
+   text-align: left;
+   font-size: 18px;
+   height: 20px;
+}
+
+li button {
+   float: right;
+   background-color: #cce5ff;
+   color: royalblue;
+   border: none;
+   font-size:18px;
+   height: 20px; 
+}
+
+li button:hover {
+   background-color: royalblue;
+   cursor: pointer;
+   color: white;
+}
+
+ul li:hover {
+   cursor: pointer;
+
+}
+
+
+/* Variazioni */
+ul li.done {
+  text-decoration: line-through;
+}
+
+ul li.canc {
+   visibility: hidden;
+}
+
