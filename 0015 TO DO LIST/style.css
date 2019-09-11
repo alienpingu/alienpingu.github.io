@@ -17,6 +17,9 @@ div.zone h1 {
   color: #3E025F;
   font-weight: bold;
   font-size: 3em;
+  border: 1px solid #3E025F;
+  border-radius: 5px;
+  padding:10px;
 }
 
 div.zone p {
@@ -62,10 +65,11 @@ div.list ul {
 
 div.list ul li {
    text-align: left;
-   font-size: 40px;
-   height: 50px;
+   font-size: 10vh;
+   height: 10vh;
    vertical-align: middle;
    border-bottom: 1px solid black;
+   text-align: middle;
 }
 
 div.list ul li:hover {
@@ -79,9 +83,10 @@ div.list button.delete {
    background-color: #cce5ff;
    color: royalblue;
    border: none;
-   font-size:45px;
-   height: 50px; 
+   font-size: 10vh;
+   height: 10vh; 
    vertical-align: middle;
+   text-align: middle;
 }
 
 div.list li button.delete:hover {
@@ -127,14 +132,38 @@ ul li.canc {
   body {
     margin: 0px;  
   }
+  div.list ul li {
+
+  }
 }
 
 
-@media (max-height: 500px) {
+@media (max-height: 550px) {
   .zone {
-    height: auto;
-  }
+    height: 200px;
+    display: grid;
 
+  }
+  div.zone h1 {
+    display: inline-block;
+    font-size: auto;
+
+  }
+  }
+  div.zone p {
+    display: none;
+    font-size: auto;
+  }
+  div.zone input {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+  #enter {
+    align-items: right;
+    vertical-align: middle;
+  }
 }
 
 
