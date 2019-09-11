@@ -1,75 +1,96 @@
+body {
+  background-color: #00BDBD;
+  display: block;
+}
+
+
 /* Box superiore */
 
-div {
-   display: block;
-   text-align: center;
+.zone {  
+  text-align: center;
+  height: 40vh;
+  background-color: #8FE8E8;
+  padding: 5vh;
 }
 
-div input {
+div.zone h1 {
+  color: #3E025F;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+div.zone p {
+  color: #8408C8
+}
+
+div.zone input {
    vertical-align: middle;
    margin: 5px 0 5px 0;
-   padding: 10px;
    background-color: #fff;
    border: 1px solid #ddd;
-
+   padding: 10px 200px 10px 10px ;
 }
-div button {
+
+/*Enter Button */
+
+#enter {
    padding: 10px 20px;
-   background-color: dodgerblue;
-   border: 1px solid #ddd;
+   background-color: #3E025F;
+   border: 1px solid #005555;
    color: white;
 }
 
-div button:hover {
-   background-color: royalblue;
+#enter:hover {
+   background-color: #8408C8;
    cursor: pointer;
 }
 
-@media (max-width: 800px) {
-  div input {
-    margin: 10px 0;
-  }
 
-  div {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
+/************************************************************************************************/
+
+
 
 /* Lista */
 
-ul {
-  background: dodgerblue;
+div.list ul {
   padding: 20px;
   list-style: none;
+  background-color: #8FE8E8;
 
 }
+ 
 
-ul li {
-   background: #cce5ff;
-   margin: 5px;
-   position: relative;
+div.list ul li {
    text-align: left;
-   font-size: 18px;
-   height: 20px;
+   font-size: 40px;
+   height: 50px;
+   vertical-align: middle;
+   border-bottom: 1px solid black;
 }
 
-li button {
+div.list ul li:hover {
+  background-color: #00BDBD;
+  color: white;
+}
+
+
+div.list button.delete {
    float: right;
    background-color: #cce5ff;
    color: royalblue;
    border: none;
-   font-size:18px;
-   height: 20px; 
+   font-size:45px;
+   height: 50px; 
+   vertical-align: middle;
 }
 
-li button:hover {
+div.list li button.delete:hover {
    background-color: royalblue;
    cursor: pointer;
    color: white;
 }
 
-ul li:hover {
+div.list ul li:hover {
    cursor: pointer;
 
 }
@@ -83,4 +104,37 @@ ul li.done {
 ul li.canc {
    visibility: hidden;
 }
+
+/************************************************************************************************/
+
+@media (min-width: 1200px) {
+  body {
+    padding-left: 20vh;
+    padding-right: 20vh;  
+  }
+}
+
+
+@media (max-width: 800px) {
+  div input {
+    margin: 10px 0;
+  }
+
+  div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  body {
+    margin: 0px;  
+  }
+}
+
+
+@media (max-height: 500px) {
+  .zone {
+    height: auto;
+  }
+
+}
+
 
