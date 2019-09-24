@@ -1,0 +1,535 @@
+CHANGES
+=======
+
+4.3.2
+-----
+
+* Wait for cluster node to be available
+* Update TOX/UPPER\_CONSTRAINTS\_FILE for stable/train
+* Update .gitreview for stable/train
+
+4.3.1
+-----
+
+* Update and replace http with https for doc links
+* Fix VHD detach
+* Add Python 3 Train unit tests
+
+4.3.0
+-----
+
+* Replace git.openstack.org URLs with opendev.org URLs
+* OpenDev Migration Patch
+* Dropping the py35 testing
+* Update master for stable/stein
+* Update hacking version
+* add python 3.7 unit test job
+* Replace testrepository with stestr
+* Add mutex class
+
+4.2.0
+-----
+
+* Cleanup utilsfactory map
+* Add pipe helpers
+* Silently continue when disconnecting missing vhds
+* Use template for lower-constraints
+* Change openstack-dev to openstack-discuss
+* Logging multiple WMI job errors
+* Disable wmi object caching by default
+* Trivial: Fix flaky unit test
+
+4.1.1
+-----
+
+* Limit Failover Cluster WMI provider usage
+
+4.1.0
+-----
+
+* Ignore events for unnamed VM vNICs
+* Add getter for MemorySettingsData
+* Allow enabling metrics per virtual disk
+* Add method for retrieving VM nics
+* Fix port metrics
+* Fix incorrect numeric comparisons
+* Add wmi job terminate timeout cfg opt
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* Updated from global requirements
+* Update reno for stable/rocky
+* Add release note link in README
+* fix tox python3 overrides
+* uncap eventlet
+* add lower-constraints job
+* Updated from global requirements
+* Update links in README
+* Removing pypy
+
+4.0.0
+-----
+
+* Improve WMI jobs logging
+* Ensures that all classes have the same interface as their parents
+* Update reno for stable/queens
+* Updated from global requirements
+* tests: Use mock autospec in unit tests
+* Fixes port security settings caching issue
+* Adds NIC hardware offload support
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* [Trivial] Allow flushing named pipe log handles
+* Cleanup test-requirements
+* Remove deprecated methods
+
+3.0.0
+-----
+
+* Remove deprecated methods and exceptions
+* Updated from global requirements
+* Add processutils module
+* Implement VHD attach/detach
+* Cleanup vmutils create\_vm
+* Avoid tox\_install.sh for constraints support
+* Updated from global requirements
+
+2.6.0
+-----
+
+* Adds SR-IOV support
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* doc: Switch to openstackdocstheme
+* Add config sample to os-win docs
+* Updated from global requirements
+* Add oslo.config entry point
+* [Trivial] Add HyperVvSwitchNotFound exception
+
+2.5.0
+-----
+
+* Silently continue when destroying missing vNIC
+* Add SAN policy setter/getter
+* Add method returning vswitch extensions
+* Include disk ctrl addr in attachment info
+* Fix fetching vm boot sources
+* Allow fetching disk attachment info by tag
+* Updated from global requirements
+* vmutils: Fixes setting disk QoS on Hyper-V 6.2
+* Updated from global requirements
+* Updated from global requirements
+* check minimum VM version when setting VM snapshots
+* Allow aggregating disk rescan requests
+* Include FCP lun when returning mappings
+* Add methods for retrieving disks
+* FC: add support for retrieving FC LUN UIDs
+* FC: cleanup WWN usage
+* Allow detaching disks by serial tag
+* iSCSI: add checks for MPIO disks
+* Updated from global requirements
+* Update the documentation link for doc migration
+* [Trivial] Add method checking if a disk is claimed by MPIO
+* Updated from global requirements
+* clusterutils: Adds clustering configuration options
+* Adds releasenotes configuration
+* Update log translation hacking rule
+
+2.1.0
+-----
+
+* vmutils: Planned VMs separation
+* Fixed all typos in comments
+* Adds config option for caching WMI objects
+* Retry changing VM state in case of exceptions
+* Improve WMI job check method
+* Wrap "WMI not found" exception
+* Updated from global requirements
+* Add hacking rules for ctypes libraries
+* tests: Sets baseutils.BaseUtilsVirt.\_old\_wmi
+* Refactor Windows API usage
+* Updated from global requirements
+* Fixes cached old WMI service objects issue
+* raises exceptions.NotFound instead of x\_wmi: Not Found
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Add 'rm -f .testrepository/times.dbm' command in testenv
+
+2.0.1
+-----
+
+* networkutils: specializes the exception raised by \_get\_vnic\_settings
+* Updated from global requirements
+* Add cluster vm owner change listener
+* pep8: fixes indentation issues
+* Remove log translations
+* Optimize the link address
+* Replacing six.iteritems() with .items()
+* Updated from global requirements
+* Fix share local address check
+
+2.0.0
+-----
+
+* pathutils: Adds copy\_folder\_files method
+* Uses \_compat\_conn where WMI objects need to be updated or added
+* py35: fixes exception.message reference issues
+* Fix cluster group migration status checks
+* networkutils: fixes update\_cache
+* Replaces CRLF line endings to LF line endings
+* Ensure failed disk attachments are cleaned up
+* Retrieve VM disk attachment info
+* Remove deprecated IOUtils class
+* Updated from global requirements
+* Add support for setting the port profile id
+* Updated from global requirements
+* Indicating the location tests directory in oslo\_debug\_helper
+* Updated from global requirements
+* updates hacking requirement
+* pathutils: Adds retry decorator to rmdir
+* Ignores "Not found" jobs when stopping jobs
+* Allow setting VM snapshot types
+* Synchronize iscsi\_target\_utils
+* vmutils: Adds vnuma\_enabled argument to update\_vm
+* vmutils: Allows updating and disabling instance RemoteFX
+* vmutils: Adds remove\_all\_pci\_devices method
+* removes the VirtualSystemType kwarg when fetching VMs
+* Improve VM snapshots support
+* Remove old iSCSI initiator utils modules
+* Cleanup livemigrationutils
+* Updated from global requirements
+* vmutils: set all \*DataRoot paths to the same value
+* Change intermediary vm state handling
+* Rearrange imports
+* Add Python 3.5 classifier and venv
+
+1.4.0
+-----
+
+* Adds Hyper-V PCI Passthrough support
+* Rename argument in iscsi\_utils, breaking os-brick
+* Implements qos methods in networkutils
+* Allow setting automatic vm shutdown action
+
+1.3.0
+-----
+
+* Add hbaapi path config option
+* Adds nested virtualization support
+* use unpatched socket module to get addresses
+* FibreChannel: ignore unsupported HBA adapters
+* Add Constraints support
+* Use assertEqual() instead of assertDictEqual()
+* Adds VLAN trunk mode support
+* Updated from global requirements
+* Pin docutils version
+* Avoid opening parents when fetching VHD info
+* Changed author and author-email
+* Show team and repo badges on README
+* Removes unnecessary oslo.service requirement
+* Removes all references to openstack.common
+* Updated from global requirements
+* Fix iscsi volumes not being attached
+* Updated from global requirements
+* Updated from global requirements
+* Move unit tests to a separate folder
+* Add methods for handling file ACLs
+* Ensure GetLastError gets called in the right thread
+* Retry on opening named pipe failures
+* Fix clustered VM migration status polling
+* Updated from global requirements
+* Handle sporadic iSCSI initiator errors
+* VM Importing/Exporting
+* Ensure Win32 API calls do not block
+* Avoid using diskpart for disk rescans
+* vmutils: honor host argument
+* Add method for retrieving vm config root dir
+* Fix clustered vm live migration
+* Non-clustered VM live migration fix
+
+1.2.0
+-----
+
+* TrivialFix: Remove cfg import unused
+* TrivialFix: Remove logging import unused
+* Fix DNS zone serial number retrieval
+* Adds docstrings to the public methods of hostutils and jobutils
+* Updates README.rst
+* Updated from global requirements
+* Refactors wmi exceptions usage
+* Sets parent class for ISCSITargetUtils
+* Removes Windows Server 2008 R2 specific code
+* Resolves flake8 errors
+* Retry failed disk rescans
+* Add public method for destroying planned vms
+* Remove discover from test-requirements
+
+1.1.0
+-----
+
+* Updated from global requirements
+* Adds method for returning DNS Zone properties
+* iSCSI tgt utils: remove workaround needed by old WMI lib
+* Add instance job terminate timeout
+* Hyper-V: Added checking secure VMs status
+* Updated from global requirements
+* Properly handle stopping VM jobs
+* Add utils for managing DNS operations
+* Fix for VM's not getting IP due to missing SG rules
+* Updated from global requirements
+
+1.0.0
+-----
+
+* Fixes loading HGS namespace on early builds of Windows 10
+* Add method for checking whether a share is local
+* Fix disk rescan method
+* Fix event handle leaks
+* Hyper-V: Shielded VMs
+* Updated from global requirements
+* Fix iSCSI initiator utils docstring
+* iSCSI utils: accept rescan\_attempts arg in login method
+* Add missing wmi to requirements.txt
+* Updated from global requirements
+* Add method for retrieving local share paths
+* Updated from global requirements
+* Events: use tpool only if thread module is patched
+* Fix event listeners
+* Updated from global requirements
+* Adds missing attribute from get\_cpus\_info query
+* Fix retrieving VM notes race condition
+* Fix retrieving VHDX block size
+* Updated from global requirements
+* Fix retrieving VM physical disk mapping
+* Copies get\_share\_capacity\_info to diskutils
+* python3: Fixes vhdutils internal VHDX size
+* Consistently raise exception if port not found
+* Ensure vmutils honors the host argument
+* Sets OsWinBaseTestCase as base class for unit tests
+* Fixes PyMI compatiblity issue
+* Fixes vmutils take\_vm\_snapshot method
+* Adds check for VLAN and VSID operations
+* Fix named pipe handler cleanup regression
+* Fixes vmutils get\_vm\_generation method
+* Improve clusterutils with new pyMI features
+* Ensure namedpipe IO workers clean up handles when stopping
+* switch to post-versioning
+* Bump version to 0.3.3
+
+0.3.2
+-----
+
+* Deprecate volumeutils v1
+* Instance event listener: ignore exceptions
+* Replace associators with direct queries (part 2)
+* Fix serial console worker blocking Nova
+* Adds Hyper-V Cluster related utils
+* Fixed \_winreg OpenKey parameter
+* Bump version to 0.3.2
+
+0.3.1
+-----
+
+* Changes how association classes are treated
+* Fix livemigrationutils wmi connection getter
+* Bump version to 0.3.1
+
+0.3.0
+-----
+
+* Sets BaseUtilsVirt \_conn as a property
+* networkutils: change caches to class members
+* Use the retry decorator for methods adding/removing virt res
+* Removes forgotten TODO and \_\_init\_\_
+* Adds networkutils clear\_port\_sg\_acls\_cache
+* Bump version to 0.3.0
+
+0.2.3
+-----
+
+* Change method names in networkutils
+* Adds NetworkUtilsR2 to the utilsfactory map
+* Update get\_vm\_power\_state\_listener to retrieve a poller
+* Bumps version to 0.2.3
+
+0.2.2
+-----
+
+* Updated from global requirements
+* Fix retry decorators
+* Cleans up vmutils and pathutils
+* Creates baseutils module
+* Replaces WMI requirement with PyMI
+* Replace associators with direct queries
+* Adds NVGRE related utils (part 2)
+* Add remotefx related utils
+* Updated from global requirements
+* Caches Security Group Rule ACLs
+* bump version to 0.2.2
+* Create a new object instead of querying the default one
+* Avoid wmi query while creating an acl
+* Refactors disconnect\_switch\_port
+* Adds vNIC event listeners
+* Caches Hyper-V vSwitches
+* Removes networkutils get\_external\_vswitch method
+* Caches switch port, VLAN, VSID setting data WMI objects
+
+0.2.1
+-----
+
+* Refactors metrics related utils
+* Fix retrieving in-use VHD info
+* Bumps version to 0.2.1
+
+0.2.0
+-----
+
+* Bump version to 0.2.0
+* Fibre Channel: Fix invalid HBA adapter issues
+* iSCSI initiator refactoring using iscsidsc.dll
+* Adds Hyper-V NVGRE related utils
+* Add diskutils module
+* Fixes bug: Error when calling modify\_virtual\_resource
+* Fix getting attached VHD images info
+* Updated from global requirements
+* Bumps version to 0.1.2
+
+0.1.1
+-----
+
+* Avoid initializing WMI connections on Linux
+* Bumps version to 0.1.1
+
+0.1.0
+-----
+
+* Bumps version to 0.1.0
+* Adds vNUMA related utils
+* Add method for checking windows feature states
+* Refactors constants
+* Updated from global requirements
+* Adds FC Utils
+* Maintain livemigrationutils compatibility
+* Maintain PathUtils interface
+* Adds base test case
+* Refactor live migration, avoiding retrieving disk path remotely
+* Set \_SERIAL\_PORT\_SETTING\_DATA\_CLASS in vmutilsv10.py
+* Add VM serial port connection get/set methods
+* Add methods for retrieving and setting disk paths
+* Allow tagging physical disk resources with serial numbers
+* Updated from global requirements
+* Bumps version to 0.0.8
+
+0.0.7
+-----
+
+* Removes unused argument from set\_qos\_specs
+* Caches VirtualSystemManagementService object
+* Fix live migration, updating the method checking job results
+* Improve startup performance of nova-compute Hyper-V driver
+* Removes wrong extra argument from vmutils method
+* Updated from global requirements
+* Remove unused vm\_name argument when checking if a disk is attached
+* Fix utilsfactory unsupported class type exception
+* Removes unused arguments from modify/remove virt resources
+* Adds methods for setting vm boot order
+* Fixes bug: wrong wmi call in vmutils.\_modify\_virtual\_system method
+* Fix method retrieving error codes from HRESULTs
+* Add retry decorator to the add\_multiple\_virt\_features method
+* Add method for setting virtual disk IOPS limits
+* Add constants for dealing with BDM
+* Make os-win Py3 compatible
+* Set \_get\_wt\_snapshot fail\_if\_not\_found default value
+* Ensure WMIException message includes the original WMI exc msg
+* Add method for checking if a disk is attached
+* Bump version to 0.0.7
+
+0.0.6
+-----
+
+* Hyper-V: Adds Hyper-V UEFI Secure Boot
+* Hyper-V: refactors utilsfactory
+* Fix method retrieving share capacity info
+* Update method retrieving mounted disks to work with DVD drives
+* Bump version to 0.0.6
+
+0.0.5
+-----
+
+* Add method for checking if an iSCSI target exists
+* Validate requested new vhd size when performing resizes
+* Add SMBUtils class retriever method in utilsfactory
+* Port named pipe handler
+* Port ioutils classes from compute-hyperv
+* Add iSCSI target disk resize method
+* Bump version to 0.0.5
+
+0.0.4
+-----
+
+* Bump version to 0.0.4
+* Fixes wrong vhdutils vhd info attribute
+
+0.0.3
+-----
+
+* Fixes OSWinException missing kwargs formatting issue
+* Fixes vmutils create\_nic method
+* Add iSCSI target utils
+* Adds RetryDecorator for modify\_virt\_resource
+* Remove deprecated usage of v1 virtualization utils
+* Removes pointless constructor
+* Rename 'volutils' attribute in iSCSI initiator unit tests
+* Fixes failing unit tests related to file opening
+* Add share capacity retriever method
+* Use Win32 API for the copy method
+* Add symlink related functions
+* Switch VHDUtils to using virtdisk.dll
+* Refactor iscsi initiator utils
+* Removes nova specific utils from pathutils
+* Move SMB related methods to a separate class
+* Refactors and cleans exceptions
+* Adds noqa to six.moves.range imports
+* Bump version to 0.0.3
+* Mock time.sleep in pathutils tests
+
+0.0.2
+-----
+
+* Adds vm generation and destroy nic utils
+* Bumps version to 0.0.2
+
+0.0.1
+-----
+
+* Updates setup.cfg
+* Updates requirements.txt
+* Change ignore-errors to ignore\_errors
+* Refactors utils into specific folders
+* Fixes Bug "destroy\_vm fails with HyperVException"
+* Synchronise differences between os\_win utils and their source
+* Remove duplicated network related utils
+* Rename project to os-win
+* Fixes project for Jenkins runs
+* Renames project to os-windows
+* Fixes invalid exception raised in vmutils check\_admin\_permissions
+* Removes unused methods from basevolumeutils
+* Removes CONF import from pathutils
+* Specializes exception raised during \_lookup\_vm\_check
+* Adds usage of jobutils
+* Adds jobutils module
+* Adds network related utils
+* Decouples unit tests
+* Updates README.rst
+* Fixes requirements.txt
+* Fixes local imports unit tests
+* Adds block\_device\_info related helpers
+* Adds oslo\_windows.\_utils
+* Refactors HyperVException and subclasses
+* Adds local i18n translators
+* Adds Nova utils classes as is
+* Adds oslo cookiecutter template
+* Initial commit
