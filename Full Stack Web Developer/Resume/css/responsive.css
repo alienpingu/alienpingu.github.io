@@ -25,6 +25,10 @@
 		transform: rotate(90deg);
 		margin-left: -40px;
 	}
+	.home_banner_area .banner_inner .banner_content .media .d-flex img {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }
 @media (max-width:1199px){
 	/* Main Menu Area css
@@ -62,8 +66,10 @@
 		width: 100%;
 	}
 	.home_banner_area .banner_inner .banner_content .media .d-flex img {
-		width: 85%;
+		width: 100%;
 		height: auto;
+		padding-left: 40px;
+    	padding-right: 40px;
 	}
 	.home_banner_area .banner_inner .banner_content .media .media-body {
 		margin-top: 30px;
