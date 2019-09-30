@@ -13,7 +13,7 @@ def function():
 	for element in Inp:
 		
 		while len(element) < 4:
-			element = "0" + str(elem ent)
+			element = "0" + str(element)
 
 
 		
