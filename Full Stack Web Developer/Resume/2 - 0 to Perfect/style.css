@@ -1,11 +1,9 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: auto 0;
-    background: rgb(116,0,0);
-    background: -moz-linear-gradient(18deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 100%);
-    background: -webkit-linear-gradient(18deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 100%);
-    background: linear-gradient(18deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#740000",endColorstr="#0d0350",GradientType=1);
+    background-color: #08AEEA;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
 }
 
 
@@ -53,16 +51,13 @@ body {
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
+/*.sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgb(116,0,0);
-    background: -moz-linear-gradient(90deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 52%);
-    background: -webkit-linear-gradient(90deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 52%);
-    background: linear-gradient(90deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 52%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#740000",endColorstr="#0d0350",GradientType=1);
-}
+    background-color: black ;
+    
+}*/
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
@@ -72,34 +67,41 @@ body {
 
 /* COVER */
 
-.cover {
+
+#home {
     display: block;
     justify-content: center;
     align-items: center;
-    height: 83vh; /*vh -> percentuale occupata del viewpoint*/
+    height: 582.4px; /*vh -> percentuale occupata del viewpoint*/
     min-height: 560px;
 }
 
-.r-cover {
-    height: 100%;
-    margin-right: 10vh;
-    margin-left: 10vh;
-    text-align: center;
-  
+#home .row {
+    height: 582.4px;
 }
+
+#home .row .col {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/*.col , .row {
+    position:static;
+}*/
+
 
 .ta-left {
     text-align: left;
 }
 
 .mT-a {
-        margin-top: auto;
+    margin-top: auto;
 }
 
-
 .personal {
-    height: 80vh;
-    min-height: 530px;
+    display: flex;
+    height: 582.4px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -111,7 +113,6 @@ body {
     border-radius: 1rem;
     max-width: 450px;
     margin: auto;
-    margin-top: 10vh;
 }
 .card-body {
     padding: 2rem;
@@ -127,7 +128,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: #FF1509;
+    background: #08AEEA;
     border: 1px solid transparent;
         border-top-color: transparent;
         border-right-color: transparent;
@@ -135,8 +136,7 @@ body {
         border-left-color: transparent;
     padding: .375rem .75rem;
     line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-radius: 1.5rem 1.5rem 0.2rem 1.5rem;
 }
 
 .card-title {
@@ -146,7 +146,7 @@ body {
 
 .card-subtitle {
     padding-left: 1rem;
-    color: #99181896;
+    color: #08AEEA94;
 }
 
 .list-group {
@@ -190,16 +190,53 @@ li .social {
     width: 2.2rem;
     height: inherit;
 }
+
+
+.u-text--quiet {
+ color: white !important;
+}
+
+
+
+
 /* CORP  */ 
-#about .container {
-    padding-top: 10vh;
+#story .container {
     max-width: 100%
 }
 
-.col h1 {
-    text-align: center;
-    margin-bottom: 4rem;
+
+
+/* SERVICE */
+
+#servizi {
+    padding-bottom: 10vh; 
 }
+
+#servizi .container {
+    max-width: 100%;
+}
+.undraw {
+    padding: 15px;
+    max-height: 179.95px;
+}
+
+
+.page-title {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.servizio {
+    text-align: center;
+}
+/* Skills */
+#skills .row {
+    margin: 7vh 15px 7vh 15px;
+}
+
+
 
 
 /* Footer */
@@ -324,11 +361,8 @@ footer {
 }
 
 .gradiant-blaze {
-    background: rgb(116,0,0);
-    background: -moz-linear-gradient(18deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 100%);
-    background: -webkit-linear-gradient(18deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 100%);
-    background: linear-gradient(18deg, rgba(116,0,0,1) 0%, rgba(13,3,80,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#740000",endColorstr="#0d0350",GradientType=1);
+    background-color: #08AEEA;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 
-    color: white;
 }
+

@@ -4,16 +4,17 @@
 	<title>I'm SamueleMaker</title>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="stylesheet" href="https://unpkg.com/@blaze/css@5.0.0/dist/blaze.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
 	<header> 
 	  	<div id="navbar">
 	  		<a>SAMUELEMAKER</a>
 			<a href="#home">Home</a>
-			<a href="#news">News</a>
-			<a href="#contact">Contact</a>
+			<a href="#servizi">Servizi</a>
+			<a href="#story">Story</a>
+			<a href="#skills">Skills</a>
 			<div>	
 				<button type="button" class="c-button c-button--rounded c-button--ghost c-button--info">Download</button>
 			</div>
@@ -21,10 +22,9 @@
 	</header>
 	
 
-	<section id='news'>
-		<div class="cover">
-			<div class='row r-cover'>
-				<div  class="container" style="max-width: 50%">
+	<section id='home'>
+			<div class='row'>
+				<div  class="col col-lg-6">
 					<div class='card ta-left'>
 						<div class='card-body'>
 							<h5 id='hello'>Hello i'm</h5>
@@ -42,128 +42,78 @@
 								<li class='list-group-item'><img class='social' src="icon/github.svg"></li>	
 								<li class='list-group-item'><img class='social' src="icon/linkedin.svg"></li>
 								<li class='list-group-item'><img class='social' src="icon/twitter.svg"></li>
-							</ul>
-							
+							</ul>	
 						</div>
 					</div>
 				</div>
-				<div class="container mT-a" style="max-width: 50%">
-					<img class="personal" src="personal.png">
+				<div class="col col-lg-6">
+					<div class='container'>
+						<img class="personal" src="personal.png">
+					</div>
+					
 				</div>
 			</div>
-		</div>
+		
 	</section>
-	<section id='what'>
-		<div class="bg-light">
+	<section id='servizi' class="bg-light">
 			<div class="container">
 				<div class='row'>
-					<div class='row col-lg-6'>
-						<div class='col col-lg-12 '><h1>Esperienze</h1></div>
-						<div class='col col-lg-12 '>
-							<ul class="o-timeline o-timeline--alternate o-timeline--loading">
-							  <li class="c-timeline-item c-timeline-item--left">
-							    <div class="c-timeline-item__body">
-							      ITIS Elettronico
-							    </div>
-							  </li>
-							  <li class="c-timeline-item c-timeline-item--warning">
-							    <div class="c-timeline-item__body">Organo Gold
-							    	<p class="c-paragraph u-text--quiet u-small">
-							        Distributore autonomo
-							      </p>
-							    </div>
-							  </li>
-							  <li class="c-timeline-item c-timeline-item--brand c-timeline-item--left">
-							    <div class="c-timeline-item__body">
-							      S&P Italia
-
-							      <p class="c-paragraph u-text--quiet u-small">
-							        Ufficio Tecnico
-							      </p>
-							    </div>
-							  </li>
-							  <li class="c-timeline-item c-timeline-item--info">
-							    <div class="c-timeline-item__body">
-							    	TP Light
-							    	<p class="c-paragraph u-text--quiet u-small">
-								    Progettista CAD 3D
-							      	</p>
-							    <div>
-							  </li>
-							  
-							  <li class="c-timeline-item c-timeline-item--success c-timeline-item--left">
-							    <div class="c-timeline-item__body">ProntoPro
-							    	<p class="c-paragraph u-text--quiet u-small">
-								    Python Developer - CAD 3D 
-							      	</p>
-							    </div>
-							  </li>
-							  <li class="c-timeline-item c-timeline-item--last">
-							    <div class="c-timeline-item__body">
-							      Junior Full Stack Developer
-							    </div>
-							  </li>
-							  <li class="c-timeline-item c-timeline-item--loading c-timeline-item--left">
-							    <div class="c-timeline-item__body">
-							    	Senior Full Stack Developer
-							    </div>
-							  </li>
-							</ul>
+					<div class="col col-lg-12">
+						<h1 class='page-title'>Servizi</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col col-lg-3'>
+						<div class="card">
+		  					<img src="svg/front-end.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Front End</p>
+		  					</div>
 						</div>
 					</div>
-					<div class='row col-lg-6'>
-						<div class="col col-lg-12"><h1>Skills</h1></div>
-						<div class='col col-lg-3'>Python</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class='col col-lg-3'>HTML</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class='col col-lg-3'>CSS</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class='col col-lg-3'>JavaScript</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
-						</div>
-						<div class='col col-lg-3'>Googling</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-							</div>
+					<div class='col col-lg-3'>
+						<div class="card">
+		  					<img src="svg/back-end.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Back End</p>
+		  					</div>
 						</div>
 					</div>
-				
+					<div class='col col-lg-3'>
+						<div class="card">
+		  					<img src="svg/problem-solving.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Problem Solving</p>
+		  					</div>
+						</div>
+					</div>
+					<div class='col col-lg-3'>
+						<div class="card">
+		  					<img src="svg/top-responsive.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Top Responsive</p>
+		  					</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
-	<section id='about'>
+	<section id='story'>
 		<div class="gradiant-blaze">
 			<div class="container">
 				<div class='row'>
 					<div class='row col-lg-6'>
-						<div class='col col-lg-12 '><h1>Esperienze</h1></div>
+						<div class='col col-lg-12 '><h1 class='page-title'>Esperienze</h1></div>
+						
 						<div class='col col-lg-12 '>
-							<ul class="o-timeline o-timeline--alternate o-timeline--loading">
+							<ul class="o-timeline o-timeline--alternate o-timeline--brand">
 							  <li class="c-timeline-item c-timeline-item--left">
 							    <div class="c-timeline-item__body">
 							      ITIS Elettronico
 							    </div>
 							  </li>
-							  <li class="c-timeline-item c-timeline-item--warning">
+							  <li class="c-timeline-item c-timeline-item--brand">
 							    <div class="c-timeline-item__body">Organo Gold
 							    	<p class="c-paragraph u-text--quiet u-small">
 							        Distributore autonomo
@@ -179,7 +129,7 @@
 							      </p>
 							    </div>
 							  </li>
-							  <li class="c-timeline-item c-timeline-item--info">
+							  <li class="c-timeline-item c-timeline-item--brand">
 							    <div class="c-timeline-item__body">
 							    	TP Light
 							    	<p class="c-paragraph u-text--quiet u-small">
@@ -188,7 +138,7 @@
 							    <div>
 							  </li>
 							  
-							  <li class="c-timeline-item c-timeline-item--success c-timeline-item--left">
+							  <li class="c-timeline-item c-timeline-item--brand c-timeline-item--left">
 							    <div class="c-timeline-item__body">ProntoPro
 							    	<p class="c-paragraph u-text--quiet u-small">
 								    Python Developer - CAD 3D 
@@ -199,49 +149,53 @@
 							    <div class="c-timeline-item__body">
 							      Junior Full Stack Developer
 							    </div>
-							  </li>
-							  <li class="c-timeline-item c-timeline-item--loading c-timeline-item--left">
-							    <div class="c-timeline-item__body">
-							    	Senior Full Stack Developer
-							    </div>
-							  </li>
 							</ul>
 						</div>
 					</div>
-					<div class='row col-lg-6'>
-						<div class="col col-lg-12"><h1>Skills</h1></div>
-						<div class='col col-lg-3'>Python</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					<section id='skills' class='col-lg-6'>
+							<div class="col col-lg-12"><h1 class='page-title'>Skills</h1></div>
+						
+							<div class='row'>
+								<div class='col col-lg-2'>Python</div>
+								<div class='col col-lg-10'>
+									<div class="progress">
+				  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class='col col-lg-3'>HTML</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class='row'>
+								<div class='col col-lg-2'>HTML</div>
+								<div class='col col-lg-10'>
+									<div class="progress">
+				  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class='col col-lg-3'>CSS</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class='row'>
+								<div class='col col-lg-2'>CSS</div>
+								<div class='col col-lg-10'>
+									<div class="progress">
+				  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class='col col-lg-3'>JavaScript</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class='row'>
+								<div class='col col-lg-2'>JavaScript</div>
+								<div class='col col-lg-10'>
+									<div class="progress">
+				  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class='col col-lg-3'>Googling</div>
-						<div class='col col-lg-9'>
-							<div class="progress">
-		  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class='row'>
+								<div class='col col-lg-2'>Googling</div>
+								<div class='col col-lg-10'>
+									<div class="progress">
+				  						<div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-				
+					</section>
 				</div>
 			</div>
 		</div>
