@@ -217,7 +217,8 @@ li .social {
 }
 .undraw {
     padding: 15px;
-    max-height: 179.95px;
+    height: 13rem;
+    min-width: 14rem;
 }
 
 
@@ -232,7 +233,7 @@ li .social {
     text-align: center;
 }
 /* Skills */
-#skills .row {
+.row-skills {
     margin: 7vh 15px 7vh 15px;
 }
 
