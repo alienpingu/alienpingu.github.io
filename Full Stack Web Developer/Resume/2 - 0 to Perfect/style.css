@@ -86,8 +86,9 @@ body {
 
 
 /* PERSONAL INFO */
-.card {
+#infoCard {
      border-radius: 1rem;
+     width: 420px;
 }
 
 #hello {
@@ -111,29 +112,18 @@ body {
 }
 
 .card-title {
-    padding-left: 1rem;
     color: #1D174A;
 }
 
 .card-subtitle {
-    padding-left: 1rem;
     color: #08AEEA94;
 }
 
-.list-group {
-    padding-top: 1.5rem;
-    padding-bottom: initial;
-    list-style: none;
-
-
-}
 
 .list-group li {
-    border: none;
     background: none;
-    position:static;
+    border: none;
     color: #201858C7;
-
 }
 
 .card-text {
@@ -149,8 +139,6 @@ body {
 .icon {
     width: inherit;
     height: 1.2rem;
-    margin-right: 10px;
-    margin-left: inherit;
 }
 
 .list-group-horizontal li {
@@ -358,7 +346,7 @@ footer {
 
 @media screen and (max-width: 840px) {
     .fantasma {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -366,9 +354,19 @@ footer {
     .fantasma1 {
         visibility: hidden;
     }
-    
     #infoCard {
         margin-top: 5vh;
     }
     
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+#infoCard {
+        width: 95%;
+        margin-top: 3vh;
+        height: 78vh;
+    }
 }
