@@ -6,4 +6,3 @@ function Tendina() {
     x.className = "topnav";
   }
 } 
-

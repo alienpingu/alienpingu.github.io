@@ -356,9 +356,19 @@ footer {
 
 /* Nascondi la foto quando la larghezza dello schermo è minore di 916px*/
 
-@media screen and (max-width: 990px) {
-    .visible {
-        display: none;
+@media screen and (max-width: 840px) {
+    .fantasma {
+        visibility: hidden;
     }
+}
 
+@media screen and (max-width: 992px) {
+    .fantasma1 {
+        visibility: hidden;
+    }
+    
+    #infoCard {
+        margin-top: 5vh;
+    }
+    
 }
