@@ -352,21 +352,25 @@ footer {
 
 @media screen and (max-width: 992px) {
     .fantasma1 {
-        visibility: hidden;
+        display: none;
     }
     #infoCard {
         margin-top: 5vh;
     }
     
 }
-
-
-
-
-@media screen and (max-width: 420px) {
-#infoCard {
+@media screen 
+  and (max-width: 360px) 
+  and (max-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    #infoCard {
         width: 95%;
         margin-top: 3vh;
         height: 78vh;
+
+    }
+
+    body, h1, h2, h3, h4, h5 {
+        font-size: 3.5rem;
     }
 }
