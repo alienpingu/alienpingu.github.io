@@ -341,6 +341,9 @@ footer {
   }
 } 
 
+html {
+        font-size: 150%;
+    }
 
 /* Nascondi la foto quando la larghezza dello schermo è minore di 916px*/
 
@@ -374,7 +377,7 @@ footer {
     
 }
 
-@media screen and (max-resolution: 480dpi;) {
+@media screen and (max-resolution: 480  dpi;) {
     html {
         font-size: 150%;
     }
