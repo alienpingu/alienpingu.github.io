@@ -5,27 +5,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/@blaze/css@5.0.0/dist/blaze.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
 	<header> 
-	  	<div id="navbar">
-	  		<a>SAMUELEMAKER</a>
+	  	<div class="topnav" id="myTopnav">
+		 	<a href="#home" class="active">SAMUELEMAKER</a>
 			<a href="#home">Home</a>
 			<a href="#servizi">Servizi</a>
 			<a href="#story">Story</a>
 			<a href="#skills">Skills</a>
-			<div>	
-				<button type="button" class="c-button c-button--rounded c-button--ghost c-button--info">Download</button>
-			</div>
+		  	<a href="javascript:void(0);" class="icon" onclick="Tendina()">
+		    	<i class="fa fa-bars"></i>
+		  	</a>
 		</div>
 	</header>
 	
 
 	<section id='home'>
 			<div class='row'>
-				<div  class="col col-lg-6">
-					<div class='card ta-left shadow'>
+				<div  class="col col-sm-12 col-md-12 col-lg-6">
+					<div class='card shadow mx-auto p-1' style="width: 90%;">
 						<div class='card-body'>
 							<h5 id='hello'>Hello i'm</h5>
 							<h1 class='card-title'>Samuele Bertocco</h1>
@@ -39,16 +40,16 @@
 							<ul class='list-group list-group-horizontal'>
 								
 								<li class='list-group-item'><button type="button" class="c-button c-button--rounded c-button--ghost c-button--warning">Download</button></li>
-								<li class='list-group-item'><img class='social' src="icon/github.svg"></li>	
-								<li class='list-group-item'><img class='social' src="icon/linkedin.svg"></li>
-								<li class='list-group-item'><img class='social' src="icon/twitter.svg"></li>
+								<li class='list-group-item visible'><img class='social' src="icon/github.svg"></li>	
+								<li class='list-group-item visible'><img class='social' src="icon/linkedin.svg"></li>
+								<li class='list-group-item visible'><img class='social' src="icon/twitter.svg"></li>
 							</ul>	
 						</div>
 					</div>
 				</div>
-				<div class="col col-lg-6">
+				<div class="col col-sm-6 col-md-6 col-lg-6 visible">
 					<div class='container'>
-						<img class="personal" src="personal.png">
+						<img id='personal' class="personal" src="personal.png">
 					</div>
 					
 				</div>
@@ -64,7 +65,7 @@
 				</div>
 				<div class='row'>
 					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
-						<div class="card shadow">
+						<div class="card shadow m-3">
 		  					<img src="svg/front-end.svg" class="card-img-top undraw" alt="">
 		  					<div class="card-body">
 		    						<p class="card-text servizio">Front End</p>
@@ -72,7 +73,7 @@
 						</div>
 					</div>
 					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
-						<div class="card shadow">
+						<div class="card shadow m-3">
 		  					<img src="svg/back-end.svg" class="card-img-top undraw" alt="">
 		  					<div class="card-body">
 		    						<p class="card-text servizio">Back End</p>
@@ -80,7 +81,7 @@
 						</div>
 					</div>
 					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
-						<div class="card shadow">
+						<div class="card shadow m-3">
 		  					<img src="svg/problem-solving.svg" class="card-img-top undraw" alt="">
 		  					<div class="card-body">
 		    						<p class="card-text servizio">Problem Solving</p>
@@ -88,7 +89,7 @@
 						</div>
 					</div>
 					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
-						<div class="card shadow">
+						<div class="card shadow m-3">
 		  					<img src="svg/top-responsive.svg" class="card-img-top undraw" alt="">
 		  					<div class="card-body">
 		    						<p class="card-text servizio">Top Responsive</p>
@@ -102,7 +103,7 @@
 	<section id='story'>
 		<div class="container">
 			<div class='row'>
-				<div class='col col-lg-6'>
+				<div class='col  col-md-12 col-lg-6'>
 					<div class='row'><div class='col col-lg-12 '><h1 class='page-title'>Esperienze</h1></div></div>
 					<div class='row'>
 					<div class='col col-lg-12 '>
@@ -160,7 +161,7 @@
 					</div>
 					</div>
 				</div>
-				<div class='col col-lg-6'>
+				<div class='col col-md-12 col-lg-6'>
 						<div class='row'><div class="col col-lg-12"><h1 class='page-title'>Skills</h1></div></div>
 						<div class='row row-skills '>
 							<div class='col col-lg-2'>Python</div>
@@ -206,7 +207,49 @@
 			</div>
 		</div>
 	</section>
-
+	<section id='progetti' class="bg-light">
+			<div class="container">
+				<div class='row'>
+					<div class="col col-">
+						<h1 class='page-title'>Progetti</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
+						<div class="card shadow m-3">
+		  					<img src="svg/front-end.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Front End</p>
+		  					</div>
+						</div>
+					</div>
+					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
+						<div class="card shadow m-3">
+		  					<img src="svg/back-end.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Back End</p>
+		  					</div>
+						</div>
+					</div>
+					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
+						<div class="card shadow m-3">
+		  					<img src="svg/problem-solving.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Problem Solving</p>
+		  					</div>
+						</div>
+					</div>
+					<div class='col col- col-xs-12 col-sm-12 col-md-6 col-lg-3'>
+						<div class="card shadow m-3">
+		  					<img src="svg/top-responsive.svg" class="card-img-top undraw" alt="">
+		  					<div class="card-body">
+		    						<p class="card-text servizio">Top Responsive</p>
+		  					</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
 	<footer class="zone blue">
 		<div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
 	</footer>
