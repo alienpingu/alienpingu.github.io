@@ -344,11 +344,7 @@ footer {
 
 /* Nascondi la foto quando la larghezza dello schermo è minore di 916px*/
 
-@media screen and (max-width: 840px) {
-    .fantasma {
-        display: none;
-    }
-}
+
 
 @media screen and (max-width: 992px) {
     .fantasma1 {
@@ -359,23 +355,15 @@ footer {
     }
     
 }
-@media screen 
-  and (max-width: 360px) 
-  and (max-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) {
+@media screen and (max-width: 840px) {
+    .fantasma {
+        display: none;
+    }
     #infoCard {
         width: 95%;
         margin-top: 3vh;
         height: 78vh;
-
-
     }
-
-    
 }
 
-@media screen and (max-resolution: 480  dpi;) {
-    html {
-        font-size: 150%;
-    }
-} 
+
