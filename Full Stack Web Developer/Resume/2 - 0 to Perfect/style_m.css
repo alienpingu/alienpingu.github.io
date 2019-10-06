@@ -14,7 +14,7 @@ html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 4vw;
 }
 
 .topnav a:hover {
@@ -64,14 +64,12 @@ html {
 body {
 	margin: auto 0;
 	display: block;
-  background: transparent;
 }
 
 	/*SECTION*/
 
 section {
 	height: 100vh;
-  margin: 0px;
 }
 
 
@@ -81,7 +79,7 @@ section {
 
 	/*RESPONSIVE*/
 	/*NAVBAR*/
-@media screen and (max-width: 600px) {
+@media screen and (max-resolution:600px;) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
