@@ -4,51 +4,69 @@
 	<title>I'm SamueleMaker Mobile</title>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://unpkg.com/@blaze/css@5.0.0/dist/blaze.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style_m.css">
 </head>
-<body>
+<body class='blaze'>
+	
 	<header> 
-	  	<div class="topnav" id="myTopnav">
-		 	<a href="#home" class="active">SAMUELEMAKER</a>
-			<a href="#home">Home</a>
-			<a href="#servizi">Servizi</a>
-			<a href="#story">Story</a>
-			<a href="#skills">Skills</a>
-		  	<a href="javascript:void(0);" class="icon" onclick="Tendina()">
-		    	<i class="fa fa-bars"></i>
-		  	</a>
-		</div>
+
 	</header>
 
-	<section id='landing' class='blaze'>
-		<div class='card'>
+	<section id='landing' class=''>
+		
+	</section>
+	<section id='about' class='align-self-center'>
+		<div class='card mx-auto mt-3 '>
+			<div class="card-body">
+				<h5 id='hello'>Hello i'm</h5>
+			    <h1 class='card-title mt-4'>Samuele Bertocco</h1>
+				<h4 class='card-subtitle mb-5'>Junior Full Stack Developer</h4>
+				<ul class='list-group my-5'>
+					<li class='list-group-item mt-4 '>
+						<img class='icon align-middle mr-3' src='icon/user.svg'>
+					<h7 class='card-text align-middle'>
+					14 Agosto 1999</h7>
+					</li>
+					<li class='list-group-item mt-4'>
+						<img class='icon align-middle mr-3' src='icon/email.svg'>
+					<h7 class='card-text align-middle'>samuele.bertocco@gmail.com</h7>
+					</li>
+					<li class='list-group-item mt-4'>
+						<img class='icon align-middle mr-3' src='icon/placeholder.svg'>
+					<h7 class='card-text align-middle'>Abbiategrasso MI</h7>
+					</li>
+					<li class='list-group-item mt-4'>
+						<img class='icon align-middle mr-3' src='icon/telegram.svg'>
+						<h7 class='card-text align-middle'>SamueleMaker</h7>
+					</li>
+				
+					<ul class='list-group list-group-horizontal mt-5'>
+						<li class='list-group-item mx-auto'><img class='social' src="icon/github.svg"></li>	
+						<li class='list-group-item mx-auto'><img class='social' src="icon/linkedin.svg"></li>
+						<li class='list-group-item mx-auto'><img class='social' src="icon/twitter.svg"></li>
+					</ul>
+					<li class='list-group-item'>
+						<button type="button" class="btn btn-info btn-lg btn-block">Download CV</button>
+					</li>
+				</ul>	
+			</div>
+		</div>
+	</section>
+
+	<section id='skill' class=''>
+		<div class='card mx-auto'>
+
+		</div>
+	</section>
+	<section id='story' class=''>
+		<div class='card mx-auto'>
 			
 		</div>
 	</section>
-	<section id='about' class='bg-gradient-light'>
-		<div class='card'>
-			
-		</div>
-	</section>
-	<section id='skill' class='blaze'>
-		<div class='card'>
-			
-		</div>
-	</section>
-	<section id='story' class='	bg-gradient-light'>
-		<div class='card'>
-			
-		</div>
-	</section>
-	<section id='service' class='blaze'>
-		<div class='card'>
-			
-		</div>
+	<section id='service' class=''>
+		
 	</section>
 </body>
-	<script src="https://unpkg.com/@blaze/atoms@7.0.0/dist/blaze-atoms.js"></script>
-	<script src="node_modules/@blaze/atoms/dist/blaze-atoms.js"></script>
-	<script type="text/javascript" src='script.js'></script>
+	<script type="text/javascript" src='script_m.js'></script>
 </html>
