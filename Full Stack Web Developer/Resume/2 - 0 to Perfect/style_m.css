@@ -23,8 +23,7 @@ section {
 
 .card {
   width: 90vw;
-  height: 80vh;
-  border-radius: 20px;
+  border-radius: 2rem;
 }
 
 #hello {
@@ -54,7 +53,7 @@ section {
 .card-subtitle {
   font-size: 5vw;
 }
-.list-group-item {
+.list-group-item , .list-group-horizontal {
   background: none;
   border: none;
 }
