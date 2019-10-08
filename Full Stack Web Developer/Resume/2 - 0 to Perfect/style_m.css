@@ -21,11 +21,15 @@ body {
   text-decoration: none;
   font-size: 10vw;
 }
-.box {
-  height: 20vh;
+
+.typewrite {
+  font-size: 10vw;
 }
 .img-fluid {
   width: 100%;
+  background: lightblue;
+  border-radius: 10rem;
+  margin-top: 15px;
 }
 #arrow {
   width: 20vw;
@@ -34,7 +38,7 @@ body {
 }
   /*ABOUT*/
 
-.card {
+#about > .card{
   width: 90vw;
   border-radius: .5rem;
 }
