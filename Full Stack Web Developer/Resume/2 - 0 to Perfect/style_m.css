@@ -39,8 +39,7 @@ body {
 }
   /*ABOUT*/
 
-#about > .card{
-  width: 90vw;
+.card{
   border-radius: .5rem;
 }
 
@@ -102,7 +101,7 @@ body {
 }
 /*STORY*/
 .o-timeline {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 /*skills*/
 .flip-card {
@@ -171,13 +170,3 @@ body {
 /**************************************************************************/
   /*ANIMATION*/
 
-@keyframes slide1 {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(0, 10px);
-  }
-}
