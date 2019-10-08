@@ -4,7 +4,7 @@
 	<title>I'm SamueleMaker Mobile</title>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/@blaze/css@5.0.0/dist/blaze.css">
 	<link rel="stylesheet" type="text/css" href="style_m.css">
 </head>
 <body class='blaze'>
@@ -13,16 +13,16 @@
 
 	</header>
 
-	<section id='landing' class=''>
+	<section id='landing' class='' style="height: 100vh;">
 		<div class='container-fluid'>
 			<div class='row'>
 				<div class="col col-12">
 					<img src="personal2.png" class="img-fluid">
 				</div>
-				<div class="col col-12 p-5 bg-light">
-					<h1>
+				<div class="col col-12 p-5 box bg-light">
+					<h1 id='typecall'>
 					  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Samuele", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
-					    <span class="wrap"></span>
+						<span class="wrap"></span>
 					  </a>
 					</h1>
 				</div>
@@ -34,11 +34,11 @@
 			</div>
 		</div>
 	</section>
-	<section id='about' class='align-self-center'>
-		<div class='card mx-auto mt-5'>
+	<section id='about' class='align-self-center py-3 py-sm-5'>
+		<div class='card mx-auto'>
 			<div class="card-body p-3 p-sm-4">
 				<h5 id='hello'>Hello i'm</h5>
-			    <h1 class='card-title'>Samuele Bertocco</h1>
+				<h1 class='card-title'>Samuele Bertocco</h1>
 				<h4 class='card-subtitle mb-1 mb-sm-3'>Junior Full Stack Developer</h4>
 				<ul class='list-group my-3 py-3 mt-sm-5 pt-sm-5'>
 					<li class='list-group-item px-1 py-3 p-sm-4'>
@@ -72,17 +72,113 @@
 		</div>
 	</section>
 
-	<section id='skill' class=''>
-		<div class='card mx-auto'>
-
-		</div>
+	<section id='service' class='bg-light'>
+		<div class="container">
+				<div class='row'>
+					<div class="col col-">
+						<h1 class='p-5 title'>Servizi</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col col- col-12'>
+						<div class="card shadow my-3 mx-0 m-sm-4">
+							<img src="svg/front-end.svg" class="card-img-top p-3" alt="">
+							<div class="card-body">
+									<p class="card-text txt1">Front End</p>
+							</div>
+						</div>
+					</div>
+					<div class='col col- col-12'>
+						<div class="card shadow my-3 mx-0 m-sm-4">
+							<img src="svg/back-end.svg" class="card-img-top p-3" alt="">
+							<div class="card-body">
+									<p class="card-text txt1">Back End</p>
+							</div>
+						</div>
+					</div>
+					<div class='col col- col-12'>
+						<div class="card shadow my-3 mx-0 m-sm-4">
+							<img src="svg/problem-solving.svg" class="card-img-top p-3" alt="">
+							<div class="card-body">
+									<p class="card-text txt1">Problem Solving</p>
+							</div>
+						</div>
+					</div>
+					<div class='col col- col-12'>
+						<div class="card shadow my-3 mx-0 m-sm-4">
+							<img src="svg/top-responsive.svg" class="card-img-top p-3" alt="">
+							<div class="card-body">
+									<p class="card-text txt1">Top Responsive</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 	</section>
 	<section id='story' class=''>
-		<div class='card mx-auto'>
-			
+		<div class='row'>
+			<div class='col col-12 '>
+				<h1 class='p-5 title'>Esperienze</h1>
+			</div>
+			<div class='col col--12 '>
+				<ul class="o-timeline o-timeline--alternate o-timeline--brand">
+					<li class="c-timeline-item c-timeline-item--left">
+						<div class="c-timeline-item__body">
+						ITIS Elettronico
+						</div>
+					</li>
+					<li class="c-timeline-item c-timeline-item--brand">
+						<div class="c-timeline-item__body">Organo Gold
+							<p class="c-paragraph u-text--quiet u-small">
+								Distributore autonomo
+							</p>
+						</div>
+					</li>
+					<li class="c-timeline-item c-timeline-item--brand c-timeline-item--left">
+						<div class="c-timeline-item__body">
+						S&P Italia
+							<p class="c-paragraph u-text--quiet u-small">
+								Ufficio Tecnico
+							</p>
+						</div>
+					</li>
+					<li class="c-timeline-item c-timeline-item--brand">
+						<div class="c-timeline-item__body">
+							TP Light
+							<p class="c-paragraph u-text--quiet u-small">
+							Progettista CAD 3D
+							</p>
+						</div>
+					</li>
+					<li class="c-timeline-item c-timeline-item--brand c-timeline-item--left">
+						<div class="c-timeline-item__body">ProntoPro
+							<p class="c-paragraph u-text--quiet u-small">
+							Python Developer<br>
+							CAD 3D 
+							</p>
+						</div>
+					</li>
+					<li class="c-timeline-item c-timeline-item--brand">
+						<div class="c-timeline-item__body">
+						Junior Full Stack Developer
+						</div>
+					</li>
+					<li class="c-timeline-item c-timeline-item--left c-timeline-item--last c-timeline-item--loading">
+						<div class="c-timeline-item__body">
+							Senior Full Stack Developer
+							<p class="c-paragraph u-text--quiet u-small">
+								Corso su Udemy
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
+
+					
+				
 	</section>
-	<section id='service' class=''>
+	<section id='skill' class=''>
 		
 	</section>
 </body>

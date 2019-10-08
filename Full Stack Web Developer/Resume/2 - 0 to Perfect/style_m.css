@@ -15,19 +15,18 @@ body {
 
 	/*SECTION*/
 
-section {
-	height: 100vh;
-}
   /*LENDING*/
 .container-fluid {
   text-align: center;
   text-decoration: none;
+  font-size: 10vw;
+}
+.box {
+  height: 20vh;
 }
 .img-fluid {
   width: 100%;
 }
-
-
 #arrow {
   width: 20vw;
   height: initial;
@@ -86,7 +85,23 @@ section {
   font-size: 5vw;
   border-radius: .7rem;
 }
-
+/*Servizi*/
+#service, .title {
+  text-align: center;
+}
+.title {
+  font-size: 10vw;
+}
+.txt1 {
+  font-size: 7vw;
+}
+/*STORY*/
+.o-timeline {
+  font-size: 5vw;
+}
+.u-text--quiet {
+  color: green !important;
+}
 
 
 
