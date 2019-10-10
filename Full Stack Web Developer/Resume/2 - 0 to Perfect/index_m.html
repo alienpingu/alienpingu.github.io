@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>I'm SamueleMaker Mobile</title>
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Oswald:700|Ubuntu&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/@blaze/css@5.0.0/dist/blaze.css">
 	<link rel="stylesheet" type="text/css" href="style_m.css">
@@ -14,26 +14,27 @@
 	</header>
 
 	<section id='landing' class=' p-0' style="height: 100vh;">
-		<div class='container-fluid'>
+		<div class='container-fluid d-flex align-items-end'>
 			<div class='row'>
 				<div class="col col-12 px-auto m-0">
 					<img src="personal.png" class="personal mt-5 rounded-circle border border-primary">
-					<p class="text-center text-warning mt-3" style="font-size: 5vw; font-weight: bold;">Samuele Bertocco</p>
+					<p id='personal-title'class="text-center text-warning mt-3" style="font-size: 10vw; font-weight: bold;">Samuele Bertocco</p>
+					
 				</div>
-				<div class="col col-12 landing-text-col" style="text-align: left;">
+				<div class="col col-12 text-center" style="">
 					<h1 class="">
-					  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Samuele", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+					  <a href="" class="typewrite" data-period="2000" data-type='[ "Front End Developer", "Back End Developer", "UX Template", "I love Learn!" ]'>
 						<span class="wrap"></span>
 					  </a>
 					</h1>
 				</div>
-				<a class="arrow bounce" href='#about'></a>
+				<a class='col col-12 d-flex align-items-end' style="height: 35vh; "href='#about'>
+					<div class="arrow bounce"></div>
+				</a>	
 			</div>
 		</div>
 	</section>
-	<section id='about' class='align-self-center'>
-		<div class='bg-light mx-auto'>
-			<div class="p-3 p-sm-4">
+	<section id='about' class='bg-light py-3 px-2'>
 				<h5 id='hello'>Hello i'm</h5>
 				<h1 class='card-title'>Samuele Bertocco</h1>
 				<h4 class='card-subtitle mb-1 mb-sm-3'>Junior Full Stack Developer</h4>
@@ -63,13 +64,12 @@
 					</ul>
 				</ul>
 			</div>
-			<div class='card-body p-2 px-sm-3 p-lg-4'>
-				<a href="#service" type="button" class="btn btn-info btn-lg btn-block py-3 py-sm-4 py-lg-5">Show more</a>
-			</div>
-			<div class='card-body p-2 px-sm-3 p-lg-4'>
-				<a href="#" type="button" class="btn btn-primary btn-lg btn-block py-3 py-sm-4 py-lg-5">Download CV</a>
-			</div>
-		</div>
+				<div class='p-2 px-sm-3 p-lg-4'>
+					<a href="#service" type="button" class="btn btn-info btn-lg btn-block py-3 py-sm-4 py-lg-5">Show more</a>
+				</div>
+				<div class='p-2 px-sm-3 p-lg-4'>
+					<a href="#" type="button" class="btn btn-primary btn-lg btn-block py-3 py-sm-4 py-lg-5">Download CV</a>
+				</div>
 	</section>
 	<section id='service' class='bg-light'>
 		<div class="container">

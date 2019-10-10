@@ -30,15 +30,17 @@ section {
   text-align: center;
   text-decoration: none;
   font-size: 10vw;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
 }
-.landing-text-col {
-
+#personal-title {
+  font-family: 'Oswald', sans-serif;
 }
 .typewrite {
-  font-size: 10vw;
+  font-size: 7.5vw;
+  color: orange;
   text-decoration: none;
+  font-family: 'Big Shoulders Display', cursive;
 }
 .personal {
   height: 40vh;
@@ -49,12 +51,12 @@ section {
 .arrow
 {
   position: relative;
-  bottom: -2rem;
+  bottom: 0;
   left: 50%;
-  margin-left:-20px;
-  width: 40px;
-  height: 40px;
-
+  margin-left: -10vw;
+  width: 20vw;
+  height: 20vw;
+  margin-top: 0;
   /**
    * Dark Arrow Down
    */
@@ -69,7 +71,9 @@ section {
 }
 
   /*ABOUT*/
-
+#about {
+  height: 100vh;
+}
 #about > .card {
   border-radius: 0px;
 }
