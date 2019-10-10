@@ -74,10 +74,6 @@ section {
 #about {
   height: 100vh;
 }
-#about > .card {
-  border-radius: 0px;
-}
-
 #hello {
     font-size: 5vw;
     display: inline-block;
@@ -99,44 +95,78 @@ section {
     border-radius: 5vw 5vw 0.5vw 5vw;
 }
 .card-title {
-  font-size: 9vw;
+  font-size: 12vw;
   font-weight: bold;
+  font-family: 'Oswald', sans-serif;
 }
 .card-subtitle {
   font-size: 5vw;
+  margin-left:3vw;
+  font-family: 'Oswald', sans-serif;
+  color: gray;
+}
+#about > .list-group {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  font-family: 'Varela Round', sans-serif;
 }
 .list-group-item , .list-group-horizontal {
   background: none;
   border: none;
 }
+
 .icon {
   width: 4vw;
   height: inherit;
 }
 .card-text {
   font-size: 5vw;
+  margin-left: 2vw;
 }
 .social{
   width: 10vw;
   height: inherit;
 }
-.btn-info , .btn-primary {
+#about > div > a {
   font-size: 5vw;
   border-radius: .7rem;
+  font-family: 'Varela Round', sans-serif;
 }
 /*Servizi*/
+#service {
+   background: rgb(79,189,181);
+  background: -moz-linear-gradient(125deg, rgba(79,189,181,1) 0%, rgba(91,140,195,1) 50%, rgba(101,106,202,1) 100%);
+  background: -webkit-linear-gradient(125deg, rgba(79,189,181,1) 0%, rgba(91,140,195,1) 50%, rgba(101,106,202,1) 100%);
+  background: linear-gradient(125deg, rgba(79,189,181,1) 0%, rgba(91,140,195,1) 50%, rgba(101,106,202,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4fbdb5",endColorstr="#656aca",GradientType=1); 
+}
 #service, .title {
   text-align: center;
 }
+.card {
+  border-radius: 10%;
+}
 .title {
-  font-size: 10vw;
+  font-size: 13vw;
+  font-family: 'Varela Round', sans-serif;
+  color:#FFC56B;
 }
 .txt1 {
   font-size: 7vw;
+  font-family: 'Kanit', sans-serif;
 }
 /*STORY*/
+#story {
+  background: rgb(101,106,202);
+  background: -moz-linear-gradient(225deg, rgba(101,106,202,1) 0%, rgba(91,140,195,1) 50%, rgba(79,189,181,1) 100%);
+  background: -webkit-linear-gradient(225deg, rgba(101,106,202,1) 0%, rgba(91,140,195,1) 50%, rgba(79,189,181,1) 100%);
+  background: linear-gradient(225deg, rgba(101,106,202,1) 0%, rgba(91,140,195,1) 50%, rgba(79,189,181,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#656aca",endColorstr="#4fbdb5",GradientType=1);
+}
 .o-timeline {
   font-size: 5vw;
+  color: white;
+  font-family: 'Kanit', sans-serif;
 }
 /*skills*/
 
