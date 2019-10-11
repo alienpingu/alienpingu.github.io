@@ -104,6 +104,7 @@ section {
   margin-left:3vw;
   font-family: 'Oswald', sans-serif;
   color: gray;
+  list-style: none;
 }
 #about > .list-group {
   margin-top: 5vh;
@@ -124,8 +125,7 @@ section {
   margin-left: 2vw;
 }
 .social{
-  width: 10vw;
-  height: inherit;
+  font-size: 15vw;
 }
 #about > div > a {
   font-size: 5vw;
@@ -149,12 +149,25 @@ section {
 .title {
   font-size: 13vw;
   font-family: 'Varela Round', sans-serif;
-  color:#FFC56B;
+  color: white;
 }
 .txt1 {
   font-size: 7vw;
   font-family: 'Kanit', sans-serif;
 }
+/*Skill*/
+#skill > ul {
+  font-size: 7vw;
+}
+#skill > ul > li {
+  font-family: 'Varela Round', sans-serif;
+}
+.subtitle {
+  font-size: 4vw;
+  color: gray;
+}
+
+
 /*STORY*/
 #story {
   background: rgb(101,106,202);
@@ -168,7 +181,7 @@ section {
   color: white;
   font-family: 'Kanit', sans-serif;
 }
-/*skills*/
+
 
 
 
