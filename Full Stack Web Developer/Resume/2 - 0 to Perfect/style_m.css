@@ -73,6 +73,8 @@ section {
   /*ABOUT*/
 #about {
   height: 100vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 #hello {
     font-size: 5vw;
