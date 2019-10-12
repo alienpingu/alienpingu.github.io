@@ -25,6 +25,7 @@ section {
 #landing {
   background-image: url(https://media.giphy.com/media/l3q2XB76CaWPggiNW/giphy.gif);
   background-size: cover;
+
 }
 .container-fluid {
   text-align: center;
@@ -72,9 +73,7 @@ section {
 
   /*ABOUT*/
 #about {
-  height: 100vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding: 2vh 3vw 2vh 3vw;
 }
 #hello {
     font-size: 5vw;
@@ -113,6 +112,9 @@ section {
   margin-bottom: 3vh;
   font-family: 'Varela Round', sans-serif;
 }
+#about > .list-group > .list-group-item {
+  padding: 2vh 0 2vh 0;
+}
 .list-group-item , .list-group-horizontal {
   background: none;
   border: none;
@@ -127,7 +129,8 @@ section {
   margin-left: 2vw;
 }
 .social{
-  font-size: 15vw;
+  font-size: 10vw;
+  padding: 2vh 0 2vh 0;
 }
 #about > div > a {
   font-size: 5vw;
@@ -147,6 +150,7 @@ section {
 }
 .card {
   border-radius: 10%;
+  margin: 7vw;
 }
 .title {
   font-size: 13vw;
