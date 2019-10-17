@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Samuele Bertocco</title>
 	<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Oswald:700|Ubuntu|Kanit|Varela+Round&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -10,25 +11,23 @@
 	<link rel="stylesheet" type="text/css" href="style_m.css">
 </head>
 <body class='blaze'>
-	
-	<header> 
-
-	</header>
-
+	<button onclick="topFunction()" id="goTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 	<section id='landing' class=' p-0' style="height: 100vh;">
-		<div class='container-fluid d-flex align-items-end'>
+		<div class='container d-flex align-items-end'>
 			<div class='row'>
 				<div class="col col-12 px-auto m-0">
-					<img src="personal.png" class="personal mt-5 rounded-circle border border-primary">
-					<p id='personal-title'class="text-center text-warning mt-3" style="font-size: 10vw; font-weight: bold;">Samuele Bertocco</p>
+					<img src="personal.png" class="personal mt-5 rounded-circle border border-primary text-center">
+					<p id='personal-title'class="text-center text-warning tracking-in-expand mt-3">Samuele Bertocco</p>
 					
 				</div>
-				<div class="col col-12 pl-3 text-left" style="">
-					<h1 class="" style="">
-					  <a href="" class="typewrite" data-period="2000" data-type='[ "Front End Developer", "Back End Developer", "UX Template", "I love Learn!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
+				<div class="col col-12 pl-3 text-center" style="">
+					<div class="" style="width: 100%;">
+						<h1 class="" style="">
+						  <a href="" class="typewrite" data-period="2000" data-type='[ "Front End Developer", "Back End Developer", "UX Template", "I love Learn!" ]'>
+							<span class="wrap"></span>
+						  </a>
+						</h1>
+					</div>
 				</div>
 				<a class='col col-12 pb-5 d-flex align-items-end' style="height: 35vh; "href='#about'>
 					<div class="arrow bounce"></div>
@@ -38,8 +37,8 @@
 	</section>
 	<section id='about' class='bg-light'>
 				<h5 id='hello'>Hello i'm</h5>
-				<h1 class='card-title'>Samuele Bertocco</h1>
-				<h4 class='card-subtitle'>Junior Full Stack Developer</h4>
+				<h1 class='card-title slide-right'>Samuele Bertocco</h1>
+				<h4 class='card-subtitle slide-right'>Junior Full Stack Developer</h4>
 				<ul class='list-group'>
 					<li class='list-group-item'>
 						<i class="fas fa-user m-1 text-middle" style="font-size: 6vw; width: 6vw;"></i><h7 class='card-text'>14 Agosto 1999</h7>
@@ -54,19 +53,19 @@
 						<a href='https://t.me/samuelemaker'><i class="fab fa-telegram m-1 text-middle" style="font-size: 6vw; width: 6vw;"></i><h7 class='card-text'>SamueleMaker</h7></a>
 					</li>
 					<ul class='list-group list-group-horizontal my-1'>
-						<a href='https://github.com/alienpingu/' class='mx-auto'><li class='list-group-item'><i class="fab fa-github social"></i></li></a>
+						<a href='https://github.com/alienpingu/' class='mr-auto'><li class='list-group-item'><i class="fab fa-github social"></i></li></a>
 						<a href='https://www.linkedin.com/in/samuele-bertocco-217476149/' class='mx-auto'><li class='list-group-item'><i class="fab fa-linkedin social"></i></li></a>
-						<!-- <li class='list-group-item ml-auto'><i class="fab fa-twitter social"></i></li> -->
+						<a href="https://twitter.com/brtsml" class="ml-auto"><li class='list-group-item ml-auto'><i class="fab fa-twitter social"></i></li></a>
 					</ul>
 				</ul>
 				<div class='p-2 px-sm-3 p-lg-4'>
-					<a href="#service" type="button" class="btn btn-info btn-lg btn-block py-3 py-sm-4 py-lg-5">
-						Show more
+					<a href="#skill" type="button" class="btn btn-info btn-lg btn-block py-3 py-sm-4 py-lg-5">
+						Skills
 					</a>
 				</div>
 				<div class='p-2 px-sm-3 p-lg-4'>
 					<a href="#story" type="button" class="btn btn-primary btn-lg btn-block py-3 py-sm-4 py-lg-5">
-						My Story
+						Story
 					</a>
 				</div>
 	</section>
@@ -129,11 +128,11 @@
 
 	<section id='story' class='px-2'>
 		      <div class='row'>
-		        <div class='col col-12 '>
-		          <h1 class='py-4 title'>Esperienze</h1>
+		        <div class='col col-12 text-center my-4'>
+		          <h1 class='title'>Esperienze</h1>
+		          <h7 class='subtitle'> Per il formato PDF clicca <a href='CV-Bertocco.pdf'> qui </a></h7>
 		        </div>
 		        <div class='col col-12 '>
-		        	<a href="#" type="button" class="btn btn-outline-light btn-lg btn-block py-3 py-sm-4 py-lg-5 my-5">Download PDF</a>
 		          <ul class="o-timeline o-timeline--alternate o-timeline--brand">
 		            <li class="c-timeline-item c-timeline-item--left">
 		              <div class="c-timeline-item__body">
@@ -190,8 +189,11 @@
 		        </div>
 		      </div>
 	</section>
+	<!-- Footer -->
 	<footer>
-		<p>Photo by Roozbeh Eslami on Unsplash</p>
+	  <!-- Copyright -->
+	  <div class="footer-copyright text-center py-3">© 2018 Copyright: brtsml.it</div>
+	  <!-- Copyright -->
 	</footer>
 </body>
 	<script type="text/javascript" src='script_m.js'></script>
