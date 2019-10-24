@@ -1,0 +1,49 @@
+html {
+	margin: 0px;
+}
+body {
+	background: #D3CCE3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*NAV*/
+nav, footer {
+	background: #6719FF;
+}
+.active {
+	font-family: 'Monda', sans-serif;
+}
+/*HEADER*/
+header {
+	background: #6719FF;
+	color: #ffc107;
+}
+header > img {
+	width: 18rem;
+}
+/*Products*/
+.card {
+	width: 18rem;
+}
+/*CONTACTS*/
+#Contacts > img {
+	width: 18rem;
+	background: #6719FF;
+	border-radius: 18rem;
+}
+/*FOOTER*/
+footer > .row > .col >  ul {
+	list-style: none;
+}
+/*FONTS*/
+
+.Pacifico {
+font-family: 'Pacifico', cursive;
+}
+.Questrial {
+font-family: 'Questrial', sans-serif;
+}
+.Monda {
+font-family: 'Monda', sans-serif;
+}
+
