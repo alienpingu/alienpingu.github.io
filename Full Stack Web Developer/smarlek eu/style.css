@@ -29,7 +29,7 @@ nav, footer {
 header {
 	background: #6719FF;
 	color: #ffc107;
-	border-radius: 0 0 10rem 10rem;
+	/*border-radius: 0 0 10rem 10rem;*/
 	max-height: 85vh;
 }
 header > img {
@@ -79,7 +79,7 @@ footer > .row > .col >  ul {
 }
 /*FONTS*/
 .handwrite {
-	font-family: 'Liu Jian Mao Cao', cursive;
+	/*font-family: 'Liu Jian Mao Cao', cursive;*/
 	color: #6719FF;
 	text-shadow: 2px 2px #ffc107;
 }
