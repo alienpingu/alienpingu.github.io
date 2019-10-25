@@ -30,6 +30,7 @@ header {
 	background: #6719FF;
 	color: #ffc107;
 	border-radius: 0 0 10rem 10rem;
+	max-height: 85vh;
 }
 header > img {
 	height: 30vh;
@@ -39,17 +40,25 @@ header > img {
 #Products > .card {
 	width: 20rem;
 }
-.btn-primary {
+#Products > .card > .card-body >.btn-primary {
 	background-color: #6719FF; 
 	border-color: #6719FF;
+	transition: transform .5s ease;
+}
+#Products > .card > .card-body >.btn-primary:hover {
+	transform: scale(1.05);
+	background-color: #6719FF; 
+	border-color: #6719FF;
+}
+#Products > .card > .card-body >.btn-primary:active {
+	background-color: #5B06FF !important; 
+	border-color: #5B06FF !important;
+}
 
 }
 /*CONTACTS*/
 #Contacts > img {
-	width: 20rem;
-	background: #6719FF;
-	border-radius: 20rem;
-}
+	width: 20rem;}
 .fa-envelope, .fa-map-pin {
 	color:#ffc107;
 	background-color: #6719FF;
@@ -76,9 +85,9 @@ footer > .row > .col >  ul {
 }
 
 /*RFS*/
-/*Responsive fonts size*/
+/*Responsive mobile*/
 
-@media (max-width: 1200px) { 
+@media (max-width: 800px) { 
 	legend { 
 		font-size: calc(1.275rem + 0.3vw); } 
 	h1, .h1 { 
@@ -103,6 +112,13 @@ footer > .row > .col >  ul {
 		font-size: calc(1.475rem + 2.7vw); } 
 	.close { 
 		font-size: calc(1.275rem + 0.3vw); } 
+	#Products > .card {
+	width: 80vw;}
+	#Contacts > img {
+	width: 80vw;
+	background: #6719FF;
+	border-radius: 20rem;
+	}
 	}
 
 
