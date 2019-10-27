@@ -4,18 +4,31 @@
 body {
 	background-image: url(img/bg.jpeg);
 }
-header img {
-	width: 100%;
+#logo {
+	position: absolute;
+	z-index: 9999;
+	background-color:#C8E6C9;
+	border-radius: 0rem 10rem 20rem 10rem;
+}
+#logo img {
+	width: 10rem;
+	padding: 1rem;
+	z-index: 9999;
+}
+.nav {
+	 z-index: 9999;
 }
 .nav-link {
 	color:#FFFFFF !important;
 }
+.nav {
+	padding-left: 10rem;
+}
 section {
 	margin: 3rem 0 3rem 0;
 }
-
 .card {
-	width: 20rem;
+	width: 24rem;
 	margin-left: auto;
 	margin-right: auto;
 }
