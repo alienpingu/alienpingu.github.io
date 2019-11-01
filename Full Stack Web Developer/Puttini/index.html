@@ -16,10 +16,10 @@
 	<div id="MobileNav" class="overlay">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  <div class="overlay-content">
-	    <a href="#ChiSiamo" onclick="closeNav()">About</a>
-	    <a href="#" onclick="closeNav()">Services</a>
-	    <a href="#" onclick="closeNav()">Clients</a>
-	    <a href="#" onclick="closeNav()">Contact</a>
+	    <a href="#ChiSiamo" onclick="closeNav()">Chi Siamo</a>
+	    <a href="#Contatti" onclick="closeNav()">Contatti</a>
+	    <a href="#DoveSiamo" onclick="closeNav()">Dove Siamo</a>
+	    <a href="#IlParco" onclick="closeNav()">Il Parco</a>
 	  </div>
 
 	</div>
@@ -30,25 +30,16 @@
 			</a> 	
 		</li>
 		<li class="nav-item first">
-			<a class="nav-link d-none d-md-block" href="#">Active</a>
+			<a class="nav-link d-none d-md-inline-block" href="#IlParco">Il Parco</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link d-none d-md-inline-block" href="#">Active</a>
+			<a class="nav-link d-none d-md-inline-block" href="#ChiSiamo">Chi Siamo</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link d-none d-md-inline-block" href="#">Active</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link d-none d-md-inline-block" href="#">Active</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link d-none d-md-inline-block" href="#DoveSiamo">DoveSiamo</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link d-none d-md-inline-block" href="#ChiSiamo">ChiSiamo</a>
+			<a class="nav-link d-none d-md-inline-block" href="#DoveSiamo">Dove Siamo</a>
 		</li>
 		<li class="nav-item ml-auto">
-			<a class="nav-link d-none d-md-inline-block" href="#">Active</a>
+			<a class="nav-link d-none d-md-inline-block" href="#Contatti">Contatti</a>
 		</li>
 		<li class="nav-item" onclick="openNav()">
 			<i class="nav-link fas fa-bars d-inline-block d-md-none"></i>
@@ -96,15 +87,21 @@
 				</div>
 			</div>
 		</div>
-		<div id="#Contatti"class="container mT6r">
+		<div id="Contatti"class="container mT6r">
 			<div class="card">
 				<img class="card-img-top" src="svg/contacts.svg">
 					<div class="card-body">
 						<h1 class="card-title">Contatti</h1>
-						<p class="card-text">
-							18234718974<br>
-							cia.bello@gmail.com
+						<a class='text-decoration-none' href='tel:029085090'><i class="fas fa-phone mr-2"></i>Telefono: 02 9085090</a><br>
+						<a class='text-decoration-none' href='mailto:puttini@pensionecani.it'><i class="fas fa-envelope mr-2"></i>E-mail: puttini@pensionecani.it</a>
+						<h2>I nostri orari</h2>
+						<p class="card-text">Siamo aperti al pubblico tutti i giorni, dalle 8 alle 18 orario continuato.</p>
+						<p class="text-muted">A Natale, Pasqua, Ferragosto ci occupiamo di tutti i nostri ospiti ma siamo CHIUSI al pubblico.<br>
+						Il primo Gennaio siamo aperti dalle 15 alle 18<br>
 						</p>
+						<p class="text-weight-bold">Per qualsiasi informazione, per prenotazioni o per venire a conoscerci, chiamateci! Siamo a vostra disposizione!</p>
+
+							
 					</div>
 				</div>
 			</div>
@@ -127,40 +124,72 @@
 				</div>
 			</div>
 		</div>
-		<div class="container mT6r">
+		<div id='IlParco' class="container mT6r mb-5">
 			<div class="card">
 				<div class="card-body">
 					<h1 class="card-title">Il Parco</h1>
-					<p class="card-text">Lorem ajfnhfb hheorb hbh abjbfha lbalhb ljahb ljhf lajhb lahb ljhb aljhb ljh bljh baljhbljhbaljh fbalhb ljhab jhbalj hbfljahb ljhfabj hbfaljhb ljahb jlhabljh baljb jhab ljhabljh baljhbfljhabfljhab jhlab ljhba jhbah bflhbafhbejhb h beljh b</p>
-					<div class="row">
-						<div class="col col-12 col-sm-4">
-							<img class='fix-thumb'src="img/parco/1.jpg">
-							<img class='fix-thumb'src="img/parco/2.jpg">
-							<img class='fix-thumb'src="img/parco/3.jpg">
-							<img class='fix-thumb'src="img/parco/4.png">
-							<img class='fix-thumb'src="img/parco/5.jpg">
-							<img class='fix-thumb'src="img/parco/6.jpg">
+					<p class="card-text">Una grande area destinata a parco di 40.000 metri quadrati, permette ai cani di sfogare la loro voglia di libertà e la loro esuberanza sotto il controllo di personale specializzato.<br>
+					Ci troviamo a pochi minuti da Milano, eppure qui siamo proprio in un’oasi di verde e silenzio dove i nostri amici possono correre felici e sereni.</p>
+					<button class="btn btn-block btn-lg btn-success" onclick="dSwitch()">Gallery</button>
+						<div id='Gallery'class="row d-none">
+							<div class="col col-12 col-sm-4">
+								<img src="img/parco/1.jpg">
+								<img src="img/parco/2.jpg">
+								<img src="img/parco/3.jpg">
+								<img src="img/parco/4.png">
+								<img src="img/parco/5.jpg">
+								<img src="img/parco/6.jpg">
+								<img src="img/parco/7.jpg">
+								<img src="img/parco/8.jpg">
+								<img src="img/parco/9.jpg">
+							</div>
+							<div class="col col-12 col-sm-4">
+								<img src="img/parco/10.jpg">
+								<img src="img/parco/11.jpg">
+								<img src="img/parco/12.jpg">
+								<img src="img/parco/13.jpg">
+								<img src="img/parco/14.png">
+								<img src="img/parco/15.jpg">
+								<img src="img/parco/16.png">
+								<img src="img/parco/17.jpg">
+								<img src="img/parco/27.jpg">
+								
+							</div>
+							<div class="col col-12 col-sm-4">
+								<img src="img/parco/19.jpg">
+								<img src="img/parco/20.jpg">
+								<img src="img/parco/21.jpg">
+								<img src="img/parco/22.png">
+								<img src="img/parco/23.jpg">
+								<img src="img/parco/24.jpg">
+								<img src="img/parco/25.jpg">
+								<img src="img/parco/26.jpg">
+								<img src="img/parco/18.jpg">
+							</div>
 						</div>
-						<div class="col col-12 col-sm-4">
-							<img class='fix-thumb'src="img/parco/1.jpg">
-							<img class='fix-thumb'src="img/parco/2.jpg">
-							<img class='fix-thumb'src="img/parco/3.jpg">
-							<img class='fix-thumb'src="img/parco/4.png">
-							<img class='fix-thumb'src="img/parco/5.jpg">
-							<img class='fix-thumb'src="img/parco/6.jpg">
-						</div>
-						<div class="col col-12 col-sm-4">
-							<img class='fix-thumb'src="img/parco/1.jpg">
-							<img class='fix-thumb'src="img/parco/2.jpg">
-							<img class='fix-thumb'src="img/parco/3.jpg">
-							<img class='fix-thumb'src="img/parco/4.png">
-							<img class='fix-thumb'src="img/parco/5.jpg">
-							<img class='fix-thumb'src="img/parco/6.jpg">
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
+		<footer>
+			<div class="container-fluid pt-4 pb-5">
+				<div class="row">
+					<div class="col-6">
+						<h4>Contattaci</h4>
+						<a class='text-decoration-none' href='tel:029085090'><i class="fas fa-phone mr-2"></i>Chiamaci!</a><br>
+						<a class='text-decoration-none' href='mailto:puttini@pensionecani.it'><i class="fas fa-envelope mr-2"></i>Scrivici!</a>
+					</div>
+					<div class="col-6">
+						 	<h4>Footer Nav</h4>
+						    <a href="#ChiSiamo">Chi Siamo</a><br>
+						    <a href="#Contatti">Contatti</a><br>
+						    <a href="#DoveSiamo">Dove Siamo</a><br>
+						    <a href="#IlParco">Il Parco</a><br>
+					</div>
+				</div>
+				<hr>
+				<p>Puttini - Pensione per cani Località Isola Bettolina - 20083 Gaggiano (Milano) Tel.: 02 9085090 Partita IVA 05097490964</p>
+			</div>
+		</footer>
 </body>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

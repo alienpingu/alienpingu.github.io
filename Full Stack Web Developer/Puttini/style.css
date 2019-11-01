@@ -3,6 +3,13 @@
 }
 body {
 	background-image: url(img/bg.jpeg);
+
+}
+a {
+	color: #212121;
+}
+hr {
+	color:#BDBDBD;
 }
 /*NAV*/
 #logo {
@@ -95,17 +102,34 @@ body {
 .card {
 	width: 100%
 }
-.fix-thumb {
-	/*object-fit: cover;*/
-	width: 100%;
-	padding: 1rem;
+#Gallery > .col > img {
+	object-fit: cover;
+	width: 18rem;
+	height: 18rem;
+	margin: 0.2rem;
 	border-radius: 1rem;
+	border: 1px solid black;
 }
 
+#Gallery > .col > img:hover {
+	object-fit: fill; 
+	width: 100%;
+	height: auto;
+	transform: scale(1.2);
+	transition: 0.5s;
+	border-radius: 0px;
+	border: 2px solid black;
+	z-index: 1;
+}
 
+footer, footer a {
+	background-color: #388E3C;
+	color: white;
+}
 
-
-
+footer h4 , footer p {
+	text-align: center;
+}
 
 
 
