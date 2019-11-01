@@ -1,3 +1,4 @@
+AOS.init();
 
 /* Open when someone clicks on the span element */
 function openNav() {
