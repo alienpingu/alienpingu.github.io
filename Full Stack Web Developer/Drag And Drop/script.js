@@ -1,3 +1,4 @@
+loadBk();
 (function()
 {
 
@@ -62,6 +63,7 @@
 			e.target.appendChild(item);
 			
 			e.preventDefault();
+			saveBk();
 		}
 	
 	}, false);
@@ -87,3 +89,28 @@ function dSwitch(y)
 		x.classList.add('d-none');
 	}
 }
+
+// Aggiungi Categoria
+function addCategoria() {
+	var n = Number(localStorage.catNum);
+	var x = `<button class= 'btn btn-block btn-primary' onclick='dSwitch(${n})'>categoria${n}</button><ol id='categoria${n}' class='d-none' data-draggable='target'></ol>`
+	$('div')[0].innerHTML+= x;
+	saveBk();
+	localStorage.catNum = n + 1;
+}
+
+// LocalBackupSys
+function saveBk() {
+	localStorage.bk = $('div.container')[0].innerHTML;
+}
+function loadBk() {
+	if (localStorage.bk) {
+		$('div')[0].innerHTML = localStorage.bk;
+		for (item of document.querySelectorAll('ol')) {
+			item.classList.add('d-none');
+		}
+	}
+}
+
+
+
