@@ -1,4 +1,8 @@
 loadBk();
+var botNav = document.getElementsByClassName('bottomBar')[0];
+botNav.addEventListener("touchstart", startTouch, false);
+botNav.addEventListener("touchmove", moveTouch, false);
+
 (function()
 {
 
@@ -61,11 +65,15 @@ loadBk();
 		if(e.target.getAttribute('data-draggable') == 'target')
 		{
 			e.target.appendChild(item);
-			
 			e.preventDefault();
-			saveBk();
 		}
-	
+		//Se l' elemento viene rilasciato btn item viene aggiunto
+		//all' elemento successivo
+		else if(e.target.classList.contains('btn')) {
+			e.target.nextElementSibling.appendChild(item);
+			e.preventDefault();
+		}
+		saveBk();
 	}, false);
 	
 	//dragend event to clean-up after drop or abort
@@ -90,13 +98,15 @@ function dSwitch(y)
 	}
 }
 
+
+
 // Aggiungi Categoria
 function addCategoria() {
-	var n = Number(localStorage.catNum);
+	var n = 0;
+	for (item of $('[data-draggable="target"]')) {n = n + 1;}
 	var x = `<button class= 'btn btn-block btn-primary' onclick='dSwitch(${n})'>categoria${n}</button><ol id='categoria${n}' class='d-none' data-draggable='target'></ol>`
 	$('div')[0].innerHTML+= x;
 	saveBk();
-	localStorage.catNum = n + 1;
 }
 
 // LocalBackupSys
@@ -113,4 +123,59 @@ function loadBk() {
 }
 
 
+// Swipe
+
+
+
+// Swipe Up / Down / Left / Right
+var initialX = null;
+var initialY = null;
+
+function startTouch(e) {
+	initialX = e.touches[0].clientX;
+	initialY = e.touches[0].clientY;
+};
+
+function moveTouch(e) {
+	if (initialX === null) {
+		return;
+	}
+
+	if (initialY === null) {
+		return;
+	}
+
+	var currentX = e.touches[0].clientX;
+	var currentY = e.touches[0].clientY;
+
+	var diffX = initialX - currentX;
+	var diffY = initialY - currentY;
+
+	if (Math.abs(diffX) > Math.abs(diffY)) {
+		// sliding horizontally
+		if (diffX > 0) {
+		// swiped left
+			console.log("swiped left");
+		} else {
+		// swiped right
+			console.log("swiped right");
+		} 
+		} else {
+		// sliding vertically
+		if (diffY > 0) {
+		// swiped up
+			console.log("swiped up");
+			dSwitch(5);
+		} 
+		else {
+		// swiped down
+			console.log("swiped down");
+			dSwitch(5);
+		} 
+	}
+
+initialX = null;
+initialY = null;
+e.preventDefault();
+};
 
