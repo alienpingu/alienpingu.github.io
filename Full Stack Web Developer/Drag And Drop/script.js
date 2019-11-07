@@ -3,6 +3,20 @@ var botNav = document.getElementsByClassName('bottomBar')[0];
 botNav.addEventListener("touchstart", startTouch, false);
 botNav.addEventListener("touchmove", moveTouch, false);
 
+
+// Per ogni pulsante categoria aggiungi un listener per il doppio click
+// Quando viene doppiocliccato rende il contenuto editable
+for (item of $('button')) {
+item.addEventListener('dblclick', (e) => { 
+	
+	if (e.target.isContentEditable) {
+		e.target.setAttribute('contenteditable', 'true');
+	} else {
+		e.target.setAttribute('contenteditable', 'false');
+	}
+})};
+
+
 (function()
 {
 
@@ -111,22 +125,21 @@ function addCategoria() {
 
 // LocalBackupSys
 function saveBk() {
-	localStorage.bk = $('div.container')[0].innerHTML;
+	localStorage.container = $('div.container')[0].innerHTML;
+	localStorage.all = $('#categoria0')[0].innerHTML;
 }
 function loadBk() {
-	if (localStorage.bk) {
-		$('div')[0].innerHTML = localStorage.bk;
-		for (item of document.querySelectorAll('ol')) {
-			item.classList.add('d-none');
-		}
+	$('div.container')[0].innerHTML += localStorage.container;
+	for (item of $('ol')) {
+		item.classList.add('d-none');
 	}
+	$('#categoria0')[0].innerHTML += localStorage.all;
+	
 }
+
 
 
 // Swipe
-
-
-
 // Swipe Up / Down / Left / Right
 var initialX = null;
 var initialY = null;
@@ -179,3 +192,41 @@ initialY = null;
 e.preventDefault();
 };
 
+
+//Una volta cliccato il pulsate url caricato dal form viene utilizzato per generare un elemento
+//img nel div delle non categorizzate 
+$("#imageupload").on('change', function () {
+ 
+	var countFiles = $(this)[0].files.length;
+
+	var imgPath = $(this)[0].value;
+	var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+	var image_holder = $("#categoria0");
+	// image_holder.empty();
+ 
+	if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+        if (typeof (FileReader) != "undefined") {
+ 
+            for (var i = 0; i < countFiles; i++) {
+ 
+                var reader = new FileReader();
+                reader.onload = function (e) {
+					$("<img/>", 
+                    {
+                        "data-draggable": "item",
+                     	"src": e.target.result,
+                    }).appendTo(image_holder);
+                }
+ 				
+                image_holder.show();
+                reader.readAsDataURL($(this)[0].files[i]);
+            }
+ 
+        } else {
+            alert("It doesn't supports");
+        }
+    } else {
+        alert("Select Only images");
+    }
+    saveBk();
+});
