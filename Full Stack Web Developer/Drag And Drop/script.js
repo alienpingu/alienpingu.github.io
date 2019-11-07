@@ -129,11 +129,16 @@ function saveBk() {
 	localStorage.all = $('#categoria0')[0].innerHTML;
 }
 function loadBk() {
-	$('div.container')[0].innerHTML += localStorage.container;
-	for (item of $('ol')) {
-		item.classList.add('d-none');
+	if (localStorage.container && localStorage.all) {
+		$('div.container')[0].innerHTML += localStorage.container;
+		for (item of $('ol')) {
+			item.classList.add('d-none');
+		}
+		$('#categoria0')[0].innerHTML += localStorage.all;
 	}
-	$('#categoria0')[0].innerHTML += localStorage.all;
+	else {
+		console.log('Nessun backup locale')
+	}
 	
 }
 
