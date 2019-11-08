@@ -4,17 +4,19 @@ botNav.addEventListener("touchstart", startTouch, false);
 botNav.addEventListener("touchmove", moveTouch, false);
 
 
-// Per ogni pulsante categoria aggiungi un listener per il doppio click
-// Quando viene doppiocliccato rende il contenuto editable
-for (item of $('button')) {
-item.addEventListener('dblclick', (e) => { 
-	
-	if (e.target.isContentEditable) {
-		e.target.setAttribute('contenteditable', 'true');
-	} else {
-		e.target.setAttribute('contenteditable', 'false');
-	}
-})};
+// // Per ogni pulsante categoria aggiungi un listener per il doppio click
+// // Quando viene doppiocliccato rende il contenuto editable
+// for (item of $('button')) {
+// 	item.addEventListener('dblclick', (e) => { 
+// 		if (e.target.isContentEditable) {
+// 			e.target.setAttribute('contenteditable', 'true');
+// 			console.log('editabile');
+// 		} else {
+// 			e.target.setAttribute('contenteditable', 'false');
+// 			console.log('NON editabile');
+// 		}
+// 	})
+// };
 
 
 (function()
@@ -218,13 +220,14 @@ $("#imageupload").on('change', function () {
                 reader.onload = function (e) {
 					$("<img/>", 
                     {
-                        "data-draggable": "item",
+                        "draggable": "true",
                      	"src": e.target.result,
                     }).appendTo(image_holder);
                 }
  				
                 image_holder.show();
                 reader.readAsDataURL($(this)[0].files[i]);
+                saveBk();
             }
  
         } else {
@@ -233,5 +236,5 @@ $("#imageupload").on('change', function () {
     } else {
         alert("Select Only images");
     }
-    saveBk();
+    
 });
