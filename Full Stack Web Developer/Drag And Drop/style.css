@@ -6,11 +6,10 @@ html {
 /* draggable targets */
 [data-draggable="target"]
 {	
-	width: 100%;
 	overflow-y:auto;
 	background:#ddd;
 }
-/* draggable items */
+
 img
 {
 	height: 100px;
@@ -18,13 +17,15 @@ img
 	display:inline-block;
 }
 
-.bottomBar {
+
+/*RFS*/
+@media (max-width: 1200px) { legend { font-size: calc(1.275rem + 0.3vw); } h1, .h1 { font-size: calc(1.375rem + 1.5vw); } h2, .h2 { font-size: calc(1.325rem + 0.9vw); } h3, .h3 { font-size: calc(1.3rem + 0.6vw); } h4, .h4 { font-size: calc(1.275rem + 0.3vw); } .display-1 { font-size: calc(1.725rem + 5.7vw); } .display-2 { font-size: calc(1.675rem + 5.1vw); } .display-3 { font-size: calc(1.575rem + 3.9vw); } .display-4 { font-size: calc(1.475rem + 2.7vw); } .close { font-size: calc(1.275rem + 0.3vw); } 
+	.bottomBar {
 	display: block;
-	flex-wrap: wrap;
 	position: fixed;
 	bottom:0;
-	width: 100%;
-	min-height: 6rem;
+	left: 0;
+	margin:0px;
+	padding:0px;
 }
-/*RFS*/
-@media (max-width: 1200px) { legend { font-size: calc(1.275rem + 0.3vw); } h1, .h1 { font-size: calc(1.375rem + 1.5vw); } h2, .h2 { font-size: calc(1.325rem + 0.9vw); } h3, .h3 { font-size: calc(1.3rem + 0.6vw); } h4, .h4 { font-size: calc(1.275rem + 0.3vw); } .display-1 { font-size: calc(1.725rem + 5.7vw); } .display-2 { font-size: calc(1.675rem + 5.1vw); } .display-3 { font-size: calc(1.575rem + 3.9vw); } .display-4 { font-size: calc(1.475rem + 2.7vw); } .close { font-size: calc(1.275rem + 0.3vw); } }
+}

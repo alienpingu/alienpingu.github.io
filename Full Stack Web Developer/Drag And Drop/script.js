@@ -1,25 +1,7 @@
 loadBk();
-var botNav = document.getElementsByClassName('bottomBar')[0];
-botNav.addEventListener("touchstart", startTouch, false);
-botNav.addEventListener("touchmove", moveTouch, false);
+DraNDro();
 
-
-// // Per ogni pulsante categoria aggiungi un listener per il doppio click
-// // Quando viene doppiocliccato rende il contenuto editable
-// for (item of $('button')) {
-// 	item.addEventListener('dblclick', (e) => { 
-// 		if (e.target.isContentEditable) {
-// 			e.target.setAttribute('contenteditable', 'true');
-// 			console.log('editabile');
-// 		} else {
-// 			e.target.setAttribute('contenteditable', 'false');
-// 			console.log('NON editabile');
-// 		}
-// 	})
-// };
-
-
-(function()
+function DraNDro()
 {
 
 	//exclude older browsers by the features we need them to support
@@ -100,104 +82,33 @@ botNav.addEventListener("touchmove", moveTouch, false);
 	
 	}, false);
 
-})();	
-
-
-function dSwitch(y) 
-{	var x = document.getElementById('categoria' + y);
-	if (x.classList == 'd-none') 
-	{
-		x.classList.remove('d-none');
-	} else 
-	{
-		x.classList.add('d-none');
-	}
-}
-
-
+};	
 
 // Aggiungi Categoria
 function addCategoria() {
-	var n = 0;
+	// Crea un pulsante con sottostante categoria con nome 'categoria' + numero (estetico)
+	var n = 0; 
 	for (item of $('[data-draggable="target"]')) {n = n + 1;}
-	var x = `<button class= 'btn btn-block btn-primary' onclick='dSwitch(${n})'>categoria${n}</button><ol id='categoria${n}' class='d-none' data-draggable='target'></ol>`
-	$('div')[0].innerHTML+= x;
+	var htmlWall = `<button class= 'btn btn-block btn-primary'>categoria${n}</button><ol class='d-none' data-draggable='target'></ol>`
+	$('div.bk')[0].innerHTML+= htmlWall;
+	//Cliccando il pulsante categoria, quest' ultima verra mostrata / nascosta
+	$('button').on('click', Clk);
+	DbClickListener();
 	saveBk();
 }
-
 // LocalBackupSys
 function saveBk() {
-	localStorage.container = $('div.container')[0].innerHTML;
-	localStorage.all = $('#categoria0')[0].innerHTML;
+	localStorage.bk = $('div.bk')[0].innerHTML;
+	localStorage.tutte = $('#categoria0')[0].innerHTML;
+	console.log('backup effettuato')
 }
 function loadBk() {
-	if (localStorage.container && localStorage.all) {
-		$('div.container')[0].innerHTML += localStorage.container;
-		for (item of $('ol')) {
-			item.classList.add('d-none');
-		}
-		$('#categoria0')[0].innerHTML += localStorage.all;
-	}
-	else {
-		console.log('Nessun backup locale')
-	}
+	if (localStorage.bk == undefined) {localStorage.bk = "";}
+	else {$('div.bk')[0].innerHTML += localStorage.bk;}
 	
-}
-
-
-
-// Swipe
-// Swipe Up / Down / Left / Right
-var initialX = null;
-var initialY = null;
-
-function startTouch(e) {
-	initialX = e.touches[0].clientX;
-	initialY = e.touches[0].clientY;
-};
-
-function moveTouch(e) {
-	if (initialX === null) {
-		return;
-	}
-
-	if (initialY === null) {
-		return;
-	}
-
-	var currentX = e.touches[0].clientX;
-	var currentY = e.touches[0].clientY;
-
-	var diffX = initialX - currentX;
-	var diffY = initialY - currentY;
-
-	if (Math.abs(diffX) > Math.abs(diffY)) {
-		// sliding horizontally
-		if (diffX > 0) {
-		// swiped left
-			console.log("swiped left");
-		} else {
-		// swiped right
-			console.log("swiped right");
-		} 
-		} else {
-		// sliding vertically
-		if (diffY > 0) {
-		// swiped up
-			console.log("swiped up");
-			dSwitch(5);
-		} 
-		else {
-		// swiped down
-			console.log("swiped down");
-			dSwitch(5);
-		} 
-	}
-
-initialX = null;
-initialY = null;
-e.preventDefault();
-};
+	if (localStorage.tutte == undefined) {localStorage.tutte = "";}
+	else {$('#categoria0')[0].innerHTML += localStorage.tutte;}}
+	
 
 
 //Una volta cliccato il pulsate url caricato dal form viene utilizzato per generare un elemento
@@ -209,7 +120,6 @@ $("#imageupload").on('change', function () {
 	var imgPath = $(this)[0].value;
 	var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
 	var image_holder = $("#categoria0");
-	// image_holder.empty();
  
 	if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
         if (typeof (FileReader) != "undefined") {
@@ -220,16 +130,17 @@ $("#imageupload").on('change', function () {
                 reader.onload = function (e) {
 					$("<img/>", 
                     {
-                        "draggable": "true",
+                        "data-draggable": "item",
                      	"src": e.target.result,
                     }).appendTo(image_holder);
                 }
  				
                 image_holder.show();
                 reader.readAsDataURL($(this)[0].files[i]);
-                saveBk();
+                
             }
- 
+            DraNDro();
+ 			saveBk();
         } else {
             alert("It doesn't supports");
         }
@@ -238,3 +149,26 @@ $("#imageupload").on('change', function () {
     }
     
 });
+
+
+
+//Cliccando il pulsante categoria, quest' ultima verra mostrata / nascosta
+function Clk() {this.nextElementSibling.classList.toggle('d-none');console.log('click')}
+$('button').on('click', Clk);
+
+// Rende editabile il contenuto del bottone doppiocliccato
+DbClickListener = () => {$('button').on('dblclick',function() {
+	this.contentEditable = "true";
+	$('button').off('click', Clk);
+	console.log('on');
+});}
+DbClickListener();
+
+// Premendo il tasto enter si esce dalla modalità editing
+$('button').on('keyup', function(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		$('button').on('click', Clk);
+		this.contentEditable = "false";
+		saveBk();
+}});
