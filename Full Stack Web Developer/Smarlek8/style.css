@@ -29,7 +29,6 @@ h1 {font-family: Nunito;}
 #home {height: 100vh;}
 #home>h1 {
     text-align: center;
-    font-size: 3rem; 
     margin: 3rem 0 3rem 0;
     font-weight: bolder;
     color: white;
