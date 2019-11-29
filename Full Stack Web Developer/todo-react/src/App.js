@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import tachyons from 'tachyons';
 import List from './List';
+import tachyons from 'tachyons';
 
 export default class App extends Component {
   constructor(props) {
