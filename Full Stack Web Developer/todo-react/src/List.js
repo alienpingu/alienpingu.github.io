@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const List = props => (
-  <ul className='list fl w-100 b--navy'>
+  <ul>
     {
-      props.items.map((item, index) => <li className=' f3 ttc courier bg-lightest-blue bw1 b--navy' key={index}>{item}</li>)
+      props.items.map((item, index) => <li key={index}>{item}</li>)
     }
   </ul>
 );
