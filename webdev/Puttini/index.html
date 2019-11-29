@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<base href="index.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/195f6b2ce4.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>	
+	<!-- The overlay -->
+	<div id="MobileNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+	    <a href="#ChiSiamo" onclick="closeNav()">Chi Siamo</a>
+	    <a href="#Contatti" onclick="closeNav()">Contatti</a>
+	    <a href="#DoveSiamo" onclick="closeNav()">Dove Siamo</a>
+	    <a href="#IlParco" onclick="closeNav()">Il Parco</a>
+	  </div>
+
+	</div>
+	<ul class="nav dark-primary-color sticky-top">
+		<li>
+			<a id='logo'class="" href="#">
+				<img  src="http://www.pensionecani.it/wp-content/themes/cane/images/slideheader0-object2014798738.png">
+			</a> 	
+		</li>
+		<li class="nav-item first">
+			<a class="nav-link d-none d-md-inline-block" href="#IlParco"><i class="fas fa-tree mr-2"></i>Il Parco</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link d-none d-md-inline-block" href="#ChiSiamo"><i class="fas fa-heart mr-2"></i>Chi Siamo</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link d-none d-md-inline-block" href="#DoveSiamo"><i class="fas fa-map-marker-alt mr-2"></i>Dove Siamo</a>
+		</li>
+		<li class="nav-item ml-auto">
+			<a class="nav-link d-none d-md-inline-block" href="#Contatti"><i class="fas fa-address-book mr-2"></i>Contatti</a>
+		</li>
+		<li class="nav-item" onclick="openNav()">
+			<i class="nav-link fas fa-bars d-inline-block d-md-none"></i>
+		</li>
+	</ul>
+	<a href="https://www.facebook.com/pensionecaniPuttini/" class="btn btn-primary btn-block btn-lg fixed-bottom rounded-0"><i class="fab fa-facebook-square mr-2"></i>Seguici su Facebook!</a>
+	<div class="container-fluid">	
+		<div class="row pt-4">
+			<div id='home' class="col col-12 col-lg-4" data-aos="fade-up">
+				<div class="card my-2 p-md-5">
+					<div id="carouselExampleSlidesOnly" class="card-img-top carousel slide d-md-none" data-ride="carousel">
+						<div class="carousel-inner">
+			    			<div class="carousel-item active">
+			        			<img src="http://www.pensionecani.it/wp-content/themes/cane/images/slideheader1.jpg" class="d-block w-100" alt="...">
+			    			</div>
+			    			<div class="carousel-item">
+			    				<img src="http://www.pensionecani.it/wp-content/themes/cane/images/slideheader2.jpg" class="d-block w-100" alt="...">
+			    			</div>
+			    			<div class="carousel-item">
+			      				<img src="http://www.pensionecani.it/wp-content/themes/cane/images/slideheader3.jpg" class="d-block w-100" alt="...">
+			    			</div>
+		  				</div>
+					</div>
+					<h1 class="text-center display-1" >Puttini</h1>
+					<h2>Dal 1930</h2>
+					<h3>Pensione per cani</h3>
+					<div class="card-body">
+						<p class="card-text"> 
+						Il tuo migliore amico in vacanza insieme a noi!<br>
+						Da tre generazioni mettiamo a disposizione la nostra esperienza, passione e professionalità per un soggiorno pensato e realizzato per farlo vivere piacevolmente nella sua dimensione.<br>
+						Ampi box immersi nel verde all’interno del Parco Sud di Milano.<br>
+						20 mila mq di parchi per correre e giocare con le nostre amorevoli ragazze.<br>
+						Un laghetto tutto per loro per tuffi in libertà.<br>
+						Uno staff qualificato scelto con cura perché i nostri ospiti siano felici sempre, come quel primo giorno del 1930.<br>
+						Vieni a trovarci! Ti aspettiamo!</p>
+					</div>
+				</div>
+			</div>
+			<div id="ChiSiamo" class="col col-12 col-lg-8" data-aos="fade-up">
+				<div class="card my-2">
+					<iframe class='card-img-top' width="100%" height="100%" src="https://www.youtube.com/embed/DAwQnuib5Qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="card-body">
+						<h1 class="text-center primary-text-color">Chi Siamo</h1>
+						<p> 
+					Fondata nel 1930 da Ernesto Puttini la nostra struttura offre un servizio completo di pensione, con particolare attenzione alla alimentazione e al benessere degli animali.<br>
+					Curati da mani esperte i cani si adattano rapidamente all’ambiente e trovano lo stesso affetto e calore dei propri padroni. La nostra più grande soddisfazione è vedere i nostri ospiti felici, sempre, come da quel primo giorno del 1930.</p>
+					<a href="#DoveSiamo" class="btn btn-primary btn-block btn-lg">Dove siamo?</a>
+					<a href="http://www.pensionecani.it/Regolamento.pdf" class="btn btn-info btn-block">Regolamento</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="Contatti"class="col col-12 col-md-8 " data-aos="fade-up">
+				<div class="card my-2 ">
+					<img class="card-img-top p-md-3" src="svg/contacts.svg">
+						<div class="card-body">
+							<h1 class="card-title">Contatti</h1>
+							<a class='text-decoration-none' href='tel:029085090'><i class="fas fa-phone mr-2"></i>Telefono: 02 9085090</a><br>
+							<a class='text-decoration-none' href='mailto:puttini@pensionecani.it'><i class="fas fa-envelope mr-2"></i>E-mail: puttini@pensionecani.it</a>
+							<h2>I nostri orari</h2>
+							<p class="card-text">Siamo aperti al pubblico tutti i giorni, dalle 8 alle 18 orario continuato.</p>
+							<p class="text-muted">A Natale, Pasqua, Ferragosto ci occupiamo di tutti i nostri ospiti ma siamo CHIUSI al pubblico.<br>
+							Il primo Gennaio siamo aperti dalle 15 alle 18<br>
+							</p>
+							<p class="text-weight-bold">Per qualsiasi informazione, per prenotazioni o per venire a conoscerci, chiamateci! Siamo a vostra disposizione!</p>
+						</div>
+				</div>
+			</div>
+			<div id='DoveSiamo'class="col col-12 col-md-4" data-aos="fade-up">
+				<div class="card my-2">
+					<iframe class="card-img-top" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d179277.13126609262!2d9.008891!3d45.405202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x67200cbcf47fea94!2sPuttini+Snc+Di+Simona+%26+Gianni+Puttini!5e0!3m2!1sit!2sit!4v1426663851520" width="100%" height="100%" frameborder="0"></iframe>
+						<div class="card-body">
+							<h1 class="card-title">Dove Siamo</h1>
+							<p class="card-text">
+								Siamo a 14 km dal centro di Milano.
+								Come ci si arriva:
+								da Milano,
+								via Lorenteggio per Abbiategrasso-Vigevano, 4 km dopo Trezzano sul 							Naviglio
+								(villaggio Zingone) sulla statale Nuova Vigevanese.
+								Dalla Tangenziale Ovest,
+								uscita Vigevano, 4 km in direzione Abbiategrasso-Vigevano
+							</p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">	
+			<div id='IlParco' class="col col- mb-5" data-aos="fade-up">
+				<div class="card my-2">
+					<div class="card-body">
+						<h1 class="card-title">Il Parco</h1>
+						<p class="card-text">Una grande area destinata a parco di 40.000 metri quadrati, permette ai cani di sfogare la loro voglia di libertà e la loro esuberanza sotto il controllo di personale specializzato.<br>
+						Ci troviamo a pochi minuti da Milano, eppure qui siamo proprio in un’oasi di verde e silenzio dove i nostri amici possono correre felici e sereni.</p>
+						<button class="btn btn-block btn-lg btn-success" onclick="dSwitch()">Gallery</button>
+							<div id='Gallery'class="row d-none">
+								<div class="col col-12 col-md-4 text-center">
+									<img src="img/parco/1.jpg">
+									<img src="img/parco/2.jpg">
+									<img src="img/parco/3.jpg">
+									<img src="img/parco/4.png">
+									<img src="img/parco/5.jpg">
+									<img src="img/parco/6.jpg">
+									<img src="img/parco/7.jpg">
+									<img src="img/parco/8.jpg">
+									<img src="img/parco/9.jpg">
+								</div>
+								<div class="col col-12 col-md-4 text-center">
+									<img src="img/parco/10.jpg">
+									<img src="img/parco/11.jpg">
+									<img src="img/parco/12.jpg">
+									<img src="img/parco/13.jpg">
+									<img src="img/parco/14.png">
+									<img src="img/parco/15.jpg">
+									<img src="img/parco/16.png">
+									<img src="img/parco/17.jpg">
+									<img src="img/parco/27.jpg">
+									
+								</div>
+								<div class="col col-12 col-md-4 text-center">
+									<img src="img/parco/19.jpg">
+									<img src="img/parco/20.jpg">
+									<img src="img/parco/21.jpg">
+									<img src="img/parco/22.png">
+									<img src="img/parco/23.jpg">
+									<img src="img/parco/24.jpg">
+									<img src="img/parco/25.jpg">
+									<img src="img/parco/26.jpg">
+									<img src="img/parco/18.jpg">
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid pt-4 pb-5">
+			<div class="row">
+				<div class="col-6">
+					<h4>Contattaci</h4>
+					<a class='text-decoration-none' href='tel:029085090'><i class="fas fa-phone mr-2"></i>Chiamaci!</a><br>
+					<a class='text-decoration-none' href='mailto:puttini@pensionecani.it'><i class="fas fa-envelope mr-2"></i>Scrivici!</a>
+				</div>
+				<div class="col-6">
+					 	<h4>Footer Nav</h4>
+					    <a href="#ChiSiamo">Chi Siamo</a><br>
+					    <a href="#Contatti">Contatti</a><br>
+					    <a href="#DoveSiamo">Dove Siamo</a><br>
+					    <a href="#IlParco">Il Parco</a><br>
+				</div>
+			</div>
+			<hr>
+			<p>Puttini - Pensione per cani Località Isola Bettolina - 20083 Gaggiano (Milano) Tel.: 02 9085090 Partita IVA 05097490964</p>
+		</div>
+	</footer>
+</body>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>
+</html>
+

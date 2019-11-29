@@ -1,0 +1,104 @@
+:root {
+	--dark-bg: #121212;
+	--text: rgba(255,255,255,0.8);
+	--text-light: rgba(255,255,255,0.5);
+	--dark-1dp: rgba(255,255,255,0.05);
+	--dark-2dp: rgba(255,255,255,0.07);
+	--dark-3dp: rgba(255,255,255,0.08);
+	--dark-4dp: rgba(255,255,255,0.09);
+	--red-primary: #B9323F;
+}
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+	background: var(--dark-bg);
+	color: var(--text);
+}
+
+section {
+	margin: 2rem 0;
+}
+
+.hero {
+	text-align: center;
+
+}
+
+.hero > display1 {
+	font-size: 15vw;
+	font-family: 'Montserrat', sans-serif;
+}
+.hero > .display1 {
+  color: var(--red-primary);
+  -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon5 1.5s ease-in-out infinite alternate;
+  animation: neon5 1.5s ease-in-out infinite alternate;
+}
+
+.hero .btn {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+section > h1 {
+	margin:1rem 0;
+	color: var(--red-primary);
+	text-align: center;
+}
+.list-group-item {
+	background: var(--dark-2dp);
+	color:#FFF;
+}
+.tab-content {
+	background: var(--dark-2dp);
+	color:#FFF;
+	padding:1rem;
+	height: 100%;
+	border-radius:0.25rem;
+}
+.list-group-item.active {
+	background-color: var(--red-primary);
+	border-color: var(--red-primary);
+}
+
+.card {
+	background: var(--dark-2dp);
+	max-height: 50rem;
+
+}
+.card-img-top {
+	height: 15rem;
+}
+.card-text {
+	color: var(--text-light);
+}
+.card .btn {
+	width: 100%;
+}
+#Gallery img {
+	flex-wrap: wrap;
+	width: 100%;
+	max-height: 14rem;
+	border: 1px solid var(--red-primary);
+	margin: 1rem 0 ; 
+	border-radius: 0.25rem;
+}
+
+#Credits p {
+	color: var(--text-light);
+}
+#Credits h3 {
+	text-align: center;
+}
+
+@-webkit-keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B9323F, 0 0 70px #B9323F, 0 0 80px #B9323F, 0 0 100px #B9323F, 0 0 150px #B9323F;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B9323F, 0 0 35px #B9323F, 0 0 40px #B9323F, 0 0 50px #B9323F, 0 0 75px #B9323F;
+  }
+}
+@media (max-width: 1200px) { legend { font-size: calc(1.275rem + 0.3vw); } h1, .h1 { font-size: calc(1.375rem + 1.5vw); } h2, .h2 { font-size: calc(1.325rem + 0.9vw); } h3, .h3 { font-size: calc(1.3rem + 0.6vw); } h4, .h4 { font-size: calc(1.275rem + 0.3vw); } .display-1 { font-size: calc(1.725rem + 5.7vw); } .display-2 { font-size: calc(1.675rem + 5.1vw); } .display-3 { font-size: calc(1.575rem + 3.9vw); } .display-4 { font-size: calc(1.475rem + 2.7vw); } .close { font-size: calc(1.275rem + 0.3vw); } }

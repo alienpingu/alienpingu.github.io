@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smarlek8</title>
+	<link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="aos.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id='home' class="container-fluid">
+		<h1>FACEROLLER</h1>
+		<div class="card">
+			<img class="card-img" src='pic/hero.png'>
+			<p>By Smarlek8</p>
+		</div>
+		<a href="#benefit"><div class="text-center"><i class="fas fa-angle-double-down"></i></div></a>
+	</div>
+	<div id='benefit'>
+		<h1 data-aos="fade-right">Benefit</h1>
+		<hr data-aos="fade-right">
+		<ul>
+			<li data-aos="fade-left"><h3>Reduce fine lines</h3></li>
+			<li data-aos="fade-left"><h3>Reduce black circles</h3></li>
+			<li data-aos="fade-left"><h3>Improve flabby skin</h3></li>
+			<li data-aos="fade-left"><h3>Relaxing muscles</h3></li>
+		</ul>
+	</div>
+	<div id='design'>
+			<h1 data-aos="fade-left">New Design!</h1>
+			<hr data-aos="fade-left">
+			<div class="container-fluid">
+				<div class="card" data-aos="zoom-in">
+					<img class="card-img" src="pic/3.jpg" >
+				</div>
+			</div>
+	</div>
+	<div id="buy">
+		<h1 data-aos="fade-right">Why Amazon?</h1>
+		<hr data-aos="fade-right">
+		<ul>
+			<li data-aos="flip-up"><h3><i class="fas fa-shipping-fast"></i>Fast shipping</h3></li>
+			<li data-aos="flip-up"><h3><i class="fas fa-shield-alt"></i>Secure payment</h3></li>
+			<li data-aos="flip-up"><h3><i class="fas fa-medal"></i>Verified quality</h3></li>
+			<li data-aos="flip-up"><h3><i class="fas fa-box-open"></i>Free return</h3></li>
+		</ul>
+		<div class="container"><a href="#" class="btn btn-lg btn-outline-light">BUY NOW</a></div>
+		
+		
+	</div>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDCKchQSPUQvLV89LH3_7zX_d5DtMjh8gI",
+    authDomain: "resume-cd952.firebaseapp.com",
+    databaseURL: "https://resume-cd952.firebaseio.com",
+    projectId: "resume-cd952",
+    storageBucket: "resume-cd952.appspot.com",
+    messagingSenderId: "347447569952",
+    appId: "1:347447569952:web:b247e5b8c48406206e1645",
+    measurementId: "G-1J3DSF6YQS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+	<script src="jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+	<script src="popper.min.js" crossorigin="anonymous"></script>
+	<script src="bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="fa.js" crossorigin="anonymous"></script>
+	<script src="aos.js"></script>
+	<script src="script.js"></script>
+</html>

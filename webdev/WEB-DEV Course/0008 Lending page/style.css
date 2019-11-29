@@ -1,0 +1,36 @@
+body {
+	background: pink url(background.jpg);
+	background-position: center; /* Center the image */
+  	background-repeat: repeat; /* Do not repeat the image */
+  	background-size: fixed; /* Resize the background image to cover the entire container */
+  	color: #FF7400; 	
+  	text-align: center;
+  	padding-top: 250px;
+
+
+}
+
+
+h1 {
+	letter-spacing: 4px;
+	text-shadow: 1px 1px 3px gray;
+	font-family: 'Baloo Chettan', cursive;
+	font-size: 8em;
+}
+
+p {
+	font-family: 'Baloo Chettan', cursive;
+	font-size: 3em;
+}
+
+
+#corpo a {
+	transition: all 1s;
+	border-spacing: 20px;
+}
+
+#corpo a:hover {
+	transform: scale(1.1);
+}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<header>
+	<h1>Form</h1><hr><br>
+</header>
+<body>
+<!--Con POST al posto di GET no info in URL-->
+<div>
+	<form method="GET" >
+		<fieldset>
+			<legend>Informazioni personali</legend>
+			Nome: <input type="text" name="nome" placeholder="Nome" required>*<br>
+			Cognome: <input type="text" name="cognome" placeholder="Cognome" required>*<br>
+			<span>Email:</span><input type="Email" name="email" required placeholder="example@gmail.com">*<br>
+			Password: <input type="Password" name="password" minlength="5" required placeholder="Min 5 character">*<br>
+		</fieldset><br>
+		Genere:<br>
+		<input type="radio" name="genere" value="uomo">Uomo 
+		<input type="radio" name="genere" value="donna">Donna 
+		<input type="radio" name="genere" value="altro">Altro<br>
+		Animali:<br>
+		<input type="checkbox" name="animale" value="cane">Cane<br>
+		<input type="checkbox" name="animale" value="gatto">Gatto<br>
+		<input type="checkbox" name="animale" value="pesce">Pesce<br>
+		Car: <br>
+		<select name="macchina">
+		<option value="audi">Audi</option>
+		<option value="bmw">BMW</option>
+		<option value="volvo">Volvo</option>
+		<option value="fiat">Fiat</option>
+		<option value="ford">BMW</option>
+		</select>
+		<hr><br>
+		<input type="submit" value="Registrati">
+		<input type="reset" value="Azzera dati">
+	</form>
+</div>
+</body>
+<footer>
+	<div>
+	<p>This site is made with love <3</p>
+	<textarea maxlength="120" placeholder="Leave a comment pls"></textarea>
+	<input type="submit" value="Send">
+	</div>
+</footer>
+</html>

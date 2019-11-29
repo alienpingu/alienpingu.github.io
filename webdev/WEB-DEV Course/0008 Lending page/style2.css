@@ -1,0 +1,36 @@
+body {
+	background: pink url(background.jpg);
+	background-position: center; /* Center the image */
+  	background-repeat: repeat; /* Do not repeat the image */
+  	background-size: fixed; /* Resize the background image to cover the entire container */
+  	color: #FF7400;
+  	
+}
+
+#title {
+	border-bottom: 2px solid #FF7400;
+	border-right: 2px solid #FF7400;
+	padding: 10px;
+	width: 300px;
+	box-shadow: 2px 2px 4px black;
+	background-color: #13073A;
+}
+
+
+body form {
+	padding: 20px;
+	width: 600px;
+
+}
+
+img {
+  width: 100%;
+  height: 400px;
+}
+
+.card {
+	background: #13073A;
+	border-radius: 10px;
+	border: 2px solid #FF7400;
+	
+}
