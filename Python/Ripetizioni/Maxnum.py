@@ -8,7 +8,7 @@ def maxNum(a,b):
         print('Il numero più grande tra i due è ' + str(b))
 
 #Main
-n = int(input("Primo nuemro  "))
+n = int(input("Primo numero  "))
 m = int(input("Secondo numero  "))
 print(maxNum(n,m))
 
