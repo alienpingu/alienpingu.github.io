@@ -1,0 +1,126 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: black;
+
+}
+
+/*HORIZONTAL STICKY NAVBAR*/
+nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+  list-style: none;
+  color: white;
+  background-color: black;
+}
+
+nav li:last-child {
+  border-right: none;
+  float:right;
+}
+
+nav li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #6c63ff;
+  color:white;
+}
+/*HEADER*/
+#header {
+  text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 0.5rem;
+}
+#header h1 {
+	font-family: 'Bebas Neue', cursive;
+	color: #6c63ff;
+ 	text-align: left;
+ 	font-size: 3.5rem;
+	letter-spacing: 0.02em;
+	margin-top: 0;
+	-webkit-font-smoothing: antialiased; 
+}
+#header a {
+  background-color: #6c63ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+#header p {
+	padding-bottom: 0.5rem;
+	text-align: left;
+	color: #6c63ff;
+	opacity: 50%;
+}
+
+#post {
+	background: rgba(255, 255, 255, 0.09);
+	padding: 0.5rem;
+	margin: 0.5rem;
+	margin-bottom: 1rem;
+	border-radius: 0.5rem;
+	color: white;
+
+}
+#post h1 {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2rem;
+}
+
+#bottom-bar {
+	display:grid;
+  	grid-template-columns: repeat(3, auto);
+  	position: sticky;
+  	position: -webkit-sticky;
+  	bottom: 0;
+}
+.social{
+  width: 100%;
+  height: 45px;
+  font-size: 1.5em;
+  color: white;
+  display: grid;
+  place-items:center;
+}
+.facebook {
+  background: #3b5998;
+}
+.instagram {
+  background: #d6249f;
+  background: radial-gradient(circle at 1% 100%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.youtube {
+  background: #dd4b39;
+}
+
+/*FONT*/
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("BebasNeue-Regular.ttf");
+}
