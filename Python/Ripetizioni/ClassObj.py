@@ -1,5 +1,9 @@
 #Dichiarazione oggetti
 #I poligoni sono oggetti, hanno come parametri il lato e come parametro interno il nome del poligono
+#Gli oggetti definiscono anche due funzioni:
+#	-Formula per calcalare il perimetro in base al lato
+#	-Formula per calcalare l' area in base al lato
+
 class Quadrato:
 	def __init__(self, lato):
 		self.nome = 'Quadrato'
@@ -26,6 +30,14 @@ class Pentagono:
 		return x.lato * 5
 	def area(x):
 		return x.perimetro() * 0.688 / 2
+class Esagono:
+	def __init__(self, lato):
+		self.nome = 'Esagono'
+		self.lato = lato
+	def perimetro(x):
+		return x.lato * 6
+	def area(x):
+		return x.perimetro() * 0.56 / 2
 #definiamo una funzione che stampi un interfaccia così da migliorare l' esperienza utente
 def Interfaccia():
 	print('Programma che dato il lato calcola perimetro ed area di vari poligoni')
@@ -33,6 +45,7 @@ def Interfaccia():
 	print('1. Quadrato')
 	print('2. Triangolo')
 	print('3. Pentagono')
+	print('4. Esagono')
 #Dichiariamo una funzione che stampi con una buona formattazione i dati che ci interessano;
 # -nome del poligono
 # -Lato del poligono
@@ -50,7 +63,7 @@ n = int(input('> ')) #Inseriamo un valore che corrisponde ad un poligono
 l = int(input('Lato > ')) #Inseriamo un valore che corrisponde al lato del poligono
 #Inseriamo ogni oggetto ( poligono ) in un Array per consentirci di creare un 'interruttore multiplo'
 #più 'elegante' di if... elif... elif... else
-switch = [Quadrato(l), Triangolo(l), Pentagono(l)]
+switch = [Quadrato(l), Triangolo(l), Pentagono(l),Esagono(l)]
 #Utilizziamo TRY perchè nel caso il valore (n) non fosse valido il programma esegue,
 #EXCEPT il quale a compito di stampare a scermo la spiegazione dell'errore
 try:#Prova ad eseguire i comandi:

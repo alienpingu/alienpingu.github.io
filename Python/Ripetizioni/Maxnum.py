@@ -1,16 +1,18 @@
 # massimo 2 numeri
-def maxNum(a,b):
-    if a == b:
+def maxNum(primo,secondo):
+    if primo == secondo:
         print('I numeri sono identici')
-    elif a > b:
-        print('Il numero più grande tra i due è ' + str(a))
+    elif primo > secondo:
+        print('Il numero più grande tra i due è ' + str(primo))
     else:
-        print('Il numero più grande tra i due è ' + str(b))
+        print('Il numero più grande tra i due è ' + str(secondo))
 
 #Main
-n = int(input("Primo numero  "))
-m = int(input("Secondo numero  "))
-print(maxNum(n,m))
+#Input parametre per funzione
+INprimoNumero = int(input("Primo numero  "))
+INsecondoNumero = int(input("Secondo numero  "))
+#Stampa il risultato della funzione
+maxNum(INprimoNumero,INsecondoNumero)
 
 #Stop
 input()

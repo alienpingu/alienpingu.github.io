@@ -1,0 +1,171 @@
+html, body {
+	margin:	0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body {
+	background: rgb(103,178,111);
+	background: linear-gradient(315deg, rgba(103,178,111,1) 0%, rgba(76,162,205,1) 100%); 
+	font-family: 'Dosis', sans-serif;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	text-transform: none;
+	color: 	white;
+}
+a:hover {
+	cursor: pointer;
+}
+/*LANDING*/
+#landing {
+	height: 100vh;
+}
+#landing > div {
+	text-align: center;
+	padding-top: 1rem;
+}
+#landing > div:first-child {
+	margin-top: 1rem;
+}
+#landing > div > img {
+	width: 100%;
+	padding-right: 3rem;
+	padding-left: 3rem;
+
+}
+#landing > .space {
+	padding: 2rem 0 2rem 0;
+}
+#landing > .space > h1 {
+	font-size: 2rem;
+}
+#landing > .space > p {
+	color: var(--grass);
+}
+#landing > .space > ul > li{
+	display: inline-block;
+	padding: 0.5rem;
+}
+
+#landing > .space > ul > li > a {
+
+	color: white;
+	text-decoration: none;
+	text-transform: none;
+}
+#landing > .space > .list > li > a {
+	color: var(--grass);
+	border: 1px solid var(--grass);
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+}
+#landing > .space > .list > li > a:hover {
+	-webkit-box-shadow: 0px 10px 10px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 10px 10px 2px rgba(0,0,0,0.5);
+	box-shadow: 0px 10px 10px 2px rgba(0,0,0,0.5);
+	transition: 0.3s;
+}
+#portfolio .btn:hover{
+	background-color: var(--grass);
+
+transition: 0.3s;
+	transform: scale(1.05);}
+.arrow {
+  white-space: nowrap;
+  font-size: 4rem;
+  position: absolute;
+  color: white;
+  right: 0;
+  bottom: 50px;
+  left: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  transform: translateY(0);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 750ms ease-in-out;
+  -ms-transition: all 750ms ease-in-out;
+  -o-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+}
+.lift {
+  transform: translateY(14px);
+}
+#portfolio h1 {
+	text-align: center;
+	color: 	white;
+	margin-bottom: 1rem;
+}
+#portfolio > .container > .card{
+  position: relative;
+  width: 250px;
+  /*height: 350px; */ /*Rende le carte alte uguali*/
+  top: calc(50% - 175px);
+  left: calc(50% - 125px);
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#portfolio > .container > .card:after{
+ content: '';
+ width: 300px;
+ height: 300px;
+ background: inherit; 
+ position: absolute;
+ left: -25px;
+ left position
+ right: 0;
+ top: -25px;  
+ top position 
+ bottom: 0;
+ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+ filter: blur(10px);
+}
+#portfolio .card-title {
+	color: 	white;
+}
+/*PORTFOLIO*/
+#curriculum {
+	padding-top: 3rem;
+}
+#curriculum > h1 {
+  	position: 	absolute;	
+  	transform: rotate(270deg);
+  	margin-top: 100px;
+	margin-left: -40px;
+}
+#curriculum > ul {
+	margin-top: 1.5rem;
+	margin-left: 10rem;
+}
+#curriculum .c-timeline-item__body {
+	color: 	var(--sky);
+	font-weight: bold;
+}
+#curriculum p {
+	color: var(--grass) !important; 
+}
+
+
+/*PRESET*/
+:root {
+  --grass: #67B26F;
+  --sky: #4CA2CD;
+  --space: #203A43;
+}
+.space {
+	background: var(--space);
+	color: white;
+}
+.cmd {
+	font-family: 'Courier Prime', monospace;
+}
+
+
+
+
