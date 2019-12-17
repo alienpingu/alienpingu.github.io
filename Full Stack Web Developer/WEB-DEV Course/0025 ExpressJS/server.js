@@ -4,7 +4,7 @@ const app = express();
 
 // Response of text/html
 app.get('/', (req, res) => {
-	res.send('<h1>Hello ExpressJS!</h1>')
+	res.send('<h1>Hello!</h1>')
 });
 
 // Response of JSON
