@@ -1,0 +1,15 @@
+{
+  "name": "renamebot",
+  "version": "1.0.0",
+  "description": "Read a exel file and rename photo",
+  "main": "RenameBot.js",
+  "dependencies": {
+    "xlsx": "^0.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuele Bertocco",
+  "license": "ISC"
+}

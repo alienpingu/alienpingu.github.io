@@ -33,7 +33,6 @@ def IfExistsRename():
 	if os.path.exists(before) == True:
 		after = database[before]
 		os.rename(before, after)
-		print(f'{before} -> {after}')
 
 
 
@@ -86,7 +85,6 @@ for i in range(1,188):
 
 c = 1
 for elemento in database:
-	print(f'{c}) {elemento} => {database[elemento]} ')
 	c += 1
 
 
