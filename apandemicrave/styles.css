@@ -1,0 +1,84 @@
+body {
+    background-color: #000000;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: black;
+    transition-duration: 0.25s;
+}
+
+#hero, #info {
+    height: 100vh;
+}
+
+#hero {
+    background-image: url(./img/bg.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.btn-block {
+    width: auto;
+}
+
+/* CENTRA VERTICALMENTE E ORIZZONTALMENTE */
+.container-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#info .container-center, #hero .container-center {
+    height: 90%;
+}
+
+
+
+/* Larghezza massima */
+.w100 {
+    width: 100%;
+}
+
+/* BOUNCING ARROW */
+.arrow {
+  position: relative;
+  bottom: -2rem;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+@media (max-width: 768px) {
+    #hero .container-center {
+        height: 80%;
+    }
+    #info .container-center {
+        display: block;
+    }
+
+    .btn-block {
+        width: 100%;
+    }
+}
