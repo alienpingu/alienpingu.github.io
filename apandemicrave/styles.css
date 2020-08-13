@@ -2,6 +2,10 @@ body {
     background-color: #000000;
     color: white;
     scroll-behavior: smooth;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 nav {
@@ -86,6 +90,10 @@ nav {
   src: local('Univers_Extended'), url(font/Univers_Extended_Bold.ttf) format('ttf');
 }
 
+/* Background */
+
+/* ---- reset ---- */ /* ---- particles.js container ---- */  #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #000000; background-repeat: no-repeat; background-size: 20%; background-position: 50% 50%; z-index: -2;} /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
 /* ------------------------------------------------------------------------------ */
 /* ANIMATIONS */
 /* ------------------------------------------------------------------------------ */
@@ -121,6 +129,12 @@ nav {
 
  @-webkit-keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
+/* Entrance animation for text */
+
+.sic{-webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both}
+
+ @-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
+
  /* Responsive style */
 
 @media (max-width: 768px) {
@@ -139,12 +153,16 @@ nav {
       font-size: 2.5rem;
     }
 
-    #hero .logo {
-      display: none;
-    }
+
 
     #info {
       height: auto;
     }
+}
+
+@media (max-width: 1570px) {
+  #hero .logo {
+    display: none;
+  }
 }
 
