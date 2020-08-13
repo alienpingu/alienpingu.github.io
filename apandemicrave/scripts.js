@@ -1,16 +1,27 @@
-// Quando la freccia bounce viene cliccata sposta la visuale sulla sezione info
-$('.arrow.bounce').click(() => $('#info')[0].scrollIntoView({behavior: "smooth", block: "start"}))
-
 
 // Nascondi la Navbar quando scorri in basso
-var prevScrollpos = window.pageYOffset;
 
-window.onscroll = () => {
+navScrollHandle = () => {
+  var prevScrollpos = window.pageYOffset;
 
-  var currentScrollPos = window.pageYOffset;
+  window.onscroll = () => {
 
-  (prevScrollpos > currentScrollPos) ? $('nav')[0].style.top = "0" : $('nav')[0].style.top = "-50px"
+    var currentScrollPos = window.pageYOffset;
 
-  prevScrollpos = currentScrollPos;
+    (prevScrollpos > currentScrollPos) ? $('nav')[0].style.top = "0" : $('nav')[0].style.top = "-50px"
 
-} 
+    prevScrollpos = currentScrollPos;
+
+  } 
+}
+
+// Scorri la visuale verso l' elemento parametro
+scrollToEl = (e) => e.scrollIntoView({behavior: "smooth", block: "start"})
+
+
+// Quando la freccia bounce viene cliccata sposta la visuale sulla sezione info
+$('.arrow.bounce, .nav-link.info').click(() => scrollToEl($('#info')[0]))
+
+
+navScrollHandle();
+
