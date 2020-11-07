@@ -1,0 +1,90 @@
+/* 6/11/2020 - Samuele Bertocco */
+#landing {
+    background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+#landing div {
+    display: flex;
+    height: 66vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px dotted black; /* Da commentare */
+}
+
+#info div div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
+    border: 1px dotted black;  /* Da commentare */
+    min-height: 50vh;
+}
+#info div div:last-child {
+    background-color: black;
+    color:white;
+}
+
+#product div.row div.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+#event {
+    background-color: black;
+    padding: 2rem 0;
+}
+#event div h3 {
+    color: gold;
+}
+
+#about {
+    padding: 2rem 0;
+}
+
+#hover-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:none
+}
+#hover-wrap div.container {
+    background:white;
+    margin: auto;
+    padding: 24px;
+    border-radius: 12px;
+}
+.close-container:hover {
+    cursor: pointer;
+}
+.close-container {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: gold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    float: right;
+}
+.close-container {
+    padding-top: 10px;
+}
+.hover-img {
+    background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9');
+    background-size: cover;
+    background-position: 90 center;
+    width: 100%;
+    min-height: 20vh;
+}
