@@ -1,19 +1,96 @@
 /* 6/11/2020 - Samuele Bertocco */
+
+/* 
+SECTION:
+    1. LANDING
+    2. INFO
+    3. PRODUCT
+    4. EVENT
+    5. ABOUT
+*/
+
+
+/* LANDING - start */
+
 #landing {
-    background: #e65c00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Photo by Curren Podlesny on Unsplash */
+    background-image: url('./img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
-
-
 #landing div {
     display: flex;
     height: 66vh;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 1px dotted black; /* Da commentare */
+    /* Circle inset shadow */
+    -webkit-box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
 }
+
+#landing div h2 {
+    color: #f5f5f5;
+    font-size: 3rem;
+}
+
+#landing div h4 {
+    color: #FFD200;
+}
+
+/* LANDING - end */
+
+/* INTRO -start */
+#intro {
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
+    margin: 0;
+    text-align:center;
+    padding-top: 3rem;
+}
+
+
+
+#intro div p {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+}
+
+#intro div div.row {
+    padding: 3rem 0;
+}
+
+#intro div div.row div.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro div div.row div.col .img-container {
+    width: 5rem;
+    height: 5rem;
+    border: 2px solid  #FFD200;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 1.5rem ;
+
+}
+#intro div div.row div.col .img-container img {
+    box-sizing: border-box;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#intro div div.row div.col a{
+    color: #FFD200;
+}
+
+/* INTRO - end */
+/* INFO - start */
 
 #info div div{
     display:flex;
@@ -21,12 +98,61 @@
     justify-content: center;
     text-align: center;
     padding: 2rem 0;
-    border: 1px dotted black;  /* Da commentare */
     min-height: 50vh;
 }
+
+#info div div:first-child {
+    background-image: url('./img/sos.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#info div div:first-child h3 {
+    color: #f5f5f5;
+    text-align: left;
+    font-size: 5rem;
+    margin-left: 2rem;
+
+}
+
 #info div div:last-child {
-    background-color: black;
-    color:white;
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#info div div:last-child h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+#info div div:last-child p {
+    margin: 1rem 0;
+    font-size: 18px;
+}
+
+#info div div:last-child p img {
+    width:36px;
+    margin-right: 0.5rem;
+    /* border: 1px solid #FFD200; */
+    padding: 6px;
+    /* border-radius: 50%; */
+}
+
+
+/* INFO - end */
+
+
+/* PRODUCT -start  */
+#product {
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
+    
 }
 
 #product div.row div.col {
@@ -34,25 +160,191 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    min-height: 500px;
 }
 
+#product div.row div.col .carta {
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    height: 300px;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    transition: 0.25s ease-out;
+}
+#product div.row div.col .carta:hover {
+    height: 450px;
+    width: 300px;
+    transition: 0.25s ease-out;
+}
+#product div.row div.col .carta:hover .cta-container {
+    display: inline;
+    margin-top: 380px;
+    transition: 0.25s ease-out;
+
+}
+#product div.row div.col .carta:hover .card_circle {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+    transition: 0.25s ease-out;
+
+}
+#product div.row div.col .carta:hover h2 {
+    background: #F7971E;
+    color: #fff;
+    margin-top: 100px;
+    padding: 5px;
+    transition: 0.25s ease-out;
+
+}
+#product div.row div.col .carta:hover h2 small {
+    color: #fff;
+    transition: 0.25s ease-out;
+}
+#product div.row div.col .carta:hover p:not(.cta) { 
+    margin-top: 300px;
+    transition: 0.25s ease-out;
+}
+.card_circle {
+    background: url('http://lorempixel.com/400/200') no-repeat center bottom;
+    background-color: #F7971E;
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -270px;
+    position: absolute;
+    width: 450px;
+    transition: 0.25s ease-out;
+}
+
+#product div.row div.col .carta h2 {
+    color: #F7971E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 150px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    transition: 0.25s ease-out;
+
+}
+#product div.row div.col .carta p:not(.cta) {
+    color: rgba(0,0,0,.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 200px;
+    position: absolute;
+    text-align: center;
+    transition: 0.25s ease-out;
+    z-index: 2;
+}
+
+.cta-container {
+    display: none;
+    margin-top: 320px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    transition: 0.25s ease-out;
+    z-index: 2;
+}
+.cta {
+    -moz-border-radius: 2px;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -webkit-border-radius: 2px;
+    -webkit-transition: 0.2s ease-out;
+    background-clip: padding-box;
+    border: 2px solid #F7971E;
+    border-radius: 2px;
+    color: #F7971E;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    margin-bottom: 15px;
+    padding: 0 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.25s ease-out;
+}
+.cta:hover {
+    background-color: #F7971E;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.25s ease-out;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+/* PRODUCT - end  */
+
+/*  EVENT - start */
+
 #event {
-    background-color: black;
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 2rem 0;
 }
-#event div h3 {
-    color: gold;
+#event h3 {
+    font-weight: 700;
 }
+
+/*  EVENT - end */
+
+/*  ABOUT - start */
 
 #about {
     padding: 2rem 0;
 }
 
+#about .container h3 {
+    color: white;
+    font-weight: 700;
+}
+
+#about .container hr {
+    border-color: white;
+}
+
+#about .container p {
+    color: white;
+}
+
+#about .container .row .col:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*  ABOUT - end */
+
+
+/* HOVER PAGE -start  */
+
 #hover-wrap {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -88,3 +380,5 @@
     width: 100%;
     min-height: 20vh;
 }
+
+/* HOVER PAGE - end  */
