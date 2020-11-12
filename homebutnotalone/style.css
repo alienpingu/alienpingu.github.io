@@ -9,6 +9,27 @@ SECTION:
     5. ABOUT
 */
 
+/* General Style */
+
+body, html {
+    overflow-x: hidden;
+}
+
+.iconify {
+    width:24px !important;
+    height: 24px !important;
+}
+
+/* NAVBAR -start */
+
+nav {
+    transition: 0.25s ease-out;
+    background-color: #212121;
+}
+#navbarNav .navbar-nav:first-child {
+    width: 100%;
+    justify-content: left;
+}
 
 /* LANDING - start */
 
@@ -18,17 +39,17 @@ SECTION:
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    -webkit-box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
 }
 #landing div {
     display: flex;
-    height: 66vh;
+    height: calc(100vh - 40px);
     flex-direction: column;
     justify-content: center;
     text-align: center;
     /* Circle inset shadow */
-    -webkit-box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
+
 }
 
 #landing div h2 {
@@ -40,13 +61,18 @@ SECTION:
     color: #FFD200;
 }
 
+#landing .arrow {
+    position: relative;
+    bottom: 1rem;
+    left: 50%;
+    margin-left:-20px;
+    width: 40px;
+    height: 40px;
+}
 /* LANDING - end */
 
 /* INTRO -start */
 #intro {
-    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
-    -moz-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
-    box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
     margin: 0;
     text-align:center;
     padding-top: 3rem;
@@ -99,6 +125,9 @@ SECTION:
     text-align: center;
     padding: 2rem 0;
     min-height: 50vh;
+    -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
 #info div div:first-child {
@@ -120,8 +149,6 @@ SECTION:
     background: #F7971E;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 }
 
 #info div div:last-child h3 {
@@ -148,11 +175,10 @@ SECTION:
 
 
 /* PRODUCT -start  */
-#product {
-    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
-    -moz-box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
-    box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.25);
-    
+
+#product .svg-winwoman {
+    position: absolute;
+    left: 1rem;
 }
 
 #product div.row div.col {
@@ -163,12 +189,14 @@ SECTION:
     min-height: 500px;
 }
 
+#product div h3 {
+    color: #F7971E;
+    font-weight: 600;
+}
+
 #product div.row div.col .carta {
     background-color: #fff;
     bottom: 0;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
     height: 300px;
     left: 0;
     margin: auto;
@@ -178,11 +206,20 @@ SECTION:
     top: 0;
     width: 300px;
     transition: 0.25s ease-out;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
+    
 }
 #product div.row div.col .carta:hover {
     height: 450px;
     width: 300px;
     transition: 0.25s ease-out;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 #product div.row div.col .carta:hover .cta-container {
     display: inline;
@@ -269,7 +306,7 @@ SECTION:
     -webkit-transition: 0.2s ease-out;
     background-clip: padding-box;
     border: 2px solid #F7971E;
-    border-radius: 2px;
+    border-radius: 3px;
     color: #F7971E;
     display: inline-block;
     font-family: 'Raleway', sans-serif;
@@ -286,12 +323,12 @@ SECTION:
 }
 .cta:hover {
     background-color: #F7971E;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #fff;
-    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.25s ease-out;
-    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
 }
 
 /* PRODUCT - end  */
@@ -303,9 +340,25 @@ SECTION:
     background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 2rem 0;
+    -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 #event h3 {
     font-weight: 700;
+}
+.event-card {
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.1);
+}
+.event-card:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.3);
+    transition: 0.25s ease-out;
+
 }
 
 /*  EVENT - end */
@@ -314,6 +367,7 @@ SECTION:
 
 #about {
     padding: 2rem 0;
+    background-color: #212121;
 }
 
 #about .container h3 {
@@ -321,12 +375,16 @@ SECTION:
     font-weight: 700;
 }
 
-#about .container hr {
-    border-color: white;
-}
 
 #about .container p {
     color: white;
+}
+
+.footer-profile-pic {
+    height: 100px;
+    background-color: #FFD200;
+    border-radius:50%;
+    border: 2px solid  #F7971E;
 }
 
 #about .container .row .col:last-child {
@@ -356,23 +414,6 @@ SECTION:
     padding: 24px;
     border-radius: 12px;
 }
-.close-container:hover {
-    cursor: pointer;
-}
-.close-container {
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    background-color: gold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    float: right;
-}
-.close-container {
-    padding-top: 10px;
-}
 .hover-img {
     background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9');
     background-size: cover;
@@ -382,3 +423,81 @@ SECTION:
 }
 
 /* HOVER PAGE - end  */
+
+/* ------------------------------------------------------------------------------ */
+/* Associativa - start */
+/* ------------------------------------------------------------------------------ */
+
+#hero {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./img/hero.jpg);
+    -webkit-box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 225px 225px rgba(0,0,0,0.5);
+    color:white;
+
+}
+
+#hero h3 {
+    color: #FFD200;
+    font-size: 36px;
+}
+
+#help .row .col:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* RESPONSIVE STYLES */
+/* ------------------------------------------------------------------------------ */
+
+/* TABLET */
+
+@media (max-width: 992px) { 
+    /* navbar */
+    #navbarNav .navbar-nav:last-child {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #navbarNav .navbar-nav:last-child li {
+        margin: 0.25rem 0.5rem;
+    }
+
+    /* svg winwoman */
+    .svg-winwoman {
+        display: none;
+    }
+    
+ }
+
+
+ 
+/* ------------------------------------------------------------------------------ */
+/* ANIMATIONS */
+/* ------------------------------------------------------------------------------ */
+
+/* Animation for arrow */
+
+.bounce {
+    animation: bounce 2s infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
