@@ -115,6 +115,11 @@ nav.navbar {
 #footer .container .row .col h2 {
     font-weight: bold;
 }
+#footer .container .row .col img {
+    max-width: 100vw;
+    max-height: 12rem;
+    padding: 6px;
+}
 #footer .container .row .col ul li{
     background-color: none;
     background: none;
@@ -133,6 +138,9 @@ nav.navbar {
     height:24px;
 }
 
+#footer .container .row .col form .row .col {
+    margin-top: 12px;
+}
 #footer .container .row .col form .row .col .btn .iconify {
     margin-top: 6px;
     float: right;
