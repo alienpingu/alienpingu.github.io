@@ -4,9 +4,17 @@ html, body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+/* NAV */
 nav.navbar {
     position: fixed;
     z-index: 9999;
+    top: -70px;
+}
+.navbar a {
+    font-size: 24px;
+}
+.navbar a .iconify {
+    margin-bottom: 6px;
 }
 /* HERO */
 #hero .container {
@@ -37,6 +45,9 @@ nav.navbar {
 .heroText .btn .iconify {
     margin-bottom: 3px;
     margin-right: 6px;
+}
+#heroBtn1 {
+    display:none;
 }
 /* HELP */
 #help .container .row .col:first-child {
@@ -154,9 +165,7 @@ nav.navbar {
 /* Desktop */
 @media (min-width: 992px) { 
     /* NAV */
-    nav.navbar {
-        display:none;
-    }
+
     /* HERO */
     #hero {
         background-image: url(./img/desktopHero.svg);
@@ -185,9 +194,16 @@ nav.navbar {
         font-weight: normal;
         margin: 12px 0
     }
-    .heroText .btn-block {
-        max-width:320px;
+    #heroBtn0 {
+        display:none;
     }
+    #heroBtn1 {
+        display:inline-block;
+    }
+    .heroText .btn-block {
+        width:320px;
+    }
+
     /* HELP */
     #help .container h2.title {
         margin-bottom: 5rem;

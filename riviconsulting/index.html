@@ -15,22 +15,24 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- TAB INFO -->
     <link rel="icon" type="image/png" href="./img/favicon.svg" />
-    <title>RIVI Consulting</title>
+    <title>RIVI Consulting - Agenti del debito esperti possono aiutare la tua situazione immobiliare e finanziaria, estinguendo completamente mutuo e debiti</title>
     <!-- BOOTSTRAP STYLE -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-light bg-white fixed-top shadow-sm">
         <a href="/" class="navbar-brand"><img src="./img/brand.svg" alt="RIVI"></a>
+        <a class="btn btn-success rounded-pill" href="https://wa.me/message/JQCUCOWXPUB5C1"><span class="iconify" data-icon="mdi:whatsapp" data-inline="false"></span></a>
     </nav>
     <section id="hero">
         <div class="container">
             <div class="heroText">
                 <img class="desktopHeroLogo" src="./img/desktopHeroLogo.svg" alt="RIVA">
                 <h1 class="title">Sei in un mare di debiti? <br/> Ti portiamo noi a riva</h1>
-                <p class="btn btn-primary btn-lg rounded-pill btn-block"><span class="iconify" data-icon="mdi:phone" data-inline="false"></span>Chiamaci</p>
+                <p id="heroBtn0" class="btn btn-primary btn-lg rounded-pill"><span class="iconify" data-icon="mdi:phone" data-inline="false"></span>Chiamaci</p>
+                <p id="heroBtn1" class="btn btn-primary btn-lg rounded-pill"><span class="iconify" data-icon="mdi:email-outline" data-inline="false"></span>Contattaci</p>
             </div>
         </div>
     </section>
@@ -142,27 +144,27 @@
             <div class="row">
                 <div class="col col-12 col-md-6">
                     <h2>Contattaci!</h2>
-                    <form>
+                    <form action="https://mailthis.to/samuele.bertocco@gmail.com" method="POST" encType="multipart/form-data">
                         <div class="row">
                             <div class="col col-12 col-md-6">
                                 <label for="nomeIn">Nome</label>
-                                <input id="nomeIn" type="text" class="form-control" placeholder="Mario">
+                                <input id="nomeIn" name="nome" type="text" class="form-control" placeholder="Mario">
                             </div>
                             <div class="col col-12 col-md-6">
                                 <label for="cognomeIn">Cognome</label>
-                                <input id="cognomeIn" type="text" class="form-control" placeholder="Rossi">
+                                <input id="cognomeIn" name="cognome" type="text" class="form-control" placeholder="Rossi">
                             </div>
                             <div class="col col-12">
                                 <label for="emailIn">E-mail</label>
-                                <input id="emailIn" type="email" class="form-control" placeholder="mariorossi@esempio.com">
+                                <input id="emailIn" name="email" type="email" class="form-control" placeholder="mariorossi@esempio.com">
                             </div>
                             <div class="col col-12">
                                 <label for="numberIn">Telefono</label>
-                                <input id="numberIn" type="text" class="form-control" placeholder="(+39) 33344668899">
+                                <input id="numberIn" name="numero" type="text" class="form-control" placeholder="(+39) 33344668899">
                             </div>
                             <div class="col col-12">
                                 <label for="txtIn">Messaggio</label>
-                                <textarea class="form-control" id="txtIn" placeholder="Scrivi il tuo messaggio..." required></textarea>
+                                <textarea class="form-control" id="txtIn" name="message" placeholder="Scrivi il tuo messaggio..." required></textarea>
                             </div>
                             <div class="col col-12">
                                 <div class="custom-control custom-checkbox">
@@ -170,8 +172,11 @@
                                     <label class="custom-control-label" for="tosIn">Ho preso visione dei ToS</label>
                                 </div>
                             </div>
+                            <input type="hidden" name="_subject" value="[RIVI] Contatto dal sito">
+                            <input type="hidden" name="_honeypot" value="">
+                            <input type="hidden" name="_confirmation" value="">
                             <div class="col col-12">
-                                <button class="btn btn-primary btn-block" type="submit">Invia<span class="iconify" data-icon="mdi:send" data-inline="false"></span></button>
+                                <button class="btn btn-primary btn-block btn-lg" type="submit" value="Send">Invia<span class="iconify" data-icon="mdi:send" data-inline="false"></span></button>
                             </div>
                         </div>
 
