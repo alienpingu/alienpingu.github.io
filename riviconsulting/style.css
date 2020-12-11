@@ -4,11 +4,19 @@ html, body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+* {
+    font-family: Ubuntu;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.2) !important;
+}
 /* NAV */
 nav.navbar {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
-    top: -70px;
+    top: 1;
+    transition: 0.2s ease-out;
 }
 .navbar a {
     font-size: 24px;
@@ -41,6 +49,7 @@ nav.navbar {
 }
 .heroText .btn {
     margin-top: 24px;
+    margin-bottom: 16px;
 }
 .heroText .btn .iconify {
     margin-bottom: 3px;
@@ -105,8 +114,11 @@ nav.navbar {
     text-align: center;
     margin-bottom: 24px;
 }
-#product .container .row .col {
+#product .container .row .col, #consulenti .container .row .col {
     text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .productIco {
     max-width: 100%;
@@ -115,6 +127,34 @@ nav.navbar {
 #product .container .row .col h3.title {
     margin-top: 12px;
     margin-bottom: 6px;
+}
+
+#accordion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#accordion p.btn {
+    max-width: 18rem;
+    margin: 12px auto;
+}
+
+#product .container #accordion .card {
+    margin: 6px 0;
+    border:none;
+}
+#product .container #accordion .card .card-header {
+    background-color: #A2E5F6;
+}
+#product .container #accordion .card .card-header h5 button {
+    display:flex;
+    color: black;
+    font-size: 18px;
+}
+#product .container #accordion .card .card-body {
+    border: 1px solid #A2E5F6;
+    border-radius: 24px;
+    margin-top: 12px;
 }
 /* FOOTER */
 #footer {
@@ -152,6 +192,9 @@ nav.navbar {
 #footer .container .row .col form .row .col {
     margin-top: 12px;
 }
+#footer .container .row .col form .row .col .btn {
+    margin-bottom: 1.5rem;
+}
 #footer .container .row .col form .row .col .btn .iconify {
     margin-top: 6px;
     float: right;
@@ -165,7 +208,9 @@ nav.navbar {
 /* Desktop */
 @media (min-width: 992px) { 
     /* NAV */
-
+    nav.navbar {
+        display:none;
+    }
     /* HERO */
     #hero {
         background-image: url(./img/desktopHero.svg);
@@ -250,7 +295,7 @@ nav.navbar {
     #footer {
         padding-bottom: 36px;
     }
-    #footer .container .row {
+    #footer .container > .row {
         flex-direction: row-reverse;
     }
     #footer .container .row .col:last-child {
@@ -259,4 +304,14 @@ nav.navbar {
         justify-content: center;
     }
  }
+
+ /* Fonts */
+ @font-face {
+    font-family: Ubuntu;
+    src: url(./fonts/Ubuntu-Regular.ttf);
+  }
+
+  /* Animations */
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
 
