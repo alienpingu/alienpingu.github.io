@@ -1,0 +1,245 @@
+/*General*/
+.bg-primary {
+	background: #8E2DE2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: white;
+
+}
+
+.hc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.curved {
+  position: relative;
+  background: transparent;
+  height: 50vh;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+}
+
+.list-group, .list-group-flush, .list-group-item {
+	background: none;
+
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+}
+
+* {
+  overflow-x: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    margin:0;
+    padding: 0;
+
+  }
+*::-webkit-scrollbar-thumb {
+    background-color: #4A00E0;
+    margin:0;
+    padding: 0;
+    border-radius: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #8E2DE2;
+    border-radius: 4px;
+    margin:0;
+    padding: 0;
+}
+
+html, body {
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+
+#mission, #landing, #method, #contact {
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+nav {
+  width: 100%;
+  z-index: 9999;
+}
+
+nav > .navbar-brand img {
+  height: 50px;
+  object-fit: cover;
+}
+
+
+.sh-purple {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/img/shadow.svg');
+  background-position:center;
+  background-repeat: none;
+  background-size: cover;
+  z-index: 0;
+}
+
+/*Landing*/
+
+#landing {
+  background: url('./assets/img/bg.webp');
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100vw;
+}
+#landing .row {
+  z-index: 1;
+  padding: 0 4rem;
+}
+
+#landing img {
+  width: 100%;
+}
+
+/*Mission*/
+
+#mission .row .col img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/*Method*/
+  #method {
+    padding: 1rem 0.5rem;
+  }
+
+.prefix-icon {
+	display: flex;
+	flex-direction: row;
+	font-weight: 600;
+	font-size: 24px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	padding-top:24px;
+  padding-left:36px;
+	padding-right:36px;
+	justify-content: center;
+}
+.prefix-icon:hover {
+	cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  color:white;
+  box-shadow: none;
+}
+/*.prefix-icon.active {
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+
+}*/
+.prefix-icon svg {
+	width: 36px;
+	height: 36px;
+	margin-right:auto;
+}
+.carousel {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, calc(80% - 40px));
+  grid-template-rows: minmax(20rem, 1fr);
+  max-width: 100%;
+  overflow-x: scroll;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  scroll-behavior: smooth;
+}
+
+.carousel > .card {
+  width: 100%;
+  color: #000000
+}
+
+.carousel > .card:hover {
+  cursor: pointer;
+  transition-duration: 250ms;
+}
+.carousel > .card img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel > .card .card-body {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  width: 100%;
+}
+
+.carousel > .card .card-body .card-title, .carousel > .card .card-body .card-text {
+  display: none;
+}
+
+.carousel > .card .card-body.active .card-title, .carousel > .card .card-body.active .card-text {
+  display: flex;
+}
+
+.carousel > .card .card-body .card-icon {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+.card-icon > p {
+  text-align: center;
+}
+.card-icon > p svg {
+  margin-right: 12px;
+}
+
+.carousel > .card:last-child {
+  margin-right: 20px;
+}
+
+#team .row .col {
+  display: flex;
+  flex-direction: column;
+}
+#team .media img {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 7rem;
+  width: 7rem;
+
+}
+
+
+
+/*Desktop*/
+@media (min-width: 768px) {
+  #landing img {
+    width: 30rem;
+  }
+  .carousel {
+    grid-template-columns: repeat(6, calc(50% - 40px));
+  }
+
+}
+
