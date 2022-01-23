@@ -38,7 +38,7 @@ let data = {
 	},
 	l: {
 		value: null,
-		interaction: ['g', 'o']
+		interaction: ['g', 'o', 'i']
 	},
 	m: {
 		value: null,
@@ -49,7 +49,7 @@ let data = {
 		interaction: ['h', 'm']
 	},
 	o: {
-		value: null,interaction: ['l', '']
+		value: null,interaction: ['l', 'm']
 	},
 }
 //Valori delle caselle
@@ -70,20 +70,45 @@ let moveItem = (e) => {
 		}
 	});
 }
-//Crea nuovo array casuale
-let randomArray = shuffleArray(values)
-//Contatore
-let c = 0
-//Randomizza le caselle di gioco
-for (var key in data) {
-    data[key].value = randomArray[c];
-    let item = document.getElementById(key)
-    item.innerText = data[key].value;
-    (randomArray[c] === ' ') ? empty = key : null;
-    c++;
+//inizia il gioco 
+let startGame = () => {
+	//Crea nuovo array casuale
+	let randomArray = shuffleArray(values)
+	//Contatore
+	let c = 0
+	//Randomizza le caselle di gioco
+	for (var key in data) {
+	    data[key].value = randomArray[c];
+	    let item = document.getElementById(key)
+	    item.innerText = data[key].value;
+	    (randomArray[c] === ' ') ? empty = key : null;
+	    c++;
+	}
 }
+
+
+
+//Vinci il gioco
+let winGame = () => {
+	values.sort((a, b) => a - b)
+	let c = 0
+	//Randomizza le caselle di gioco
+	for (var key in data) {
+	    data[key].value = values[c];
+	    let item = document.getElementById(key)
+	    item.innerText = data[key].value;
+	    (values[c] === ' ') ? empty = key : null;
+	    c++;
+	}
+}
+	
+
 //Una volta che è carica la pagina aggiungi i click
 window.addEventListener('load', (event) => {
+
+	startGame()
+
+
   for (var key in data) {
 	    let item = document.getElementById(key)
 	    item.addEventListener('click', function(e){

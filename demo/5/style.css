@@ -1,19 +1,40 @@
 html,body {
 	margin:0;
 	padding:0;
+	overflow: hidden;
+}
+
+* {
+	font-family:  ubuntu;
 }
 
 .container {
 	height:100vh;
-	padding:12px;
-	background: #457fca;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: white;
 	display:flex;
 	flex-direction:column;
 	justify-content: center;
 	align-items:center;
+}
+
+.row {
+	display: flex;
+	flex-direction:row;
+}
+.col {
+	display:flex;
+	flex-direction:column;
+}
+
+#title {
+	z-index: 1;
+	padding-bottom: 12px;
+}
+#title h1 {
+	font-size: 7rem;
+    margin: 0;
+    margin-top: 1rem;
+    font-weight: bolder;
 }
 
 #tableWrapper {
@@ -24,6 +45,7 @@ html,body {
 	background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    z-index: 1;
 }
 
 .wrapper-row {
@@ -43,6 +65,7 @@ html,body {
 	flex-direction:column;
 	align-items: center;
 	justify-content:center;
+	min-width: 100px;
 }
 .wrapper-col:hover {
 	cursor: pointer;
@@ -53,6 +76,14 @@ html,body {
  	padding:12px;
  }
 
+css-doodle {
+	width: 100vw;
+	height:100vh;
+	position:absolute;
+	left:0;
+	top:0;
+}
+
 @media only screen and (max-width: 700px) {
   #tableWrapper {
   	width: 250px;
@@ -60,6 +91,9 @@ html,body {
   }
   .wrapper-row {
 	height: 50px;
+  }
+  .wrapper-col {
+  	min-width: 50px;
   }
 
 }

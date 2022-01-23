@@ -8,63 +8,89 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Papisgame</h1>
+			<div id="title" class="row">
+				<div class="col">
+					<img src="./icon.png" alt="12dot-icon" width="150" height="150">
+				</div>
+				<div class="col">
+					<h1>Dot</h1>
+				</div>
+			</div>
 			<div id="tableWrapper">
 				<div class="wrapper-row">
 					<div class="wrapper-col">
-						<span id="a">N</span>
+						<span id="a"></span>
 					</div>
 				</div>
 				<div class="wrapper-row">
 					<div class="wrapper-col">
-						<span id="b">N</span>
+						<span id="b"></span>
 					</div>
 					<div class="wrapper-col">
-						<span id="c">N</span>
+						<span id="c"></span>
 					</div>
 					<div class="wrapper-col">
-						<span id="d">N</span>
+						<span id="d"></span>
 					</div>
 					<div class="wrapper-col">
-						<span id="e">N</span>
-					</div>
-				</div>
-				<div class="wrapper-row">
-					<div class="wrapper-col">
-						<span id="f">N</span>
-					</div>
-					<div class="wrapper-col">
-						<span id="g">N</span>
-					</div>
-					<div class="wrapper-col">
-						<span id="h">N</span>
+						<span id="e"></span>
 					</div>
 				</div>
 				<div class="wrapper-row">
 					<div class="wrapper-col">
-						<span id="i">N</span>
+						<span id="f"></span>
 					</div>
 					<div class="wrapper-col">
-						<span id="l">N</span>
+						<span id="g"></span>
 					</div>
 					<div class="wrapper-col">
-						<span id="m">N</span>
-					</div>
-					<div class="wrapper-col">
-						<span id="n">N</span>
+						<span id="h"></span>
 					</div>
 				</div>
 				<div class="wrapper-row">
 					<div class="wrapper-col">
-						<span id="o">N</span>
+						<span id="i"></span>
+					</div>
+					<div class="wrapper-col">
+						<span id="l"></span>
+					</div>
+					<div class="wrapper-col">
+						<span id="m"></span>
+					</div>
+					<div class="wrapper-col">
+						<span id="n"></span>
+					</div>
+				</div>
+				<div class="wrapper-row">
+					<div class="wrapper-col">
+						<span id="o"></span>
 					</div>
 				</div>
 			</div>
+			<css-doodle click-to-update>
+	  <style>
+	    :doodle {
+	      @grid: 18 / 100vmax;
+	      background: #0a0c27;
+	    }
+	    --hue: calc(180 + 1.5 * @row * @col);
+	    background: hsl(var(--hue), 50%, 70%);
+	    margin: -.5px;
+	    transition: @r(.5s) ease;
+	    clip-path: polygon(@pick(
+	      '0 0, 100% 0, 100% 100%',
+	      '0 0, 100% 0, 0 100%',
+	      '0 0, 100% 100%, 0 100%',
+	      '100% 0, 100% 100%, 0 100%'
+	    ));
+	  </style>
+	</css-doodle>
+
 	</div>
 
 
 
 </body>
 </html>
-
+<script src="https://unpkg.com/css-doodle@0.24.1/css-doodle.min.js"></script>
 <script src="script.js"></script>
