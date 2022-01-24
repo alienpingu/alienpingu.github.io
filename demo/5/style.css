@@ -86,11 +86,11 @@ css-doodle {
 
 @media only screen and (max-width: 700px) {
   #tableWrapper {
-  	width: 250px;
-    height: 250px;
+  	width: 100vw;
+    height: 100vw;
   }
   .wrapper-row {
-	height: 50px;
+	height: 20%;
   }
   .wrapper-col {
   	min-width: 50px;
