@@ -84,6 +84,64 @@ css-doodle {
 	top:0;
 }
 
+#win_banner {
+	position:fixed;
+	width:100vw;
+	height:100vh;
+	left:0;
+	top:0;
+	color:#fff;
+	font-size: 5rem;
+	z-index: 2;
+	background: #76b852;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: none;
+}
+
+#info_banner {
+	z-index: 9999;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100vw;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+#info_banner .banner {
+	margin: 3rem;
+	background: #fff;
+	padding: 1rem;
+	border-radius: 1rem;
+	display:flex;
+	flex-direction:column;
+}
+#info_banner .banner img {
+	width:20rem;
+	height:20rem;
+}
+#icon_wrapper {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	z-index: 2;
+display: flex;
+flex-direction:column;
+align-items:flex-end;
+
+}
+
+#icon_wrapper img {
+	width:2rem;
+	height:2rem;
+	margin: 1rem;
+}
+
 @media only screen and (max-width: 700px) {
   #tableWrapper {
   	width: 100vw;

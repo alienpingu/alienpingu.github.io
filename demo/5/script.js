@@ -52,6 +52,59 @@ let data = {
 		value: null,interaction: ['l', 'm']
 	},
 }
+let win_data = {
+	a: {
+		value: 12,
+		interaction: ['c', 'd']
+	},
+	b: {
+		value: 10,
+		interaction: ['c', 'f']
+	},
+	c: {
+		value: 11,
+		interaction: ['a', 'b', 'g']
+	},
+	d: {
+		value: 1,
+		interaction: ['a', 'e', 'g']
+	},
+	e: {
+		value: 2,
+		interaction: ['d', 'h']
+	},
+	f: {
+		value: 9,
+		interaction: ['b', 'i']
+	},
+	g: {
+		value: ' ',
+		interaction: ['c', 'd', 'l', 'm']
+	},
+	h: {
+		value: 3,
+		interaction: ['e','n']
+	},
+	i: {
+		value: 8,
+		interaction: ['f','l']
+	},
+	l: {
+		value: 7,
+		interaction: ['g', 'o', 'i']
+	},
+	m: {
+		value: 5,
+		interaction: ['g', 'n','o']
+	},
+	n: {
+		value: 4,
+		interaction: ['h', 'm']
+	},
+	o: {
+		value: 6,interaction: ['l', 'm']
+	}
+}
 //Valori delle caselle
 var values = [1,2,3,4,5,6,7,8,9,10,11,12,' ']
 //Variabile per tenere memoria della casella vuota
@@ -69,6 +122,7 @@ let moveItem = (e) => {
 			empty = e.target.id;
 		}
 	});
+	checkEnd()
 }
 //inizia il gioco 
 let startGame = () => {
@@ -86,20 +140,28 @@ let startGame = () => {
 	}
 }
 
+let checkEnd = () =>{
+	if (data === win_data) {
+		document.getElementById('win_banner').style.display = 'flex';
+	}
+}
 
+let showInfoDisplay = () => {
+	document.getElementById('info_banner').style.display = 'flex'
+}
+
+let hideInfoDisplay = () => {
+	document.getElementById('info_banner').style.display = 'none'
+}
 
 //Vinci il gioco
 let winGame = () => {
-	values.sort((a, b) => a - b)
-	let c = 0
-	//Randomizza le caselle di gioco
-	for (var key in data) {
-	    data[key].value = values[c];
+	data = win_data
+  	for (var key in data) {
 	    let item = document.getElementById(key)
-	    item.innerText = data[key].value;
-	    (values[c] === ' ') ? empty = key : null;
-	    c++;
+	    item.innerText = data[key].value
 	}
+	empty = 'g'
 }
 	
 
@@ -107,7 +169,10 @@ let winGame = () => {
 window.addEventListener('load', (event) => {
 
 	startGame()
-
+	document.querySelector('#icon_wrapper img').addEventListener('click', function(e){
+		showInfoDisplay()
+	})
+	document.getElementById('info_banner').addEventListener('click', (e) => hideInfoDisplay())
 
   for (var key in data) {
 	    let item = document.getElementById(key)
