@@ -25,7 +25,7 @@ const loader =  new THREE.TextureLoader();
 loader.load('js/texture/space.jpg',
     function ( texture ) {
         // in this example we create the material when the texture is loaded
-        scene.background = spaceTexture;
+        scene.background = texture;
        
     },
     undefined
