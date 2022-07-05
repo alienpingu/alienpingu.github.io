@@ -4,41 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Static Project - AlienPingu</title>
+    <title>AlienPingu: Web Development</title>
+    <meta name="description" content="AlienPingu's Github page">
+    <link rel="icon" href="./favicon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Alienpingu' s Static Project </h1>
-    <ul>
-        <li>
-            <a href="/demo/1/">Goldinvestimenti</a>
-        </li>
-        <li>
-            <a href="/demo/2/">FormAI</a>
-        </li>
-        <li>
-            <a href="/demo/3/">SmartCV</a>
-        </li>
-        <li>
-            <a href="/demo/4/">ColorOfDay</a>
-        </li>
-        <li>
-            <a href="/demo/5/">12DOT game</a>
-        </li>
-        <li>
-            <a href="/demo/6/">Zeerconia</a>
-        </li>
-        <li>
-            <a href="/demo/7/">ThreeJS - Spinning Scene</a>
-        </li>
-        <li>
-            <a href="/demo/8/">TenniJS - Simple Tennis Game</a>
-        </li>
-        <li>
-            <a href="/demo/9/">UPGVNG - ecommerce w/ecwid</a>
-        </li>
-        <li>
-            <a href="/demo/10/">MikyFashionStore - ecommerce w/ecwid</a>
-        </li>
-    </ul>
+    <nav>
+        <a href="#">alienpingu</a>
+        <a class="btn-secondary color-change-2x" href="#contact">Contact Me</a>
+    </nav>
+    <section> 
+
+    </section>
+    <section id="landing">
+        <h1 class="puff">AlienPingu</h1>
+        <p>Full Stack Web Development</p>
+        <a class="btn-primary" href="#about">About that</a>
+    </section>
+    <section id="project">
+        <h2 class="puff">Latest Project</h2>
+        <div id="porfolio-grid" class="card-grid"></div>
+    </section>
+    <div id="scroll-container">
+        <div id="scroll-text">
+            <span>REACT</span>
+            <span>CSS</span>
+            <span>SCSS</span>
+            <span>POSTGRESS</span> 
+            <span>NODEJS</span>
+            <span>THREEJS</span>
+            <span>HEROKU</span>
+            <span>GITHUB</span>
+        </div>
+    </div>
+    <section id="about" class="container bb">
+        <h2>About this page</h2>
+        <div class="row">
+            <div class="col">
+                <h3>
+                    <img 
+                        class="circle-img"
+                        src="https://icongr.am/octicons/terminal.svg?size=36&color=ffffff" 
+                        alt="terminal"
+                    >
+                    Tech
+                </h3>
+                <p>This page is hosted with <a href="https://pages.github.com/">Github Pages</a> free hosting, this is a portfolio of my project for clients and for myself</p>
+            </div>
+            <div class="col">
+                <h3>
+                    <img 
+                        class="circle-img"
+                        src="https://icongr.am/octicons/code-square.svg?size=36&color=ffffff" 
+                        alt="terminal"
+                    >
+                    Philosofy
+                </h3>
+                This site is build with only V8 pack (Html, Css and Javascript) <br /> and can perform very well because is really light
+            </div>
+            <div class="col">
+                <h3>
+                    <img 
+                        class="circle-img"
+                        src="https://icongr.am/octicons/checklist.svg?size=36&color=ffffff" 
+                        alt="terminal"
+                    >   
+                    Expandible
+                </h3>
+                <p>This type of coding is optimized for add new feature, <br />for example add a blog with Wordpress</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container">
+            <h2>Contact me for collaboration</h2>
+            <div class="row">
+                <div class="col">
+                    <a href="mailto:brtsml@pm.me" target="_blank" rel="noreferrer">brtsml@pm.me</a>
+                    <a href="https://t.me/brtsml" target="_blank" rel="noopener">@brtsml</a>
+                </div>
+                <div class="col">   
+                    <form action="/example">
+                        <p>Or send me your name and email, i will contact you ASAP</p>
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name" placeholder="Nome"></input>
+                        <input type="email" name="email" id="email" placeholder="E-mail"></input>
+                        <input class="btn-primary" type="submit" name="submit" id="submit">
+                    </form>
+                </div>
+            </div>
+
+    </section>
+    <footer class="tc">
+        <h3>Made with ❤️ by Alienpingu</h3>
+    </footer>
 </body>
 </html>
+<script src="./script.js"></script>
