@@ -4,100 +4,271 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlienPingu: Web Development</title>
-    <meta name="description" content="AlienPingu's Github page">
-    <link rel="icon" href="./favicon.png" type="image/png">
-    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="content-language" content="en">
+    <meta name="keywords" content="website, portfolio, brtsml, 2023">
+    <meta name="author" content="Samuele Bertocco">
+    <meta name="publisher" content="Samuele Bertocco">
+    <meta name="copyright" content="Samuele Bertocco">
+    <meta name="description" content="Minimalist portfolio for the incoming years, descibing my exerience, skill and works">
+    <meta name="page-topic" content="portfolio">
+    <meta name="page-type" content="showcase">
+    <meta name="audience" content="Everyone">
+    <meta name="robots" content="index, follow">
+    <title>BrtSmlPortfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
-    <nav>
-        <a href="#">alienpingu</a>
-        <a class="btn-secondary color-change-2x" href="#contact">Contact Me</a>
-    </nav>
-    <section> 
-
-    </section>
-    <section id="landing">
-        <h1 class="puff">AlienPingu</h1>
-        <p>Full Stack Web Development</p>
-        <a class="btn-primary" href="#about">About that</a>
-    </section>
-    <section id="project">
-        <h2 class="puff">Latest Project</h2>
-        <div id="porfolio-grid" class="card-grid"></div>
-    </section>
-    <div id="scroll-container">
-        <div id="scroll-text">
-            <span>REACT</span>
-            <span>CSS</span>
-            <span>SCSS</span>
-            <span>POSTGRESS</span> 
-            <span>NODEJS</span>
-            <span>THREEJS</span>
-            <span>HEROKU</span>
-            <span>GITHUB</span>
+    <div class="d-none d-md-block" id="particles-js"></div>
+    <!-- NAVBAR | MOBILE-->
+    <div id="navbar" class="navbar container-fliud justify-content-end fixed-top p-3 d-md-none">
+        <img id="open_menu" src="https://icongr.am/clarity/bars.svg?size=42&color=fefefe" alt="menu-bars">
+    </div>
+    <div id="menu" class="menu">
+        <div class="navbar container-fliud justify-content-end p-3">
+            <img id="close_menu" src="https://icongr.am/clarity/close.svg?size=42&color=fefefe" alt="menu-close">
+        </div>
+        <div id="menu_link" class="d-flex flex-column h-100 justify-content-evenly text-center">
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#works">WORKS</a>
+            <a href="#contact">CONTACT</a>
         </div>
     </div>
-    <section id="about" class="container bb">
-        <h2>About this page</h2>
+    <!-- HOME -->
+    <div id="home" class="container d-flex flex-column justify-content-center vh-100">
+        <p class="display-1" data-aos="zoom-in-down">Hello, there!</p>
+        <h1 class="display-1 bold" data-aos="zoom-in-right">This is <span class="text-primary">my portfolio</span></h1>
+        <p class="display-2" data-aos="zoom-in-up">I'm full stack developer</p>
+        <img class="dino" src="./assets/images/dino.png" alt="dino-chrome-pixeled" data-aos="fade-left">
+    </div>
+    <div class="container my-5">
         <div class="row">
-            <div class="col">
-                <h3>
-                    <img 
-                        class="circle-img"
-                        src="https://icongr.am/octicons/terminal.svg?size=36&color=ffffff" 
-                        alt="terminal"
-                    >
-                    Tech
-                </h3>
-                <p>This page is hosted with <a href="https://pages.github.com/">Github Pages</a> free hosting, this is a portfolio of my project for clients and for myself</p>
+    <!-- ABOUT -->
+            <div id="about" class="col col-12 col-md-6 my-md-5 d-flex flex-column justify-content-between">
+                <h2 class="display-1" data-aos="fade-right">About Me</h2>
+                <p data-aos="fade-right">My name is Samuele, i’m based in Italy, I worked as a <span class="text-primary"> website developer </span>for a few years, I mainly used front end technologies but I never stopped updating and studying.</p>
+                <p data-aos="fade-right">I love <span class="text-primary"> innovative </span>technologies, I have always kept up to date by studying the latest technologies thanks to online courses.</p>
+                <p data-aos="fade-right">By now I have created a nice skill pack with which I can work on a <span class="text-primary"> 360-degree project</span></p>
             </div>
-            <div class="col">
-                <h3>
-                    <img 
-                        class="circle-img"
-                        src="https://icongr.am/octicons/code-square.svg?size=36&color=ffffff" 
-                        alt="terminal"
-                    >
-                    Philosofy
-                </h3>
-                This site is build with only V8 pack (Html, Css and Javascript) <br /> and can perform very well because is really light
-            </div>
-            <div class="col">
-                <h3>
-                    <img 
-                        class="circle-img"
-                        src="https://icongr.am/octicons/checklist.svg?size=36&color=ffffff" 
-                        alt="terminal"
-                    >   
-                    Expandible
-                </h3>
-                <p>This type of coding is optimized for add new feature, <br />for example add a blog with Wordpress</p>
+    <!-- SKILLS -->
+            <div id="skills" class="col col-12 col-md-6 py-5">
+                <h2 class="display-1" data-aos="fade-right">Skills</h2>
+                <p class="text-muted">My favorite skill rated by me</p>
+                <div class="row">
+                    <div class="col col-12 col-lg-6">
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/akar-icons_react-fill.png" alt="reactjs-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="half-star"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/cib_sass-alt.png" alt="sass-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="empty-star"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/akar-icons_node-fill.png" alt="node-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="half-star"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/bxl_java.png" alt="java-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="empty-star"></span>
+                                <span class="empty-star"></span>
+                                <span class="empty-star"></span>
+                                <span class="empty-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-6">
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/akar-icons_typescript-fill.png" alt="java-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="half-star"></span>
+                                <span class="empty-star"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/bi_git.png" alt="git-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="empty-star"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3" data-aos="fade-up">
+                            <img src="./assets/images/ico/cib_jest.png" alt="jest-icon">
+                            <div class="star mx-5">
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="full-star"></span>
+                                <span class="half-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section id="contact" class="container">
-            <h2>Contact me for collaboration</h2>
-            <div class="row">
-                <div class="col">
-                    <a href="mailto:brtsml@pm.me" target="_blank" rel="noreferrer">brtsml@pm.me</a>
-                    <a href="https://t.me/brtsml" target="_blank" rel="noopener">@brtsml</a>
-                </div>
-                <div class="col">   
-                    <form action="/example">
-                        <p>Or send me your name and email, i will contact you ASAP</p>
-                        <label for="name"></label>
-                        <input type="text" name="name" id="name" placeholder="Nome"></input>
-                        <input type="email" name="email" id="email" placeholder="E-mail"></input>
-                        <input class="btn-primary" type="submit" name="submit" id="submit">
-                    </form>
+    </div>
+    <!-- WORKS -->
+    <div id="works" class="container my-5">
+        <h2 class="display-1" data-aos="fade-right">Works</h2>
+        <p>My <span class="text-primary">latest</span> featured works, there aren't proessional but there are interesting</p>
+        <div class="row">
+            <div class="col col-12 col-md-6">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>Cocktail Master</h2>
+                    <hr>
+                    <p>Build a frontend experience for cocktailDB api w/ ReactJS.</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://cocktail-master-react.vercel.app/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
                 </div>
             </div>
-
-    </section>
-    <footer class="tc">
-        <h3>Made with ❤️ by Alienpingu</h3>
+            <div class="col col-12 col-md-6">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>Checkup Digitale</h2>
+                    <hr>
+                    <p>Landing website for modern digital agency w/ReactJS.</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://www.checkupdigitale.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 d-flex d-md-none justify-content-center">
+                <span id="more_work_btn" class="btn btn-light">Show More</span>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>SeasonCycles</h2>
+                    <hr>
+                    <p>Stock market analysis tool, also my first job w/ReactJS and Codigniter.</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://seasoncycles.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>Yatzy Simulator</h2>
+                    <hr>
+                    <p>The game of yatzy (kata) with UX and UI optized built in TypeScript w/ReactJS and NodeJS.</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://yahtzee-simultator.herokuapp.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>SmartCV</h2>
+                    <hr>
+                    <p>Open source CV type pdf creation tool only with React-pdf</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://alienpingu.github.io/demo/3/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>Identicon Generator</h2>
+                    <hr>
+                    <p>Generate little pixel art as profile pic</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://identicon-generator.herokuapp.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>12 dot Game</h2>
+                    <hr>
+                    <p>Digital Simulator of 12 dot game with a cool background</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://alienpingu.github.io/demo/5/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>Almadental</h2>
+                    <hr>
+                    <p>Landing Website for dental technician office in NextJS </p>
+                    <a class="btn btn-outline-light btn-sm" href="https://www.almadentallab.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>e23 Milano</h2>
+                    <hr>
+                    <p>Landing website for co-working space in NextJS </p>
+                    <a class="btn btn-outline-light btn-sm" href="https://e23-pagerland.vercel.app" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 d-none d-md-block">
+                <div class="my-4" data-aos="zoom-in-up">
+                    <h2>Hybrid Ecom</h2>
+                    <hr>
+                    <p>Experimental e-commerce build with NextJS and ecwid for a only frontend maintainence </p>
+                    <a class="btn btn-outline-light btn-sm" href="https://upgvng.vercel.app" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT -->
+    <div id="contact" class="container">
+        <h2 class="display-1" data-aos="fade-right">Contacts</h2>
+        <p class="text-muted">For any question or clarification contact me and i will reply asap.</p>
+        <div class="row">
+            <div class="col col-12 col-md-6">
+                <div class="d-grid gap-2">
+                    <a class="btn btn-outline-light d-flex justify-content-between my-md-4" href="https://t.me/brtsml"><img src="https://icongr.am/feather/send.svg?size=24&color=fefefe" alt="telegram-icon" data-aos="fade-right"> @brtsml</a>
+                    <a class="btn btn-outline-light d-flex justify-content-between my-md-4" href="mailto:brtsml@pm.me"><img src="https://icongr.am/feather/mail.svg?size=24&color=fefefe" alt="telegram-icon" data-aos="fade-right">brtsml@pm.me</a>
+                </div>
+            </div>
+            <p class="text-center my-3 d-md-none">-o-</p>
+            <div class="col col-12 col-md-6">
+                <form action="https://submit-form.com/YJDorugF">
+                    <div class="mb-3">
+                        <label for="name" class="form-label" data-aos="fade-left">Name</label>
+                        <input type="text" class="form-control" id="name" data-aos="fade-left" required>
+                      </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label" data-aos="fade-left">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" data-aos="fade-left" required>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label" data-aos="fade-left">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" aria-describedby="phone" data-aos="fade-left" required>
+                        <div id="phone" class="form-text">We'll never share your phone with anyone else.</div>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-lg" data-aos="fade-left">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center mt-5">
+        <p>This website is made with only one html file</p>
+        <p class="text-muted">Framework used: Bootstrap@5.2 - AOS@2.3.1</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
-<script src="./script.js"></script>
