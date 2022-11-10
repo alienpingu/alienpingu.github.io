@@ -51,6 +51,7 @@ img.dino {
     grid-template-rows: 1;
     width: 100%;
     max-width: 12rem;
+    width: 100%;
 }
 .star span {
     background-position: center;

@@ -26,7 +26,13 @@ menu_links.forEach((el) =>
   })
 );
 
-show_work.addEventListener("click", () =>{
-  hidden_work.forEach((item) => item.classList.remove("d-none"));
-  show_work.classList.add("d-none");
+show_work.addEventListener("click", () => {
+  hidden_work.forEach((item) =>
+    item.classList.contains("d-none")
+      ? item.classList.remove("d-none")
+      : item.classList.add("d-none")
+  );
+  document.querySelectorAll("#works .row .col.d-none").length > 0
+    ? (show_work.innerHTML = "Show more")
+    : (show_work.innerHTML = "Show less");
 });
