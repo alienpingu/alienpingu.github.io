@@ -1,273 +1,901 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-language" content="en">
-    <meta name="keywords" content="website, portfolio, brtsml, 2023">
-    <meta name="author" content="Samuele Bertocco">
-    <meta name="publisher" content="Samuele Bertocco">
-    <meta name="copyright" content="Samuele Bertocco">
-    <meta name="description" content="Minimalist portfolio for the incoming years, descibing my exerience, skill and works">
-    <meta name="page-topic" content="portfolio">
-    <meta name="page-type" content="showcase">
-    <meta name="audience" content="Everyone">
-    <meta name="robots" content="index, follow">
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="it" />
+    <meta name="keywords" content="website, portfolio, brtsml, 2023" />
+    <meta name="author" content="Samuele Bertocco" />
+    <meta name="publisher" content="Samuele Bertocco" />
+    <meta name="copyright" content="Samuele Bertocco" />
+    <meta
+      name="description"
+      content="Minimalist portfolio for the incoming years, descibing my exerience, skill and works"
+    />
+    <meta name="page-topic" content="portfolio" />
+    <meta name="page-type" content="showcase" />
+    <meta name="audience" content="Everyone" />
+    <meta name="robots" content="index, follow" />
     <title>BrtSmlPortfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
     <div class="d-none d-md-block" id="particles-js"></div>
     <!-- NAVBAR | MOBILE-->
-    <div id="navbar" class="navbar container-fliud justify-content-end fixed-top p-3 d-md-none">
-        <img id="open_menu" src="https://icongr.am/clarity/bars.svg?size=42&color=fefefe" alt="menu-bars">
+    <div
+      id="navbar"
+      class="navbar container-fliud justify-content-end fixed-top p-3 d-md-none"
+    >
+      <img
+        id="open_menu"
+        src="https://icongr.am/clarity/bars.svg?size=42&color=fefefe"
+        alt="menu-bars"
+      />
     </div>
     <div id="menu" class="menu">
-        <div class="navbar container-fliud justify-content-end p-3">
-            <img id="close_menu" width="42px" height="42px" src="https://icongr.am/clarity/close.svg?size=42&color=fefefe" alt="menu-close">
-        </div>
-        <div id="menu_link" class="d-flex flex-column h-100 justify-content-evenly text-center">
-            <a href="#about">ABOUT</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#works">WORKS</a>
-            <a href="#contact">CONTACT</a>
-        </div>
+      <div class="navbar container-fliud justify-content-end p-3">
+        <img
+          id="close_menu"
+          width="42px"
+          height="42px"
+          src="https://icongr.am/clarity/close.svg?size=42&color=fefefe"
+          alt="menu-close"
+        />
+      </div>
+      <div
+        id="menu_link"
+        class="d-flex flex-column h-100 justify-content-evenly text-center"
+      >
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#works">WORKS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
     </div>
     <!-- HOME -->
-    <div id="home" class="container d-flex flex-column justify-content-center vh-100">
-        <p class="display-1" >Hello, there!</p>
-        <h1 class="display-1 bold" >This is <span class="text-primary">my portfolio</span></h1>
-        <p class="display-2">I'm full stack developer</p>
-        <img class="dino" src="./assets/images/dino.png" alt="dino-chrome-pixeled" data-aos="fade-left">
+    <div
+      id="home"
+      class="container d-flex flex-column justify-content-center vh-100"
+    >
+      <p class="display-1">Hello, there!</p>
+      <h1 class="display-1 bold">
+        This is <span class="text-primary">my portfolio</span>
+      </h1>
+      <p class="display-2">I'm full stack developer</p>
+      <img
+        class="dino"
+        src="./assets/images/dino.png"
+        alt="dino-chrome-pixeled"
+        data-aos="fade-left"
+      />
     </div>
     <div class="container my-5">
-        <div class="row">
-    <!-- ABOUT -->
-            <div id="about" class="col col-12 col-md-6 my-md-5 d-flex flex-column justify-content-between">
-                <h2 class="display-1" data-aos="fade-right">About Me</h2>
-                <p data-aos="fade-right">My name is Samuele, i’m based in Italy, I worked as a <span class="text-primary"> website developer </span>for a few years, I mainly used front end technologies but I never stopped updating and studying.</p>
-                <p data-aos="fade-right">I love <span class="text-primary"> innovative </span>technologies, I have always kept up to date by studying the latest technologies thanks to online courses.</p>
-                <p data-aos="fade-right">By now I have created a nice skill pack with which I can work on a <span class="text-primary"> 360-degree project</span></p>
-            </div>
-    <!-- SKILLS -->
-            <div id="skills" class="col col-12 col-md-6 py-5">
-                <h2 class="display-1" data-aos="fade-right">Skills</h2>
-                <p>My favorite skill rated by me</p>
-                <div class="row">
-                    <div class="col col-12 col-sm-6">
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/akar-icons_react-fill.png" alt="reactjs-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="half-star"></span>
-                            </div>
-                        </div>
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/cib_sass-alt.png" alt="sass-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="empty-star"></span>
-                            </div>
-                        </div>
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/akar-icons_node-fill.png" alt="node-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="half-star"></span>
-                            </div>
-                        </div>
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/bxl_java.png" alt="java-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="empty-star"></span>
-                                <span class="empty-star"></span>
-                                <span class="empty-star"></span>
-                                <span class="empty-star"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-12 col-sm-6">
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/akar-icons_typescript-fill.png" alt="java-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="half-star"></span>
-                                <span class="empty-star"></span>
-                            </div>
-                        </div>
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/bi_git.png" alt="git-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="empty-star"></span>
-                            </div>
-                        </div>
-                        <div class="d-flex py-3">
-                            <img data-aos="fade-right" width="42px" height="42px" src="./assets/images/ico/cib_jest.png" alt="jest-icon">
-                            <div class="star" data-aos="fade-left">
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="full-star"></span>
-                                <span class="half-star"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <!-- ABOUT -->
+        <div
+          id="about"
+          class="col col-12 col-md-6 my-md-5 d-flex flex-column justify-content-between"
+        >
+          <h2 class="display-1" data-aos="fade-right">About Me</h2>
+          <p data-aos="fade-right">
+            Mi chiamo Samuele e sono uno sviluppatore, ho iniziato lavorando per
+            imprese locali è stata un ottima occasione per sperimentare nuove
+            tecnologie e comprendere le esigenze del mercato
+          </p>
+          <p data-aos="fade-right">
+            Data la mia passione per l' innovazione ho sempre continuato a
+            studiare e sviluppare con tecnologie innovative, non potendo
+            comunicare il potenziale della singola tecnologia alle piccole
+            imprese ho continuato a construire il mio pacchetto di competenze.
+          </p>
+          <p data-aos="fade-right">
+            Attualmente mi ritrovo con un pacchetto di competenze e skill che mi
+            permettono di sviluppare un progetto dall'inizio alla fine,
+            scegliendo le migliori tecnologie da utilizzare ad ogni evenienza
+          </p>
         </div>
+        <!-- SKILLS -->
+        <div id="skills" class="col col-12 col-md-6 py-5">
+          <h2 class="display-1" data-aos="fade-right">Skills</h2>
+          <div class="row">
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/html5-plain.svg"
+                alt="html-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/php-plain.svg"
+                alt="php-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/css3-plain.svg"
+                alt="css3-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/cib_sass-alt.png"
+                alt="sass-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/bootstrap-plain.svg"
+                alt="bootstrap-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/javascript-plain.svg"
+                alt="javasscript-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/jquery-plain.svg"
+                alt="jquery-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/akar-icons_react-fill.png"
+                alt="reactjs-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/akar-icons_node-fill.png"
+                alt="node-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/express-original.svg"
+                alt="express-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/akar-icons_typescript-fill.png"
+                alt="ts-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/nextjs.svg"
+                alt="next-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/postgresql-plain.svg"
+                alt="postgresql-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/bi_git.png"
+                alt="git-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/gitlab-plain.svg"
+                alt="gitlab-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/cib_jest.png"
+                alt="jest-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/gulp-plain.svg"
+                alt="gulp-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/bower-plain.svg"
+                alt="bower-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/grunt-plain.svg"
+                alt="grunt-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/c-plain.svg"
+                alt="c-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/python-plain.svg"
+                alt="python-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/ruby-plain.svg"
+                alt="ruby-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/heroku-plain.svg"
+                alt="heroku-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/trello-plain.svg"
+                alt="trello-icon"
+              />
+            </div>
+            <div class="col col-3 col-sm-2 my-3">
+              <img
+                data-aos="fade-right"
+                width="42px"
+                height="42px"
+                src="./assets/images/ico/ubuntu-plain.svg"
+                alt="ubuntu-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- WORKS -->
     <div id="works" class="container my-5">
-        <h2 class="display-1" data-aos="fade-right">Works</h2>
-        <p>Listed my <span class="text-primary">latest</span> works, there are projects that have not been works but I consider them <span class="text-primary">interesting</span>, so I put them</p>
-        <div class="row">
-            <div class="col col-12 col-md-6">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>Cocktail Master</h2>
-                    <hr>
-                    <p>Build a frontend experience for cocktailDB api w/ ReactJS.</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://cocktail-master-react.vercel.app/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>Checkup Digitale</h2>
-                    <hr>
-                    <p>Landing website for modern digital agency w/ReactJS.</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://www.checkupdigitale.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>SeasonCycles</h2>
-                    <hr>
-                    <p>Stock market analysis tool, also my first job w/ReactJS and Codigniter.</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://seasoncycles.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>Yatzy Simulator</h2>
-                    <hr>
-                    <p>The game of yatzy (kata) with UX and UI optized built in TypeScript w/ReactJS and NodeJS.</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://yahtzee-simultator.herokuapp.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>SmartCV</h2>
-                    <hr>
-                    <p>Open source CV type pdf creation tool only with React-pdf</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://alienpingu.github.io/demo/3/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>Identicon Generator</h2>
-                    <hr>
-                    <p>Generate little pixel art as profile pic</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://identicon-generator.herokuapp.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>12 dot Game</h2>
-                    <hr>
-                    <p>Digital Simulator of 12 dot game with a cool background</p>
-                    <a class="btn btn-outline-light btn-sm" href="https://alienpingu.github.io/demo/5/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>Almadental</h2>
-                    <hr>
-                    <p>Landing Website for dental technician office in NextJS </p>
-                    <a class="btn btn-outline-light btn-sm" href="https://www.almadentallab.com/" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>e23 Milano</h2>
-                    <hr>
-                    <p>Landing website for co-working space in NextJS </p>
-                    <a class="btn btn-outline-light btn-sm" href="https://e23-pagerland.vercel.app" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 col-md-6 d-none d-md-block">
-                <div class="my-4" data-aos="zoom-in-up">
-                    <h2>Hybrid Ecom</h2>
-                    <hr>
-                    <p>Experimental e-commerce build with NextJS and ecwid for a only frontend maintainence </p>
-                    <a class="btn btn-outline-light btn-sm" href="https://upgvng.vercel.app" target="_blank"><img src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe" alt="open-icon">OPEN</a>
-                </div>
-            </div>
-            <div class="col col-12 d-flex d-md-none justify-content-center">
-                <span id="more_work_btn" class="btn btn-light">Show More</span>
-            </div>
+      <h2 class="display-1" data-aos="fade-right">Works</h2>
+      <p>
+        Elencati i miei ultimi lavori, potreste trovare anche progetti non
+        commissionati che ho voluto aggiungere perchè reputo molto interessanti
+      </p>
+      <div class="row">
+        <div class="col col-12 col-md-6">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              Cocktail Master
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_react-fill.png"
+                  alt="reactjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>
+              Strumento per cercare, visualizzare e salvare ricette di cocktail,
+              utilizzando cocktailDBAPI per ottenere le informazioni
+            </p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://cocktail-master-react.vercel.app/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
         </div>
+        <div class="col col-12 col-md-6">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              Checkup Digitale
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/nextjs.svg"
+                  alt="nextjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>
+              Sito web vetrina con grafica innovativa, sviluppato per agenzia
+              digitale
+            </p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://www.checkupdigitale.com/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              SeasonCycles
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_react-fill.png"
+                  alt="reactjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>
+              Strumento per visualizzare l'andamento del mercato azionario, di
+              materie prime e Crypto (Servizio Sospeso Momentaneamente)
+            </p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://seasoncycles.com/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              Yatzy
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_react-fill.png"
+                  alt="reactjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_node-fill.png"
+                  alt="node-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/express-original.svg"
+                  alt="express-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_typescript-fill.png"
+                  alt="ts-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_jest.png"
+                  alt="jest-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>
+              Il gioco dello Yatzy! Iniziando dallo sviluppo di un Kata che
+              richiedeva di costruire la logica dietro a questo gioco con le
+              best pratices e TDD, ho voluto anche sviluppare una web app che ne
+              permetta l'utilizzo
+              <a
+                class="btn btn-outline-light btn-sm"
+                href="https://yahtzee-simultator.herokuapp.com/"
+                target="_blank"
+                ><img
+                  src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                  alt="open-icon"
+                />OPEN</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              SmartCV
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_react-fill.png"
+                  alt="reactjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>Strumento open-source per creare un CV valido, inserisci i tuoi dati e alla fine potrai scaricare un PDF, funziona tranquillamente anche offline</p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://alienpingu.github.io/demo/3/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              Identicon
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_react-fill.png"
+                  alt="reactjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_node-fill.png"
+                  alt="node-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/express-original.svg"
+                  alt="express-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/akar-icons_typescript-fill.png"
+                  alt="ts-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_jest.png"
+                  alt="jest-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>Generatore di Identicon, piccole immagini composte da pixel raffiguranti emoticon basilari</p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://identicon-generator.herokuapp.com/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              12 dot
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/html5-plain.svg"
+                  alt="html-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/css3-plain.svg"
+                  alt="css-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/javascript-plain.svg"
+                  alt="javascript-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>Versione digitale del gioco 12dot, un rompicapo molto complesso la cui risoluzione impiega diverse ore</p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://alienpingu.github.io/demo/5/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              Almadental
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/nextjs.svg"
+                  alt="nextjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>Sito vetrina per laboratorio odontotecnico, l'obbiettivo principale è stato quello di rispecchiare lo stile del brand (pulizia e professionalità)</p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://www.almadentallab.com/"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              e23 Milano
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/nextjs.svg"
+                  alt="nextjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>Sito vetrina per spazio di lavoro condiviso, utilizzando come punto di partenza un tema e con successiva personalizzazione</p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://e23-pagerland.vercel.app"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 d-none d-md-block">
+          <div class="my-4" data-aos="zoom-in-up">
+            <h2 class="d-flex justify-content-between align-items-center">
+              Hybrid Ecom
+              <span>
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/nextjs.svg"
+                  alt="nextjs-icon"
+                />
+                <img
+                  data-aos="fade-right"
+                  width="24px"
+                  height="24px"
+                  src="./assets/images/ico/cib_sass-alt.png"
+                  alt="sass-icon"
+                />
+              </span>
+            </h2>
+            <hr />
+            <p>
+             E-commerce sperimentale utilizzando tencologie molto lontane tra loro, NextJS e Ecwid usando quest'ultimo come CMS headless
+            </p>
+            <a
+              class="btn btn-outline-light btn-sm"
+              href="https://upgvng.vercel.app"
+              target="_blank"
+              ><img
+                src="https://icongr.am/material/cursor-default-click-outline.svg?size=18&color=fefefe"
+                alt="open-icon"
+              />OPEN</a
+            >
+          </div>
+        </div>
+        <div class="col col-12 d-flex d-md-none justify-content-center">
+          <span id="more_work_btn" class="btn btn-light">Show More</span>
+        </div>
+      </div>
     </div>
     <!-- CONTACT -->
     <div id="contact" class="container">
-        <hr>
-        <h2 class="display-1" data-aos="fade-right">Contacts</h2>
-        <p>For any question or clarification contact me and i will reply asap.</p>
-        <div class="row">
-            <div class="col col-12 col-md-6">
-                <div class="d-grid gap-2">
-                    <a data-aos="fade-right" class="btn btn-light d-flex justify-content-between" href="https://t.me/brtsml"><img src="https://icongr.am/feather/send.svg?size=24&color=282828" alt="telegram-icon"> @brtsml</a>
-                    <a data-aos="fade-right" class="btn btn-light d-flex justify-content-between" href="mailto:brtsml@pm.me"><img src="https://icongr.am/feather/mail.svg?size=24&color=282828" alt="telegram-icon">brtsml@pm.me</a>
-                </div>
-            </div>
-            <p class="text-center my-3 d-md-none">-o-</p>
-            <div class="col col-12 col-md-6">
-                <form action="https://submit-form.com/YJDorugF">
-                    <div class="mb-3">
-                        <label for="name" class="form-label" data-aos="fade-left" data-aos-once="true">Name</label>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Jhon Doe" data-aos="fade-left" data-aos-once="true" required>
-                      </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label" data-aos="fade-left" data-aos-once="true">Email address</label>
-                      <input name="email" type="email" class="form-control" id="email" placeholder="jhon.doe@email.com" aria-describedby="emailHelp" data-aos="fade-left" data-aos-once="true" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label" data-aos="fade-left" data-aos-once="true">Phone Number</label>
-                        <input name="phone" type="tel" class="form-control" id="phone" placeholder="346 643 7437" aria-describedby="phone" data-aos="fade-left" data-aos-once="true" required>
-                    </div>
-                    <button type="submit" class="btn btn-light btn-lg" data-aos="fade-left" data-aos-once="true">Submit</button>
-                </form>
-            </div>
+      <hr />
+      <h2 class="display-1" data-aos="fade-right">Contacts</h2>
+      <p>For any question or clarification contact me and i will reply asap.</p>
+      <div class="row">
+        <div class="col col-12 col-md-6">
+          <div class="d-grid gap-2">
+            <a
+              data-aos="fade-right"
+              class="btn btn-light d-flex justify-content-between"
+              href="https://t.me/brtsml"
+              ><img
+                width="24px"
+                height="24px"
+                src="./assets/images/ico/telegram.svg"
+                alt="telegram-icon"
+              />
+              @brtsml</a
+            >
+            <a
+              data-aos="fade-right"
+              class="btn btn-light d-flex justify-content-between"
+              href="mailto:brtsml@pm.me"
+              ><img
+                width="24px"
+                height="24px"
+                src="./assets/images/ico/mailru.svg"
+                alt="mail-icon"
+              />brtsml@pm.me</a
+            >
+          </div>
         </div>
+        <p class="text-center my-3 d-md-none">-o-</p>
+        <div class="col col-12 col-md-6">
+          <form action="https://submit-form.com/YJDorugF">
+            <div class="mb-3">
+              <label
+                for="name"
+                class="form-label"
+                data-aos="fade-left"
+                data-aos-once="true"
+                >Name</label
+              >
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Jhon Doe"
+                data-aos="fade-left"
+                data-aos-once="true"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="email"
+                class="form-label"
+                data-aos="fade-left"
+                data-aos-once="true"
+                >Email address</label
+              >
+              <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="jhon.doe@email.com"
+                aria-describedby="emailHelp"
+                data-aos="fade-left"
+                data-aos-once="true"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="phone"
+                class="form-label"
+                data-aos="fade-left"
+                data-aos-once="true"
+                >Phone Number</label
+              >
+              <input
+                name="phone"
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="346 643 7437"
+                aria-describedby="phone"
+                data-aos="fade-left"
+                data-aos-once="true"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-light btn-lg"
+              data-aos="fade-left"
+              data-aos-once="true"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
     <footer class="text-center mt-5">
-        <p>This website is made with only one html file</p>
-        <p>Framework used: Bootstrap@5.2 - AOS@2.3.1</p>
+      <p>This website is made with only one html file</p>
+      <p>Framework used: Bootstrap@5.2 - AOS@2.3.1</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/scripts/script.js"></script>
-</body>
+  </body>
 </html>

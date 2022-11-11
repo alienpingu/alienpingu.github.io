@@ -12,6 +12,7 @@ body {
     background-color: #282828;
 }
 
+
 /* NAVBAR */
 #navbar {
     max-width: 100vw;
@@ -42,30 +43,8 @@ img.dino {
 }
 /* Skils */
 #skills img {
-    max-width: 2rem;
-    max-height: 2rem;
-}
-.star {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1;
-    width: 100%;
-    max-width: 12rem;
-    width: 100%;
-}
-.star span {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.full-star {
-    background: url("../images/ico/clarity_star-solid.png");
-}
-.half-star {
-    background: url("../images/ico/clarity_half-star-solid.png");
-}
-.empty-star {
-    background: url("../images/ico/clarity_star-line.png");
+    max-width: 42px;
+    max-height: 42px;
 }
 
 /* Works */
@@ -73,9 +52,9 @@ img.dino {
 
 /* ANIMATION */
 #menu_link a:nth-child(1) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) both}
-#menu_link a:nth-child(2) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.1s both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.1s both}
-#menu_link a:nth-child(3) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.20s both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.25s both}
-#menu_link a:nth-child(4) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.30s both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.35s both}
+#menu_link a:nth-child(2) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.05s both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.1s both}
+#menu_link a:nth-child(3) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.07s both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.25s both}
+#menu_link a:nth-child(4) {-webkit-animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.08s both;animation:slide-right .5s cubic-bezier(.25,.46,.45,.94) 0.35s both}
 @-webkit-keyframes slide-right{0%{-webkit-transform:translateX(-100px);transform:translateX(-100px)}100%{-webkit-transform:translateX(0);transform:translateX(0)}}@keyframes slide-right{0%{-webkit-transform:translateX(-100px);transform:translateX(-100px)}100%{-webkit-transform:translateX(0);transform:translateX(0)}}
 
 /* General */
