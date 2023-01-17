@@ -4,6 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”robots” content="index, follow">
+    <meta name="keywords" content="NPL, nplitalia, righetti, pamela, immobiliare, investimenti">
+    <meta name="author" content="brtsml">
+    <meta name="publisher" content="Pamela Righetti">
+    <meta name="copyright" content="Pamela Righetti">
+    <meta name="description" content="NPL Italia la prima communitì di NPL in Italia, di Righetti Pamela">
+    <meta name="page-topic" content="npl">
+    <meta name="page-type" content="landing">
+    <meta name="audience" content="Everyone">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>NPL Italia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -18,19 +28,15 @@
         </div>
     </nav>
     <!-- HERO SECTION -->
-    <section id="landing" class="container text-center mt-5 pt-5">
-        <div class="row">
-            <div class="col">
-                <h1 class="display-3">Comprare casa è complicato, <br />lasciaci semplificarti il processo</h1>
-                <p class="text-secondary">Affrontare l'acquisizione di un immobile può essere un incubo, noi lo
-                    renderemo un
-                    sogno</p>
-                <a class="btn btn-primary px-2 rounded" href="#contact">Richiedi un appuntamento</a>
-                <img class="w-100 my-5" src="./img/hero.png" alt="Un contratto e una casa acquisita">
-            </div>
-        </div>
+    <section id="landing" class="hero-section">
+        <h1>Comprare casa è complicato, <br />lasciaci <span class="text-primary">semplificarti</span> il processo</h1>
+        <p>Affrontare l'acquisizione di un immobile <br> può essere un incubo, noi
+            lo
+            renderemo un
+            sogno</p>
+        <a class="btn btn-primary rounded text-uppercase" href="#contact">Richiedi un appuntamento</a>
     </section>
-    <section id="product" class="container">
+    <section id="product" class="container section">
         <h2>Per i nostri clienti</h2>
         <div class="row px-3">
             <div class="col col-12 col-md-4">
@@ -62,7 +68,7 @@
         </div>
     </section>
     <!-- ABOUT -->
-    <section id="about" class="container mt-4">
+    <section id="about" class="container mt-4 section">
         <h2>Dietro alle cose</h2>
         <div class="row my-5">
             <div class="col col-12 col-md-4">
@@ -78,19 +84,62 @@
             </div>
         </div>
     </section>
-    <section id="newsletter" class="container py-5 bg-primary text-white">
-        <h2>Rimani aggiornato</h2>
-        <p>Iscriviti alla newsletter per ricevere contenuti esclusivi</p>
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="py-5 bg-primary text-white section align-items-center ">
+        <h2 class="display-3">Rimani aggiornato</h2>
+        <p class="mb-5">Iscriviti alla newsletter per ricevere contenuti esclusivi</p>
         <form action="/">
             <label for="newsletter-email" class="form-label">Email</label>
             <input type="email" class="form-control bg-primary text-white" id="newsletter-email"
                 aria-describedby="emailHelp">
-            <span id="emailHelp" class="form-text text-white">Non condivideremo con nessuno il tuo indirizzo
+            <span id="emailHelp" class="form-text text-white w-100">Non condivideremo con nessuno il tuo indirizzo
                 email</span>
-            <button type="submit" class="btn btn-lg mt-3 btn-light">Iscriviti</button>
+            <br>
+            <button type="submit" class="btn btn-lg mt-3 btn-light ">Iscriviti</button>
         </form>
     </section>
-    <section id="contact" class="container my-5">
+    <!-- SHOP -->
+    <section id="shop" class="container my-5">
+        <h2 class="disply-3 mb-5">I nostri prodotti</h2>
+        <div class="row">
+            <div class="col col-12 col-md-4">
+                <div class="card mb-3 shadow">
+                    <img src="https://picsum.photos/300/150" class="card-img-top" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-4">
+                <div class="card mb-3 shadow">
+                    <img src="https://picsum.photos/300/150" class="card-img-top" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-4">
+                <div class="card mb-3 shadow">
+                    <img src="https://picsum.photos/300/150" class="card-img-top" alt="placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="section mt-5 bg-primary text-white">
         <h2>Richiedi un appuntamento</h2>
         <p>Ti contatteremo per programmare un appuntamento al più presto</p>
         <form>
@@ -101,7 +150,7 @@
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp2">
-                <div id="emailHelp2" class="form-text">Non condivideremo la tua email con nessuno</div>
+                <div id="emailHelp2" class="form-text text-white">Non condivideremo la tua email con nessuno</div>
             </div>
             <div class="mb-3">
                 <label for="phone" class="form-label">Telefono</label>
@@ -111,9 +160,14 @@
                 <input type="checkbox" class="form-check-input" id="asap">
                 <label class="form-check-label" for="asap">Situazione urgente</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-light">Submit</button>
         </form>
     </section>
+    <!-- FOOTER -->
+    <footer class="pb-4 bg-primary">
+        <p class="text-center text-white">© 2023 <a class="text-white" href="https://brtsml.com" target="_blank"
+                rel="noopener">brtsml</a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
