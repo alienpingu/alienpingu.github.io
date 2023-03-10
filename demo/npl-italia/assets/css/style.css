@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------
+  /*------------------------------------------------------------------
 [Master Stylesheet]
 Theme Name: 	
 Version:        1.0.0
@@ -262,7 +262,7 @@ img {
 .section-title, .section-title-s2, .section-title-s3, .section-title-s6, .section-title-s4 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 35px;
-  margin-top: -7px;
+
 }
 
 .section-title > span, .section-title-s2 > span, .section-title-s3 > span, .section-title-s6 > span, .section-title-s4 > span {
@@ -1705,7 +1705,8 @@ img {
 
 .header-style-1 .site-logo, .header-style-2 .site-logo, .header-style-3 .site-logo, .header-style-4 .site-logo {
   position: absolute;
-  left: 0;
+  left: 12px;
+  top: 12px;
 }
 
 @media screen and (min-width: 992px) {
@@ -2100,21 +2101,21 @@ img {
 
 @media (max-width: 1199px) {
   .hero-style-2 {
-    height: 900px;
+    height: 100%;
     min-height: auto;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style-2 {
-    height: 520px;
+    height: 100%;
     min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
   .hero-style-2 {
-    height: 550px;
+    height: 100%;
   }
 }
 
@@ -2127,26 +2128,37 @@ img {
 
 @media (max-width: 1199px) {
   .hero-style-2 .slide {
-    height: 900px;
+    height: 100%;
     min-height: auto;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style-2 .slide {
-    height: 520px;
+    height: 100%;
     min-height: auto;
   }
 }
 
 @media (max-width: 767px) {
   .hero-style-2 .slide {
-    height: 550px;
+    height: 100%;
   }
 }
-
+.hero-style-2 .img-holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hero-style-2 .img-holder img {
-  border-radius: 50px;
+  margin-bottom: 1rem;
+
+}
+@media (max-width: 1500px) {
+  .hero-style-2 .img-holder img{
+    width: 24rem;
+    object-fit: cover;
+  }
 }
 
 .hero-style-2 .slide-caption h2 {
@@ -3069,8 +3081,8 @@ img {
     padding: 19px 0;
   }
   .header-style-2 .sticky-header .site-logo {
-    left: 0;
-    top: 0;
+    left: 12px;
+    top: 12px;
   }
 }
 
@@ -4767,12 +4779,18 @@ img {
   position: absolute;
   left: 35px;
   top: 35px;
+  
+}
+
+.portfolio-section-s2 .grid-item .inner .details h3, .portfolio-section-s2 .grid-item .inner .details span.cat{
+  color: #000 !important;  
+  text-shadow: 0.25px 0 0 #fff, -0.25px 0 0 #fff, 0 0.25px 0 #fff, 0 -0.25px 0 #fff, 0.25px 0.25px #fff, -0.25px -0.25px 0 #fff, 0.25px -0.25px 0 #fff, -0.25px 0.25px 0 #fff;
 }
 
 @media (max-width: 767px) {
   .portfolio-section-s2 .grid-item .inner .details {
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    /* height: calc(100% - 40px); */
     left: 20px;
     top: 20px;
   }
