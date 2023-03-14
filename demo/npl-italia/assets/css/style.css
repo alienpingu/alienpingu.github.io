@@ -661,6 +661,7 @@ img {
   text-transform: uppercase;
   -webkit-box-shadow: 0 9px 10px rgba(98, 32, 217, 0.3);
   box-shadow: 0 9px 10px rgba(98, 32, 217, 0.3);
+  z-index: 999;
 }
 
 @media (max-width: 1199px) {
@@ -2235,6 +2236,7 @@ img {
   .hero-style-2 .slide-caption > p {
     margin: 0 0 2em;
   }
+ 
 }
 
 .hero-style-2 .slick-dots {
@@ -2246,7 +2248,11 @@ img {
     bottom: 40px;
   }
 }
-
+@media (min-width: 991px) {
+  .hero-style-2 .slide-caption > .btns {
+    margin-top: 5.5rem;
+  }
+}
 .hero-style-2 .slick-dots li {
   width: auto;
   height: auto;
