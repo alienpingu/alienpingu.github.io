@@ -1,0 +1,14 @@
+{
+  "name": "portfolio2024",
+  "version": "1.0.0",
+  "description": "alienpingu' portfolio 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alienpingu",
+  "license": "ISC",
+  "dependencies": {
+    "tuicss": "^2.1.1"
+  }
+}

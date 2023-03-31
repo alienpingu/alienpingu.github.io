@@ -1,0 +1,22 @@
+/*  GENERAL */
+.mb {
+    margin-bottom: 3rem;
+}
+tr {
+    height: 2rem;
+}
+#contact li, #contact input {
+    margin-bottom: 1rem;
+}
+/* HERO */
+#hero {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTACT */
+#contact {
+    margin-top: 3rem;
+}
