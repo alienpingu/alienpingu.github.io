@@ -14,10 +14,10 @@
     <!-- NAVBAR -->
     <nav class="tui-nav full-width">
         <ul>
-            <li class="cursor-pointer hide-on-small-only"><a href="#about"></a>About</a></li>
-            <li class="cursor-pointer hide-on-small-only"><a href="#project"></a>Project</a></li>
-            <li class="cursor-pointer hide-on-small-only"><a href="#skills"></a>Skills</a></li>
-            <li class="cursor-pointer"><a href="#contact"></a>Contact</a></li>
+            <li class="cursor-pointer hide-on-small-only"><a href="#about">About</a></li>
+            <li class="cursor-pointer hide-on-small-only"><a href="#project">Project</a></li>
+            <li class="cursor-pointer hide-on-small-only"><a href="#skills">Skills</a></li>
+            <li class="cursor-pointer"><a href="#contact">Contact</a></li>
             <span class="tui-datetime" data-format="h:m:s a"></span>
         </ul>
     </nav>
@@ -38,7 +38,7 @@
                     </div>
                 </section>
                 <section id="about" class="mb">
-                    <div class="tui-panel white-168 full-width black-255-text" style="width: 400px;">
+                    <div class="tui-panel white-168 full-width black-255-text mb" style="width: 400px;">
                         <div class="tui-tabs">
                             <ul>
                                 <li><a class="tui-tab active" data-tab-content="tab-1-content">Work</a></li>
@@ -93,40 +93,40 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Stack</th>
-                                    <th>Size</th>
+                                    <th>Link</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Project 1</td>
-                                    <td>HTML, CSS, JS</td>
-                                    <td>1.5MB</td>
+                                    <td>Cocktail Master</td>
+                                    <td>React, Scss</td>
+                                    <td><a target="_blank" href="https://cocktail-master-react.vercel.app/">Link</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Project 1</td>
-                                    <td>HTML, CSS, JS</td>
-                                    <td>1.5MB</td>
+                                    <td>Checkup Digitale</td>
+                                    <td>NextJS</td>
+                                    <td><a target="_blank" href="https://checkupdigitale.com/">Link</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Project 1</td>
+                                    <td>12 dot game</td>
                                     <td>HTML, CSS, JS</td>
-                                    <td>1.5MB</td>
+                                    <td><a target="_blank" href="https://alienpingu.github.io/demo/5/">Link</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Project 1</td>
-                                    <td>HTML, CSS, JS</td>
-                                    <td>1.5MB</td>
+                                    <td>Almadental LAB</td>
+                                    <td>NextJS</td>
+                                    <td><a target="_blank" href="https://www.almadentallab.com/">Link</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Project 1</td>
-                                    <td>HTML, CSS, JS</td>
-                                    <td>1.5MB</td>
+                                    <td>e23 Milano</td>
+                                    <td>NextJS</td>
+                                    <td><a href="https://e23-pagerland.vercel.app/">Link</a></td>
                                 </tr>
                             </tbody>
                         </table>
                     </fieldset>
                 </section>
-                <section id="skill" class="tui-window full-width mb">
+                <section id="skills" class="tui-window full-width mb">
                     <fieldset class="tui-fieldset">
                         <legend class="center">Hard Skills</legend>
                         <span class="tui-fieldset-text">Role: developer</span>
@@ -181,9 +181,8 @@
                 <section id="contact" class="full-width mb">
                     <p class="green-255-text">Follow me on Social Media</p>
                     <ul class="white-text">
-                        <li><a href="#">Linkedln</a></li>
-                        <li><a href="#">Github</a></li>
-                        <li><a href="#">Reddit</a></li>
+                        <li><a href="https://www.linkedin.com/in/sbertocco/" target="_blank">Linkedln</a></li>
+                        <li><a href="https://github.com/alienpingu">Github</a></li>
                     </ul>
                     <hr class="tui-divider mb">
                     </hr>
@@ -191,8 +190,8 @@
                         <fieldset class="tui-fieldset tui-border-dotted">
                             <legend class="center">Get in touch</legend>
                             <span class="tui-fieldset-text">Clean</span>
-                            <span class="tui-fieldset-text right">Submit</span>
-                            <form action="/">
+                            <span id="submit_form" class="tui-fieldset-text right">Submit</span>
+                            <form action="https://submit-form.com/YJDorugF">
                                 <input class="tui-input full-width" placeholder="fullname" type="text">
                                 <br>
                                 <input class="tui-input full-width" placeholder="e-mail" type="email">
@@ -217,7 +216,45 @@
         </ul>
     </div>
 </body>
-
+<div id="start_screen" class="black">
+    <div class="white-text" style="padding: 2px">
+        <img src="./dist/images/pcstartup1.png" width="40px" height="40px" style="float: left" />
+        <img src="./dist/images/pcstartup2.png" width="200px" height="150px" style="float: right" />
+        <div style="margin-top: 4px"></div>
+        Award Medallion BIOS v6.0, An Energy Star Ally<br>
+        Copyright (C) 1984-2001, Award Software, Inc.<br><br>
+        ASUS P4T533-C ACPI BIOS Revision 1007 Beta 001<br><br>
+        Intel(R) Pentium(R) 4 2800 MHz Processor<br>
+        Memory Test : &nbsp;&nbsp; 262144K OK<br><br>
+        <div id="session-1" style="display: none">
+            Award Plug and Play BIOS Extension v1.0A<br>
+            Initialize Plug and Play Cards...<br>
+            PNP init Completed<br><br>
+        </div>
+        <div id="session-2" style="display: none">
+            Detecting Primary Master .....: MAXTOR 6L040J2<br>
+        </div>
+        <div id="session-3" style="display: none">
+            Detecting Primary Slave ......: ASUS CD-S520/A<br>
+        </div>
+        <div id="session-4" style="display: none">
+            Detecting Secondary Master ...: Skip<br>
+            Detecting Secondaty Slave ....: None
+        </div>
+        <div id="session-5" style="display: none">
+            <br>Found virus! The PC cannot be started. I'm Sorry :(
+        </div>
+        <div class="tui-statusbar absolute black white-text">
+            <ul>
+                <li style="margin-left: 0px">Press <b>DEL</b> to enter SETUP, <b>Alt+F2</b> to enter EZ flash utility
+                </li>
+            </ul>
+            <ul>
+                <li style="margin-left: 0px">08/20/2002-1850E/ICH2/W627-P4T533-C</li>
+            </ul>
+        </div>
+    </div>
+</div>
 </html>
 <script src="./dist/tuicss.min.js"></script>
 <script src="script.js"></script>
