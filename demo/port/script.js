@@ -10,3 +10,11 @@ function showSession(id) {
     const session = document.getElementById(id);
     session.style.display = "block";
 }
+
+// Panel
+let panelContainer = document.querySelector('.panel-container');
+let infoBtn = document.querySelector('#info-btn')
+infoBtn.addEventListener('click', () => {
+    panelContainer.style.display = 'flex';
+    panelContainer.addEventListener('click', () => panelContainer.style.display = 'none')
+})
