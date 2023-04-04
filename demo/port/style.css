@@ -45,4 +45,7 @@ tr {
     #hero {
         height: 80vh;
     }
+    #start_screen {
+        font-size: 50%;
+    }
   }

@@ -4,7 +4,7 @@ window.onload = function() {
     setTimeout(function() { showSession("session-3"); }, 450);
     setTimeout(function() { showSession("session-4"); }, 870);
     setTimeout(function() { showSession("session-5"); }, 1500);
-    setTimeout(function() { document.querySelector('#start_screen').style.display = 'none' }, 2000);
+    setTimeout(function() { document.querySelector('#start_screen').style.display = 'none' }, 2250);
 };
 function showSession(id) {
     const session = document.getElementById(id);
