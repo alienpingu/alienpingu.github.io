@@ -58,7 +58,10 @@ tr {
 #about .tui-panel {
     min-height: 12rem;
 }
-
+/* QUOTE */
+#quote {
+    margin-top: 3rem;
+}
 /* CONTACT */
 #contact {
     margin-top: 3rem;

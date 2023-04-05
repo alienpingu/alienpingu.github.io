@@ -3,6 +3,15 @@ function showSession(id) {
     session.style.display = "block";
 }
 
+function getChuckQuote() {
+    fetch('https://api.chucknorris.io/jokes/random')
+        .then(response => response.json())
+        .then(json => {
+            document.querySelector('#norris_text').innerHTML = json.value;
+        })
+        .catch(err => console.log(err))
+}
+
 let infoContainer = document.querySelector('#info-panel');
 let infoBtn = document.querySelector('#info-btn')
 let menuBtn = document.querySelector('#menu-btn');
@@ -14,14 +23,15 @@ let secretTab = document.querySelector('#about .tui-tabs ul').children[2].childr
 let submitContactForm = document.querySelector('#submit_form');
 let cleanContactForm = document.querySelector('#clean_form');
 let contactForm = document.querySelector('#contact-form');
+
 window.onload = function () {
+    getChuckQuote();
     setTimeout(function () { showSession("session-1"); }, 300);
     setTimeout(function () { showSession("session-2"); }, 400);
     setTimeout(function () { showSession("session-3"); }, 450);
     setTimeout(function () { showSession("session-4"); }, 870);
     setTimeout(function () { showSession("session-5"); }, 1500);
-    setTimeout(function () { document.querySelector('#start_screen').style.display = 'none' }, 2250);
-
+    setTimeout(function () { document.querySelector('#start_screen').style.display = 'none' }, 2500);
     infoBtn.addEventListener('click', () => {
         infoContainer.style.display = 'flex';
         infoContainer.addEventListener('click', () => infoContainer.style.display = 'none')
