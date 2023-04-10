@@ -1239,10 +1239,10 @@ input[type=button] {
 
 .tui-tab {
   padding: 2px 10px 0px 10px;
-  color: #a8a8a8;
+  color: #BDBDBD;
   cursor: pointer; }
   .tui-tab.active {
-    background-color: #a8a8a8;
+    background-color: #BDBDBD;
     color: #0000a8; }
   .tui-tab.disabled {
     text-decoration: line-through; }

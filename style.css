@@ -87,10 +87,12 @@ tr {
 #start_screen div img:first-child {
     width: 2rem;
     height: auto;
+    margin-right: 1rem;
 }
-#start_screen div img:last-child {
-    width: 2rem;
-    height: auto;
+#start_screen div img:nth-child(2) {
+    width: 8rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 /* RESPONSIVE */
