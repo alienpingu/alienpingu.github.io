@@ -84,6 +84,14 @@ tr {
 #start_screen div {
     width: 100%;
 }
+#start_screen div img:first-child {
+    width: 2rem;
+    height: auto;
+}
+#start_screen div img:last-child {
+    width: 2rem;
+    height: auto;
+}
 
 /* RESPONSIVE */
 
