@@ -62,6 +62,11 @@ tr {
 #quote {
     margin-top: 3rem;
 }
+/* PAGESPEED */
+#pagespeed li {
+    display: flex;
+    justify-content: space-between;
+}
 /* CONTACT */
 #contact {
     margin-top: 3rem;
