@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-language" content="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="brtsml, alinpingu, developer, Minesweeper, arcade, game">
+        <meta http-equiv="Cache-control" content="public">
+        <meta name="author" content="alinpingu">
+        <meta name="publisher" content="alinpingu">
+        <meta name="copyright" content="alinpingu">
+        <meta name="description"
+            content="Minesweeper - Written in jquery">
+        <meta name="page-topic" content="Developer">
+        <meta name="page-type" content="game">
+        <meta name="audience" content="Everyone">
+        <meta name="robots" content="index, follow">
+        <link rel="shortcut icon" type="image" href="https://icongr.am/fontawesome/terminal.svg?size=36&color=00a329" />
+        <title>BRTSML Games - Minesweeper</title>
+        <link rel="stylesheet" href="../../dist/tuicss.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+    </head>
+<body>
+    <div class="tui-window full-width tui-no-shadow game-container">
+        <fieldset class="tui-fieldset">
+            <legend class="center">Minesweeper.JS</legend>
+            <a href="/" class="tui-fieldset-button"><span class="red-255-text">🞮</span></a>
+            <a href="/game/minesweeper/" class="tui-fieldset-button left"><span class="green-255-text">➥</span></a>
+            <span class="tui-fieldset-text top right" style="margin-right: 50px">1</span>
+            <span class="tui-fieldset-text" style="margin-left: 50px;">&nbsp;1:1&nbsp;</span>
+            <div class="row">
+                <div class="col">
+                    <fieldset class="tui-fieldset ">
+                        <legend>Difficulty</legend>
+                        <form class="form">
+                            <label class="tui-radio">
+                                Easy
+                                <input type="radio" name="group" value="10" checked="checked"/>
+                                <span></span>
+                            </label>
+                            <label class="tui-radio">
+                                Normal
+                                <input type="radio" name="group" value="20"/>
+                                <span></span>
+                            </label>
+                            <label class="tui-radio">
+                                Hard
+                                <input type="radio" name="group" value="30"/>
+                                <span></span>
+                            </label>
+                            <hr class="tui-divider"></hr>
+                            <button id="generate" class="tui-button no-shadow">Generate</button>
+                        </form>
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <p>Controls: </p>
+                    <ul>
+                        <li>Left Click - Show a cell</li>
+                        <li>Right Click - Mark a cell</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>Goal: </p>
+                    <p>Mark all bombs with red flag (Right click)</p>
+                </div>
+            </div>
+            <div id="minesweeper"></div>
+    </div>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>

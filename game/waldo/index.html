@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-language" content="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="brtsml, alinpingu, developer, waldo, where, is, game">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="author" content="alinpingu">
+    <meta name="publisher" content="alinpingu">
+    <meta name="copyright" content="alinpingu">
+    <meta name="description"
+        content="Where is Waldo? Written in jquery">
+    <meta name="page-topic" content="Developer">
+    <meta name="page-type" content="game">
+    <meta name="audience" content="Everyone">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image" href="https://icongr.am/fontawesome/terminal.svg?size=36&color=00a329" />
+    <title>BRTSML Games - Waldo</title>
+    <link rel="stylesheet" href="../../dist/tuicss.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+<body>
+    <div class="tui-window full-width tui-no-shadow game-container">
+        <fieldset class="tui-fieldset">
+            <legend class="center">WALDO.JS</legend>
+            <a href="/" class="tui-fieldset-button"><span class="red-255-text">🞮</span></a>
+            <a href="/game/waldo/" class="tui-fieldset-button left"><span class="green-255-text">➥</span></a>
+            <span class="tui-fieldset-text top right" style="margin-right: 50px">1</span>
+            <span class="tui-fieldset-text" style="margin-left: 50px;">&nbsp;1:1&nbsp;</span>
+            <div class="row">
+                <div class="col">
+                    <fieldset class="tui-fieldset ">
+                        <legend>Difficulty</legend>
+                        <form class="form">
+                            <label class="tui-radio">
+                                Easy
+                                <input type="radio" name="group" value="15" checked="checked"/>
+                                <span></span>
+                            </label>
+                            <label class="tui-radio">
+                                Normal
+                                <input type="radio" name="group" value="25"/>
+                                <span></span>
+                            </label>
+                            <label class="tui-radio">
+                                Hard
+                                <input type="radio" name="group" value="40"/>
+                                <span></span>
+                            </label>
+                            <hr class="tui-divider"></hr>
+                            <button class="tui-button no-shadow">Generate</button>
+                        </form>
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <p>Legend: </p>
+                    <ul>
+                        <li>"   " - Air</li>
+                        <li>" w " - Bird</li>
+                        <li>" ~ " - Sea</li>
+                        <li>".~." - Waves</li>
+                        <li>"M, P, A, etc" - People</li>
+                        <li><strong>"W" - Waldo</strong></li>
+                    </ul>
+                    
+                </div>
+                <div class="col">
+                    <p>Rules: </p>
+                    <p>1. Find (W)aldo</p>
+                </div>
+                <div class="col">
+                    <p>Time: </p>
+                    <p id="time" ></p>
+                </div>
+            </div>
+            <table class="waldo-table full-width"></table>
+    </div>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../../dist/tuicss.min.js" />
+<script src="script.js"></script>
+<script type="text/javascript">
+    $('button').on('click', (e) => {
+        e.preventDefault();
+        
+        let xy = Number($('input[name=group]:checked').val());
+        let table = new Table(xy,xy);
+        table.generateTable();
+    })
+</script>

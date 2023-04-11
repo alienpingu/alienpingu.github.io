@@ -99,7 +99,42 @@ tr {
     margin-top: 1rem;
     margin-right: 1rem;
 }
+/* GAME SCREEN */
+/* WALDO */
+.game-container, .game-container > .tui-fieldset {
+    min-height: 99vh !important;
+}
+.waldo-table {
+    cursor: pointer;
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#time {
+    display: none;
+}
+/* minesweeper */
+#minesweeper {
+	display: grid;
+}
+.square {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.mine {
+  background-color: red;
+}
+.hidden {
+  background-color: gray;
+}
 
+.flagged {
+  background-color: yellow;
+}
 /* RESPONSIVE */
 
 @media only screen and (max-width: 768px) {
