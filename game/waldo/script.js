@@ -29,6 +29,8 @@ class Table {
 		let diffMs = (this.end - this.start);
 		$('#time').append(`<span>${(diffMs/1000)} s</span>`);
 		$('#time').show();
+		$('.waldo-table').hide();
+
     }
     cell(y) {
     	let h = ((this.y - y) / (this.y/6));
@@ -60,6 +62,7 @@ class Table {
   				}
 	  		}
   		}
+		$('.waldo-table').show();
   		this.timeStart();
   	}
 }

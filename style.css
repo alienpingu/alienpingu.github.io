@@ -66,10 +66,17 @@ tr {
 #pagespeed li {
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem 0;
+}
+#pagespeed a {
+    padding: 0.5rem;
 }
 /* CONTACT */
 #contact {
     margin-top: 3rem;
+}
+#social li a{
+    padding: 0.5rem 0;
 }
 /* FOOTER */
 .tui-statusbar li {
@@ -106,9 +113,7 @@ tr {
 }
 .waldo-table {
     cursor: pointer;
-    max-width: 750px;
-    margin-right: auto;
-    margin-left: auto;
+    display: none;
 }
 #time {
     display: none;
