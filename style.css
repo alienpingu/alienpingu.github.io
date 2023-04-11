@@ -75,6 +75,10 @@ tr {
 #contact {
     margin-top: 3rem;
 }
+#contact span {
+    cursor: pointer;
+}
+/* SOCIAL */
 #social li a{
     padding: 0.5rem 0;
 }
