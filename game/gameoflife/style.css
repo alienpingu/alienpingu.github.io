@@ -1,0 +1,30 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+}
+#game {
+    display: none;
+    height: 100vw;
+    width: auto;
+    border: thick dotted green;
+}
+#game span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game span.live {
+    background-color: #759973;
+}
+
+@media only screen and (min-width: 600px) {
+    #game {
+        height: 98vh;
+        width: 98vh;
+        margin: 0 auto;
+
+    }
+}
