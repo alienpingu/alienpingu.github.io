@@ -3,12 +3,12 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     background: black;
+    min-height: 100vh;
+    padding-top: 1rem;
 }
 #game {
-    display: none;
+    display: grid;
     height: 100vw;
-    width: auto;
-    border: thick dotted green;
 }
 #game span {
     display: flex;
@@ -20,11 +20,21 @@ body, html {
     background-color: #759973;
 }
 
+#button {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
 @media only screen and (min-width: 600px) {
     #game {
-        height: 98vh;
-        width: 98vh;
+        height: 93vh;
+        width: 93vh;
         margin: 0 auto;
-
+        
     }
 }
