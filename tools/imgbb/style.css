@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+
+.card {
+    height: 100%;
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+
+#hero {
+    background-image: url('https://static.pexels.com/photos/1571442/pexels-photo-1571442.jpeg');
+    background-size:cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;     
+    font-family: 'Source Code Pro', monospace;
+    text-transform:uppercase;         
+}
+
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+}
+@keyframes slidein {
+    from {background-position: top;background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+}
