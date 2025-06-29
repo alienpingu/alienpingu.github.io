@@ -1,4 +1,0 @@
-# Linguaggio predefinito
-- language: en
-  # Controllo della cache
-  cache_control: "max-age=31536000, public"
