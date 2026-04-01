@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -72,9 +73,12 @@ const Work = () => (
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-          <div 
-            key={project.name} 
-            className="glass rounded-xl p-8 flex flex-col animate-fade-up"
+          <a
+            key={project.name}
+            href={project.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass rounded-xl p-8 flex flex-col animate-fade-up hover:glow transition-all group"
           >
             <div className="flex items-center justify-between mb-4">
               <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
@@ -84,8 +88,9 @@ const Work = () => (
               }`}>
                 {project.status}
               </span>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+            <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{project.name}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed flex-1">{project.description}</p>
             <div className="flex flex-wrap gap-2 mt-6">
               {project.tags.map((tag) => (
@@ -94,7 +99,7 @@ const Work = () => (
                 </span>
               ))}
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
