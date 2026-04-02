@@ -5,46 +5,24 @@ const About = () => (
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-3xl animate-fade-up">
         <p className="text-primary font-medium text-sm tracking-widest uppercase">About</p>
-        <h1 className="text-4xl md:text-5xl font-bold mt-4">Chi sono</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-4">Bertocco Samuele</h1>
 
         <div className="mt-12 space-y-6 text-foreground/80 leading-relaxed">
           <p>
-            Sono un imprenditore tech con oltre 10 anni di esperienza nello sviluppo di prodotti digitali.
-            Il mio percorso è iniziato come sviluppatore full-stack e si è evoluto nella creazione
-            e nel lancio di prodotti SaaS di successo.
+            Sono sempre stato ossessionato da internet e da come evolve. Alla mia età ho avuto il privilegio di viverlo in prima persona, dalle origini fino a oggi.
           </p>
           <p>
-            Credo fermamente che la tecnologia debba essere al servizio delle persone e del business.
-            Per questo combino competenze tecniche profonde con una visione imprenditoriale,
-            aiutando aziende e startup a trasformare idee in prodotti concreti.
+            Ho iniziato con design 3D e progettazione elettronica, ma la vera passione è sempre stata la rete. Nel 2020, con il mondo fermo, ho riscoperto questa spinta e ho aperto la mia prima partita IVA. Quello che seguì fu il classico percorso del freelancer affamato: ho offerto qualsiasi servizio IT, ads e social come un venditore porta a porta, a prezzi stracciati ma con una fame di imparare che non aveva prezzo.
           </p>
           <p>
-            La mia missione è costruire il futuro digitale — un prodotto alla volta.
+            Dopo Milano ho fatto tappa in SopraSteria, dove ho scoperto cosa significa lavorare in team strutturato. Progetti Agile, metodologie, processi veri. È stato formativo, ma ho capito presto che mi mancava quel dinamismo del "porta a porta", quella libertà di decidere velocemente.
           </p>
-        </div>
-
-        <div className="mt-16 grid sm:grid-cols-3 gap-8">
-          {[
-            { label: "Anni di esperienza", value: "10+" },
-            { label: "Prodotti lanciati", value: "8" },
-            { label: "Clienti serviti", value: "50+" },
-          ].map((stat) => (
-            <div key={stat.label} className="glass rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-gradient">{stat.value}</p>
-              <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16">
-          <h2 className="text-xl font-semibold mb-6">Tech Stack Preferito</h2>
-          <div className="flex flex-wrap gap-3">
-            {["TypeScript", "React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker", "Kubernetes", "Next.js", "Tailwind CSS"].map((tech) => (
-              <span key={tech} className="text-sm px-4 py-2 rounded-lg bg-secondary text-secondary-foreground">
-                {tech}
-              </span>
-            ))}
-          </div>
+          <p>
+            Così sono finito in una piccola realtà molto innovativa a Bologna. Dieci mesi intensi, ma quando il mio contributo non è più necessario, lo riconosco lucidamente. Non era ancora la mia forma.
+          </p>
+          <p>
+            Oggi ho registrato BRTSML — il dominio che racchiude tutto quello che sono — e mi sono messo in proprio. Ho scelto l'Italia perché voglio "stare comodo nello scomodo". Questo è il momento.
+          </p>
         </div>
       </div>
     </section>
