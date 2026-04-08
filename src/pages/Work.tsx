@@ -14,7 +14,7 @@ const projects = [
     description: "A logic-based game built with P5.js to challenge users' reasoning skills.",
     tags: ["nodejs", "P5.js"],
     status: "Live",
-    website: "https://dodici.brtsml.com/"
+    website: "https://dodici.vercel.app/"
   },
   {
     name: "Acconciature Unisex",
@@ -57,7 +57,14 @@ const projects = [
     tags: ["React", "JSS"],
     status: "Live",
     website: "https://cocktail-master-react.vercel.app/"
-  }
+  },
+  {
+    name: "My Paper Kitchen",
+    description: "SSR blog about book and cooking",
+    tags: ["Astro", "RSS"],
+    status: "Live",
+    website: "https://www.mypaper.kitchen/"
+  },
 ];
 
 const Work = () => (

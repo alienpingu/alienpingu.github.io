@@ -44,7 +44,7 @@ const Index = () => (
               to="/products"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Scopri i Prodotti <ArrowRight size={16} />
+              Scopri cosa faccio <ArrowRight size={16} />
             </Link>
             <Link
               to="/contact"
@@ -58,7 +58,7 @@ const Index = () => (
     </section>
 
     {/* Value Props */}
-    <section className="container mx-auto px-6 py-24">
+    {/* <section className="container mx-auto px-6 py-24">
       <div className="grid md:grid-cols-3 gap-8">
         {valuePropItems.map((item) => (
           <div
@@ -75,7 +75,7 @@ const Index = () => (
           </div>
         ))}
       </div>
-    </section>
+    </section> */}
   </Layout>
 );
 

@@ -13,7 +13,7 @@ const products = [
     description: "A logic-based game built with P5.js to challenge users' reasoning skills.",
     tags: ["nodejs", "P5.js"],
     status: "Live",
-    website: "https://dodici.brtsml.com/"
+    website: "https://dodici.vercel.app/"
   },
   {
     name: "Acconciature Unisex",

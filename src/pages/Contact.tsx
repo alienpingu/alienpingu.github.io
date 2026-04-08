@@ -5,8 +5,7 @@ import Layout from "@/components/Layout";
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setSubmitted(true);
   };
 
@@ -33,16 +32,25 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground">Ti risponderò il prima possibile.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  id="form" 
+                  action="https://api.formbee.dev/formbee/48a6b226-43cd-4d23-9a9e-839fb95789a8" 
+                  method="post" 
+                  encType="multipart/form-data"
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
+                >
                   <div className="grid sm:grid-cols-2 gap-4">
                     <input
                       type="text"
+                      name="name"
                       placeholder="Nome"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                     />
                     <input
                       type="email"
+                      name="email"
                       placeholder="Email"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
@@ -50,11 +58,13 @@ const Contact = () => {
                   </div>
                   <input
                     type="text"
+                    name="subject"
                     placeholder="Oggetto"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                   />
                   <textarea
+                    name="message"
                     rows={5}
                     placeholder="Il tuo messaggio..."
                     required
