@@ -2,62 +2,6 @@ import Layout from "@/components/Layout";
 
 const products = [
   {
-    name: "Picco CSS",
-    description: "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
-    tags: ["nodejs", "CSS", "Astro", "NPM"],
-    status: "Live",
-    website: "https://picco-css.vercel.app/"
-  },
-  {
-    name: "Dodici",
-    description: "A logic-based game built with P5.js to challenge users' reasoning skills.",
-    tags: ["nodejs", "P5.js"],
-    status: "Live",
-    website: "https://dodici.vercel.app/"
-  },
-  {
-    name: "Acconciature Unisex",
-    description: "Created and optimized a scalable, SEO-focused website to enhance online visibility for AcconciatureUnisex.",
-    tags: ["Astro", "scss"],
-    status: "Live",
-    website: "https://acconciature-unisex.com"
-  },
-  {
-    name: "GLM Imperia",
-    description: "Developed and managed a high-performance website to improve user experience for GLM Imperia.",
-    tags: ["Astro", "TailwindCSS"],
-    status: "Live",
-    website: "https://glmimperia.com"
-  },
-  {
-    name: "CheckupDigitale",
-    description: "CTO for CheckupDigitale, leading a freelance team and defining the technology strategy for innovative digital solutions.",
-    tags: ["react"],
-    status: "Live",
-    website: "https://checkupdigitale.com"
-  },
-  {
-    name: "Pokemon Search Engine",
-    description: "A search engine for Pokémon built with Angular to provide a fast and engaging user experience.",
-    tags: ["Angular"],
-    status: "Live",
-    website: "https://pokemon-searchengine.vercel.app/"
-  },
-  {
-    name: "Cocktail Master V2",
-    description: "A cocktail search engine built with Angular to provide a fast and intuitive user experience.",
-    tags: ["Angular"],
-    status: "Live",
-    website: "https://cocktail-master-v2.vercel.app/"
-  },
-  {
-    name: "Cocktail Master React",
-    description: "A cocktail search engine developed with React and JSS for flexibility and high performance.",
-    tags: ["React", "JSS"],
-    status: "Live",
-    website: "https://cocktail-master-react.vercel.app/"
-  },
-  {
     name: "Mastrobot",
     description: "An innovative product currently in development. Stay tuned for updates.",
     tags: ["AI", "Automation"],
@@ -69,8 +13,7 @@ const Products = () => (
   <Layout>
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-2xl mb-16 animate-fade-up">
-        <p className="text-primary font-medium text-sm tracking-widest uppercase">Products</p>
-        <h1 className="text-4xl md:text-5xl font-bold mt-4">Projects</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-4">Products</h1>
         <p className="text-muted-foreground mt-4">
           A collection of projects I have built, from CSS libraries to full-stack applications.
         </p>

@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { ExternalLink } from "lucide-react";
 
-const projects = [
+const projectsData = [
   {
     name: "Picco CSS",
     description: "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
@@ -38,27 +38,6 @@ const projects = [
     website: "https://checkupdigitale.com"
   },
   {
-    name: "Pokemon Search Engine",
-    description: "A search engine for Pokémon built with Angular to provide a fast and engaging user experience.",
-    tags: ["Angular"],
-    status: "Live",
-    website: "https://pokemon-searchengine.vercel.app/"
-  },
-  {
-    name: "Cocktail Master V2",
-    description: "A cocktail search engine built with Angular to provide a fast and intuitive user experience.",
-    tags: ["Angular"],
-    status: "Live",
-    website: "https://cocktail-master-v2.vercel.app/"
-  },
-  {
-    name: "Cocktail Master React",
-    description: "A cocktail search engine developed with React and JSS for flexibility and high performance.",
-    tags: ["React", "JSS"],
-    status: "Live",
-    website: "https://cocktail-master-react.vercel.app/"
-  },
-  {
     name: "My Paper Kitchen",
     description: "SSR blog about book and cooking",
     tags: ["Astro", "RSS"],
@@ -67,11 +46,11 @@ const projects = [
   },
 ];
 
-const Work = () => (
+const Projects = () => (
   <Layout>
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-2xl mb-16 animate-fade-up">
-        <p className="text-primary font-medium text-sm tracking-widest uppercase">Work</p>
+        <p className="text-primary font-medium text-sm tracking-widest uppercase">Projects</p>
         <h1 className="text-4xl md:text-5xl font-bold mt-4">Projects</h1>
         <p className="text-muted-foreground mt-4">
           A collection of projects I have built, from CSS libraries to full-stack applications.
@@ -79,7 +58,7 @@ const Work = () => (
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
+        {projectsData.map((project) => (
           <a
             key={project.name}
             href={project.website}
@@ -113,4 +92,4 @@ const Work = () => (
   </Layout>
 );
 
-export default Work;
+export default Projects;

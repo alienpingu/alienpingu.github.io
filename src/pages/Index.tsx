@@ -41,7 +41,7 @@ const Index = () => (
           </p>
           <div className="flex flex-wrap gap-4 mt-10 pointer-events-auto animate-fade-up-delay-3">
             <Link
-              to="/products"
+              to="/projects"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               Scopri cosa faccio <ArrowRight size={16} />
