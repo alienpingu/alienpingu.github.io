@@ -1,7 +1,9 @@
+import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Rocket, Code2, Lightbulb } from "lucide-react";
 import Layout from "@/components/Layout";
-import HeroScene from "@/components/HeroScene";
+
+const HeroScene = lazy(() => import("@/components/HeroScene"));
 
 const valuePropItems = [
   {
@@ -21,11 +23,16 @@ const valuePropItems = [
   },
 ];
 
+const HeroSceneFallback = () => (
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+);
+
 const Index = () => (
   <Layout>
-    {/* Hero */}
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <HeroScene />
+      <Suspense fallback={<HeroSceneFallback />}>
+        <HeroScene />
+      </Suspense>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background pointer-events-none" />
 
       <div className="container relative mx-auto px-6 py-24 pointer-events-none">
@@ -56,26 +63,6 @@ const Index = () => (
         </div>
       </div>
     </section>
-
-    {/* Value Props */}
-    {/* <section className="container mx-auto px-6 py-24">
-      <div className="grid md:grid-cols-3 gap-8">
-        {valuePropItems.map((item) => (
-          <div
-            key={item.title}
-            className="glass rounded-xl p-8 hover:glow transition-shadow group"
-          >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-              <item.icon className="text-primary" size={24} />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {item.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section> */}
   </Layout>
 );
 

@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     host: "::",
@@ -19,6 +18,9 @@ export default defineConfig({
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime", "@tanstack/react-query", "@tanstack/query-core"],
   },
   build: {
+    target: "esnext",
+    minify: "esbuild",
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -27,9 +29,33 @@ export default defineConfig({
           three: ["three", "@react-three/fiber", "@react-three/drei"],
           charts: ["recharts"],
           query: ["@tanstack/react-query"],
+          forms: ["react-hook-form", "@hookform/resolvers", "zod"],
+          utils: ["clsx", "tailwind-merge", "class-variance-authority"],
+        },
+        entryFileNames: "assets/[name]-[hash].js",
+        chunkFileNames: "assets/[name]-[hash].js",
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split(".");
+          const ext = info[info.length - 1];
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(assetInfo.name)) {
+            return "assets/images/[name]-[hash][extname]";
+          }
+          if (/\.(css)$/i.test(assetInfo.name)) {
+            return "assets/css/[name]-[hash][extname]";
+          }
+          return "assets/[name]-[hash][extname]";
         },
       },
     },
-    chunkSizeWarningLimit: 600,
+    chunkSizeWarningLimit: 500,
+    sourcemap: false,
+    reportCompressedSize: false,
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom", "lucide-react"],
+    exclude: ["@radix-ui/react-icons"],
+  },
+  esbuild: {
+    drop: ["console", "debugger"],
   },
 });
