@@ -8,6 +8,13 @@ const projectsData = [
     tags: ["nodejs", "CSS", "Astro", "NPM"],
     status: "Live",
     website: "https://picco-css.vercel.app/"
+  },  
+  {
+    name: "Safe Now EU",
+    description: "The Eurozone verion of the american safe-now.live",
+    tags: ["HTML"],
+    status: "Live",
+    website: "https://safe-now.eu/"
   },
   {
     name: "Dodici",
