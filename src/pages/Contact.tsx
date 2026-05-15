@@ -1,12 +1,31 @@
 import { Mail, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Layout from "@/components/Layout";
+
+const FORM_ACTION = "https://api.formbee.dev/formbee/48a6b226-43cd-4d23-9a9e-839fb95789a8";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {
-    setSubmitted(true);
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await fetch(FORM_ACTION, {
+        method: "POST",
+        body: formData,
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -32,12 +51,8 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground">Ti risponderò il prima possibile.</p>
                 </div>
               ) : (
-                <form 
-                  id="form" 
-                  action="https://api.formbee.dev/formbee/48a6b226-43cd-4d23-9a9e-839fb95789a8" 
-                  method="post" 
-                  encType="multipart/form-data"
-                  onSubmit={handleSubmit} 
+                <form
+                  onSubmit={handleSubmit}
                   className="space-y-6"
                 >
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -72,9 +87,10 @@ const Contact = () => {
                   />
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+                    disabled={loading}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Invia Messaggio <Send size={16} />
+                    {loading ? "Invio..." : "Invia Messaggio"} <Send size={16} />
                   </button>
                 </form>
               )}

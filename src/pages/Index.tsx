@@ -1,27 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Rocket, Code2, Lightbulb } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const HeroScene = lazy(() => import("@/components/HeroScene"));
-
-const valuePropItems = [
-  {
-    icon: Rocket,
-    title: "Prodotti SaaS",
-    description: "Creo e lancio prodotti digitali scalabili che risolvono problemi reali.",
-  },
-  {
-    icon: Code2,
-    title: "Sviluppo Custom",
-    description: "Sviluppo soluzioni su misura con tecnologie moderne e architetture solide.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Consulenza Strategica",
-    description: "Aiuto aziende a trasformare idee in prodotti digitali di successo.",
-  },
-];
 
 const HeroSceneFallback = () => (
   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
