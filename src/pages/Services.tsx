@@ -1,5 +1,6 @@
 import { Zap, Code2, Settings } from "lucide-react";
 import Layout from "@/components/Layout";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const services = [
   {
@@ -22,8 +23,15 @@ const services = [
   },
 ];
 
-const Services = () => (
-  <Layout>
+const Services = () => {
+  usePageMeta({
+    title: "Services",
+    description:
+      "Consulenza strategica, sviluppo custom e coaching agile per startup, PMI e enterprise.",
+  });
+
+  return (
+    <Layout>
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-2xl mb-16 animate-fade-up">
         <p className="text-primary font-medium text-sm tracking-widest uppercase">Services</p>
@@ -54,6 +62,7 @@ const Services = () => (
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default Services;

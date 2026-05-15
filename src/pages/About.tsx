@@ -1,6 +1,14 @@
 import Layout from "@/components/Layout";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
-const About = () => (
+const About = () => {
+  usePageMeta({
+    title: "About",
+    description:
+      "La storia di Bertocco Samuele: da freelancer a technology entrepreneur, passando per Milano, SopraSteria e Bologna.",
+  });
+
+  return (
   <Layout>
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-3xl animate-fade-up">
@@ -27,6 +35,7 @@ const About = () => (
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default About;

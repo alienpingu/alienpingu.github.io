@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { ExternalLink } from "lucide-react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const projectsData = [
   {
@@ -53,8 +54,15 @@ const projectsData = [
   },
 ];
 
-const Projects = () => (
-  <Layout>
+const Projects = () => {
+  usePageMeta({
+    title: "Projects",
+    description:
+      "Portfolio di progetti reali: da librerie CSS a applicazioni full-stack, passando per siti SEO e piattaforme SaaS.",
+  });
+
+  return (
+    <Layout>
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-2xl mb-16 animate-fade-up">
         <p className="text-primary font-medium text-sm tracking-widest uppercase">Projects</p>
@@ -97,6 +105,7 @@ const Projects = () => (
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default Projects;

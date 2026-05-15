@@ -1,10 +1,16 @@
 import { Mail, MapPin, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 import Layout from "@/components/Layout";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const FORM_ACTION = "https://api.formbee.dev/formbee/48a6b226-43cd-4d23-9a9e-839fb95789a8";
 
 const Contact = () => {
+  usePageMeta({
+    title: "Contact",
+    description:
+      "Contatta BRTSML per consulenza, sviluppo custom o partnership. Italia — Remote First.",
+  });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 

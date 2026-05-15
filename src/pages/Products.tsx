@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const products = [
   {
@@ -9,8 +10,14 @@ const products = [
   }
 ];
 
-const Products = () => (
-  <Layout>
+const Products = () => {
+  usePageMeta({
+    title: "Products",
+    description: "Scopri i prodotti SaaS e le soluzioni digitali sviluppate da BRTSML.",
+  });
+
+  return (
+    <Layout>
     <section className="container mx-auto px-6 py-24">
       <div className="max-w-2xl mb-16 animate-fade-up">
         <h1 className="text-4xl md:text-5xl font-bold mt-4">Products</h1>
@@ -48,6 +55,7 @@ const Products = () => (
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default Products;

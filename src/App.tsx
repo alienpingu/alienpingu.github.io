@@ -2,12 +2,12 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Index from "./pages/Index";
 
-const Products = lazy(() => import("./pages/Products"));
-const Services = lazy(() => import("./pages/Services"));
-const Projects = lazy(() => import("./pages/Projects"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const Products = lazy(() => import(/* webpackPrefetch: true */ "./pages/Products"));
+const Services = lazy(() => import(/* webpackPrefetch: true */ "./pages/Services"));
+const Projects = lazy(() => import(/* webpackPrefetch: true */ "./pages/Projects"));
+const About = lazy(() => import(/* webpackPrefetch: true */ "./pages/About"));
+const Contact = lazy(() => import(/* webpackPrefetch: true */ "./pages/Contact"));
+const NotFound = lazy(() => import(/* webpackPrefetch: true */ "./pages/NotFound"));
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
