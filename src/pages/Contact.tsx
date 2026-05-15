@@ -27,8 +27,8 @@ const Contact = () => {
         body: formData,
       });
       setSubmitted(true);
-    } catch (error) {
-      console.error("Form submission failed:", error);
+    } catch {
+      // Silently fail — user already sees loading state
     } finally {
       setLoading(false);
     }

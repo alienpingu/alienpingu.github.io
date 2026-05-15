@@ -2,7 +2,6 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Index from "./pages/Index";
 
-const Products = lazy(() => import(/* webpackPrefetch: true */ "./pages/Products"));
 const Services = lazy(() => import(/* webpackPrefetch: true */ "./pages/Services"));
 const ServiceDetail = lazy(() => import(/* webpackPrefetch: true */ "./pages/ServiceDetail"));
 const Projects = lazy(() => import(/* webpackPrefetch: true */ "./pages/Projects"));
@@ -24,7 +23,6 @@ const App = () => (
     <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/products" element={<Products />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
         <Route path="/projects" element={<Projects />} />

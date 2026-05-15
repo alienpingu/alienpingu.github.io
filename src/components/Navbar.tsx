@@ -10,6 +10,11 @@ const navItems = [
   { label: "Contact", path: "/contact" },
 ];
 
+const isActive = (pathname: string, path: string) => {
+  if (path === "/") return pathname === "/";
+  return pathname.startsWith(path);
+};
+
 const Navbar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
@@ -28,7 +33,7 @@ const Navbar = () => {
               key={item.path}
               to={item.path}
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                location.pathname === item.path
+                isActive(location.pathname, item.path)
                   ? "text-primary bg-primary/10"
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
@@ -58,7 +63,7 @@ const Navbar = () => {
                 to={item.path}
                 onClick={() => setOpen(false)}
                 className={`px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === item.path
+                  isActive(location.pathname, item.path)
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
