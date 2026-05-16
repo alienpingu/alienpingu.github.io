@@ -1,4 +1,3 @@
-import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Zap, Code2, Settings, ExternalLink } from "lucide-react";
@@ -6,12 +5,7 @@ import Layout from "@/components/Layout";
 import { useInView } from "@/hooks/use-in-view";
 import { getServices } from "@/data/services";
 import { useLanguageSwitcher } from "@/hooks/use-language";
-
-const HeroScene = lazy(() => import("@/components/HeroScene"));
-
-const HeroSceneFallback = () => (
-  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
-);
+import ParticleBackground from "@/components/ParticleBackground";
 
 const featuredProjects = [
   {
@@ -220,123 +214,124 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <Suspense fallback={<HeroSceneFallback />}>
-          <HeroScene />
-        </Suspense>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background pointer-events-none" />
+      <ParticleBackground />
+      
+      <div className="relative z-10">
+        {/* Hero */}
+        <section className="relative min-h-screen flex items-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background pointer-events-none" />
 
-        <div className="container relative mx-auto px-6 py-24 pointer-events-none">
-          <div className="max-w-3xl">
-            <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase animate-fade-up">
-              {t("home:hero.subtitle")}
+          <div className="container relative mx-auto px-6 py-24 pointer-events-none">
+            <div className="max-w-3xl">
+              <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase animate-fade-up">
+                {t("home:hero.subtitle")}
+              </p>
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold mt-6 leading-[0.95] tracking-tight animate-fade-up-delay-1">
+                <span className="text-gradient">{t("home:hero.title")}</span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-xl animate-fade-up-delay-2">
+                {t("home:hero.description")}
+              </p>
+              <div className="flex flex-wrap gap-4 mt-10 pointer-events-auto animate-fade-up-delay-3">
+                <Link
+                  to={`${prefix}/projects`}
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+                >
+                  {t("home:hero.ctaPrimary")} <ArrowRight size={16} />
+                </Link>
+                <Link
+                  to={`${prefix}/contact`}
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:bg-secondary transition-colors"
+                >
+                  {t("home:hero.ctaSecondary")}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="container mx-auto px-6 py-24">
+          <SectionTitle
+            label={t("home:services.label")}
+            title={t("home:services.title")}
+            subtitle={t("home:services.subtitle")}
+          />
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={service.id}
+                service={service}
+                delayClass={`scroll-delay-${index + 1}`}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Featured Projects */}
+        <section className="container mx-auto px-6 py-24">
+          <SectionTitle
+            label={t("home:projects.label")}
+            title={t("home:projects.title")}
+            subtitle={t("home:projects.subtitle")}
+          />
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {featuredProjects.map((project, index) => (
+              <ProjectCard
+                key={project.name}
+                project={project}
+                delayClass={`scroll-delay-${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to={`${prefix}/projects`}
+              className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+            >
+              {t("home:projects.viewAll")} <ArrowRight size={16} />
+            </Link>
+          </div>
+        </section>
+
+        {/* About Teaser */}
+        <section className="container mx-auto px-6 py-24">
+          <AboutTeaser />
+        </section>
+
+        {/* CTA Final */}
+        <section className="container mx-auto px-6 py-24">
+          <div
+            ref={useInView({ threshold: 0.3 })}
+            className="max-w-3xl mx-auto text-center scroll-animate"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              {t("home:cta.title")}
+              <span className="text-gradient">{t("home:cta.titleGradient")}</span>?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
+              {t("home:cta.description")}
             </p>
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold mt-6 leading-[0.95] tracking-tight animate-fade-up-delay-1">
-              <span className="text-gradient">{t("home:hero.title")}</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-xl animate-fade-up-delay-2">
-              {t("home:hero.description")}
-            </p>
-            <div className="flex flex-wrap gap-4 mt-10 pointer-events-auto animate-fade-up-delay-3">
-              <Link
-                to={`${prefix}/projects`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
-              >
-                {t("home:hero.ctaPrimary")} <ArrowRight size={16} />
-              </Link>
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to={`${prefix}/contact`}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:bg-secondary transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                {t("home:hero.ctaSecondary")}
+                {t("home:cta.contact")} <ArrowRight size={16} />
+              </Link>
+              <Link
+                to={`${prefix}/services`}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-border text-foreground font-semibold text-sm hover:bg-secondary transition-colors"
+              >
+                {t("home:cta.exploreServices")}
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="container mx-auto px-6 py-24">
-        <SectionTitle
-          label={t("home:services.label")}
-          title={t("home:services.title")}
-          subtitle={t("home:services.subtitle")}
-        />
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={service.id}
-              service={service}
-              delayClass={`scroll-delay-${index + 1}`}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="container mx-auto px-6 py-24">
-        <SectionTitle
-          label={t("home:projects.label")}
-          title={t("home:projects.title")}
-          subtitle={t("home:projects.subtitle")}
-        />
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard
-              key={project.name}
-              project={project}
-              delayClass={`scroll-delay-${index + 1}`}
-            />
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Link
-            to={`${prefix}/projects`}
-            className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
-          >
-            {t("home:projects.viewAll")} <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
-
-      {/* About Teaser */}
-      <section className="container mx-auto px-6 py-24">
-        <AboutTeaser />
-      </section>
-
-      {/* CTA Final */}
-      <section className="container mx-auto px-6 py-24">
-        <div
-          ref={useInView({ threshold: 0.3 })}
-          className="max-w-3xl mx-auto text-center scroll-animate"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-            {t("home:cta.title")}
-            <span className="text-gradient">{t("home:cta.titleGradient")}</span>?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            {t("home:cta.description")}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to={`${prefix}/contact`}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
-            >
-              {t("home:cta.contact")} <ArrowRight size={16} />
-            </Link>
-            <Link
-              to={`${prefix}/services`}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-border text-foreground font-semibold text-sm hover:bg-secondary transition-colors"
-            >
-              {t("home:cta.exploreServices")}
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 };
