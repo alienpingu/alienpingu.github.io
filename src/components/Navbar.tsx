@@ -1,28 +1,37 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Services", path: "/services" },
-  { label: "Projects", path: "/projects" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguageSwitcher } from "@/hooks/use-language";
 
 const isActive = (pathname: string, path: string) => {
-  if (path === "/") return pathname === "/";
-  return pathname.startsWith(path);
+  if (path === "/") {
+    return pathname === "/" || pathname === "/en" || pathname === "/en/";
+  }
+  return pathname.startsWith(path) || pathname.startsWith(`/en${path}`);
 };
 
 const Navbar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const { currentLang } = useLanguageSwitcher();
+  const { t } = useTranslation("common");
+
+  const prefix = currentLang === "en" ? "/en" : "";
+
+  const navItems = [
+    { label: t("nav.home"), path: `${prefix}/` },
+    { label: t("nav.services"), path: `${prefix}/services` },
+    { label: t("nav.projects"), path: `${prefix}/projects` },
+    { label: t("nav.about"), path: `${prefix}/about` },
+    { label: t("nav.contact"), path: `${prefix}/contact` },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <Link to="/" className="text-xl font-bold tracking-tight text-gradient">
+        <Link to={`${prefix}/`} className="text-xl font-bold tracking-tight text-gradient">
           BRTSML
         </Link>
 
@@ -41,16 +50,22 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
+          <div className="ml-2 pl-2 border-l border-border">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          <button
+            className="text-foreground"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

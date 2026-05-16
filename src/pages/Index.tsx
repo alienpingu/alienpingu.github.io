@@ -1,11 +1,12 @@
 import { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ArrowRight, Zap, Code2, Settings, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { useInView } from "@/hooks/use-in-view";
-import { services } from "@/data/services";
-import type { Service } from "@/data/services";
+import { getServices } from "@/data/services";
+import { useLanguageSwitcher } from "@/hooks/use-language";
 
 const HeroScene = lazy(() => import("@/components/HeroScene"));
 
@@ -16,22 +17,19 @@ const HeroSceneFallback = () => (
 const featuredProjects = [
   {
     name: "Picco CSS",
-    description:
-      "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
+    description: "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
     tags: ["nodejs", "CSS", "Astro"],
     website: "https://picco-css.vercel.app/",
   },
   {
     name: "CheckupDigitale",
-    description:
-      "CTO for CheckupDigitale, leading a freelance team and defining the technology strategy for innovative digital solutions.",
+    description: "CTO for CheckupDigitale, leading a freelance team and defining the technology strategy for innovative digital solutions.",
     tags: ["react", "Strategy", "Leadership"],
     website: "https://checkupdigitale.com",
   },
   {
     name: "GLM Imperia",
-    description:
-      "Developed and managed a high-performance website to improve user experience for GLM Imperia.",
+    description: "Developed and managed a high-performance website to improve user experience for GLM Imperia.",
     tags: ["Astro", "TailwindCSS", "Performance"],
     website: "https://glmimperia.com",
   },
@@ -67,15 +65,18 @@ const ServiceCard = ({
   service,
   delayClass,
 }: {
-  service: Service;
+  service: ReturnType<typeof getServices>[number];
   delayClass: string;
 }) => {
   const ref = useInView({ threshold: 0.15 });
   const Icon = service.icon;
+  const { t } = useTranslation("common");
+  const { currentLang } = useLanguageSwitcher();
+  const prefix = currentLang === "en" ? "/en" : "";
 
   return (
     <Link
-      to={`/services/${service.id}`}
+      to={`${prefix}/services/${service.id}`}
       ref={ref}
       className={`glass rounded-xl p-8 hover:glow transition-all group block scroll-animate ${delayClass}`}
     >
@@ -90,21 +91,15 @@ const ServiceCard = ({
       </p>
       <ul className="space-y-2 mb-6">
         {service.features.slice(0, 4).map((feature) => (
-          <li
-            key={feature}
-            className="text-sm text-secondary-foreground flex items-center gap-2"
-          >
+          <li key={feature} className="text-sm text-secondary-foreground flex items-center gap-2">
             <span className="w-1 h-1 rounded-full bg-primary" />
             {feature.split(" — ")[0]}
           </li>
         ))}
       </ul>
       <span className="inline-flex items-center gap-1 text-sm text-primary font-medium">
-        Scopri di più{" "}
-        <ArrowRight
-          size={14}
-          className="transition-transform group-hover:translate-x-1"
-        />
+        {t("buttons.learnMore")}{" "}
+        <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
       </span>
     </Link>
   );
@@ -141,10 +136,7 @@ const ProjectCard = ({
       </p>
       <div className="flex flex-wrap gap-2 mt-6">
         {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs px-2 py-1 rounded-md bg-secondary text-secondary-foreground"
-          >
+          <span key={tag} className="text-xs px-2 py-1 rounded-md bg-secondary text-secondary-foreground">
             {tag}
           </span>
         ))}
@@ -154,6 +146,9 @@ const ProjectCard = ({
 };
 
 const AboutTeaser = () => {
+  const { t } = useTranslation("home");
+  const { currentLang } = useLanguageSwitcher();
+  const prefix = currentLang === "en" ? "/en" : "";
   const refLeft = useInView({ threshold: 0.2 });
   const refRight = useInView({ threshold: 0.2 });
 
@@ -161,44 +156,34 @@ const AboutTeaser = () => {
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div ref={refLeft} className="scroll-animate">
         <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase mb-4">
-          Chi sono
+          {t("about.label")}
         </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-          <span className="text-gradient">Bertocco Samuele</span>
+          <span className="text-gradient">{t("about.title")}</span>
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Sono sempre stato ossessionato da internet e da come evolve. Ho
-          iniziato con design 3D e progettazione elettronica, ma la vera
-          passione è sempre stata la rete. Nel 2020 ho aperto la mia prima
-          partita IVA e da allora non ho mai smesso di costruire.
+          {t("about.bio1")}
         </p>
         <p className="text-muted-foreground leading-relaxed mb-8">
-          Dopo esperienze a Milano in SopraSteria e Bologna in una startup
-          innovativa, oggi ho registrato BRTSML e mi sono messo in proprio.
-          Scelgo l'Italia perché voglio "stare comodo nello scomodo".
+          {t("about.bio2")}
         </p>
         <Link
-          to="/about"
+          to={`${prefix}/about`}
           className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
         >
-          Leggi la mia storia <ArrowRight size={16} />
+          {t("about.cta")} <ArrowRight size={16} />
         </Link>
       </div>
 
-      <div
-        ref={refRight}
-        className="glass rounded-xl p-8 scroll-animate scroll-delay-2"
-      >
+      <div ref={refRight} className="glass rounded-xl p-8 scroll-animate scroll-delay-2">
         <div className="space-y-6">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
               <Zap className="text-primary" size={20} />
             </div>
             <div>
-              <h4 className="font-semibold mb-1">Product Strategy</h4>
-              <p className="text-sm text-muted-foreground">
-                Dall'idea al lancio, con validazione data-driven.
-              </p>
+              <h4 className="font-semibold mb-1">{t("about.skills.productStrategy")}</h4>
+              <p className="text-sm text-muted-foreground">{t("about.skills.productStrategyDesc")}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -206,10 +191,8 @@ const AboutTeaser = () => {
               <Code2 className="text-primary" size={20} />
             </div>
             <div>
-              <h4 className="font-semibold mb-1">Full-Stack Dev</h4>
-              <p className="text-sm text-muted-foreground">
-                React, Node.js, TypeScript, cloud infrastructure.
-              </p>
+              <h4 className="font-semibold mb-1">{t("about.skills.fullStack")}</h4>
+              <p className="text-sm text-muted-foreground">{t("about.skills.fullStackDesc")}</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -217,10 +200,8 @@ const AboutTeaser = () => {
               <Settings className="text-primary" size={20} />
             </div>
             <div>
-              <h4 className="font-semibold mb-1">Team & Process</h4>
-              <p className="text-sm text-muted-foreground">
-                Agile, CI/CD, code review, formazione team.
-              </p>
+              <h4 className="font-semibold mb-1">{t("about.skills.teamProcess")}</h4>
+              <p className="text-sm text-muted-foreground">{t("about.skills.teamProcessDesc")}</p>
             </div>
           </div>
         </div>
@@ -232,11 +213,16 @@ const AboutTeaser = () => {
 /* ---------- Page ---------- */
 
 const Index = () => {
+  const { t, i18n } = useTranslation(["home", "common"]);
+  const { currentLang } = useLanguageSwitcher();
+  const prefix = currentLang === "en" ? "/en" : "";
+
   usePageMeta({
-    title: "Home",
-    description:
-      "BRTSML — Technology Entrepreneur. Costruisco il futuro digitale con prodotti innovativi e soluzioni tech per chi vuole crescere.",
+    title: t("home:meta.title"),
+    description: t("home:meta.description"),
   });
+
+  const services = getServices(i18n.language as "it" | "en");
 
   return (
     <Layout>
@@ -250,27 +236,26 @@ const Index = () => {
         <div className="container relative mx-auto px-6 py-24 pointer-events-none">
           <div className="max-w-3xl">
             <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase animate-fade-up">
-              Technology Entrepreneur
+              {t("home:hero.subtitle")}
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold mt-6 leading-[0.95] tracking-tight animate-fade-up-delay-1">
-              <span className="text-gradient">BRTSML</span>
+              <span className="text-gradient">{t("home:hero.title")}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-xl animate-fade-up-delay-2">
-              Costruisco il futuro digitale — prodotti innovativi e soluzioni
-              tech per chi vuole crescere.
+              {t("home:hero.description")}
             </p>
             <div className="flex flex-wrap gap-4 mt-10 pointer-events-auto animate-fade-up-delay-3">
               <Link
-                to="/projects"
+                to={`${prefix}/projects`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                Scopri cosa faccio <ArrowRight size={16} />
+                {t("home:hero.ctaPrimary")} <ArrowRight size={16} />
               </Link>
               <Link
-                to="/contact"
+                to={`${prefix}/contact`}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-semibold text-sm hover:bg-secondary transition-colors"
               >
-                Parliamo
+                {t("home:hero.ctaSecondary")}
               </Link>
             </div>
           </div>
@@ -280,9 +265,9 @@ const Index = () => {
       {/* Services */}
       <section className="container mx-auto px-6 py-24">
         <SectionTitle
-          label="Servizi"
-          title="Come posso aiutarti"
-          subtitle="Tre aree di intervento per trasformare la tua visione in realtà."
+          label={t("home:services.label")}
+          title={t("home:services.title")}
+          subtitle={t("home:services.subtitle")}
         />
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -299,9 +284,9 @@ const Index = () => {
       {/* Featured Projects */}
       <section className="container mx-auto px-6 py-24">
         <SectionTitle
-          label="Portfolio"
-          title="Progetti in evidenza"
-          subtitle="Un assaggio dei progetti su cui ho lavorato."
+          label={t("home:projects.label")}
+          title={t("home:projects.title")}
+          subtitle={t("home:projects.subtitle")}
         />
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -316,10 +301,10 @@ const Index = () => {
 
         <div className="mt-12 text-center">
           <Link
-            to="/projects"
+            to={`${prefix}/projects`}
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
-            Vedi tutti i progetti <ArrowRight size={16} />
+            {t("home:projects.viewAll")} <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -336,25 +321,24 @@ const Index = () => {
           className="max-w-3xl mx-auto text-center scroll-animate"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-            Pronto a costruire{" "}
-            <span className="text-gradient">qualcosa di grande</span>?
+            {t("home:cta.title")}
+            <span className="text-gradient">{t("home:cta.titleGradient")}</span>?
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            Che tu abbia un'idea da validare, un prodotto da sviluppare o un
-            team da scalare, troviamo insieme la strada giusta.
+            {t("home:cta.description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/contact"
+              to={`${prefix}/contact`}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Contattami <ArrowRight size={16} />
+              {t("home:cta.contact")} <ArrowRight size={16} />
             </Link>
             <Link
-              to="/services"
+              to={`${prefix}/services`}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-border text-foreground font-semibold text-sm hover:bg-secondary transition-colors"
             >
-              Esplora i servizi
+              {t("home:cta.exploreServices")}
             </Link>
           </div>
         </div>

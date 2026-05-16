@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 interface PageMetaOptions {
   title: string;
@@ -6,9 +7,12 @@ interface PageMetaOptions {
 }
 
 export const usePageMeta = ({ title, description }: PageMetaOptions) => {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = title ? `${title} | BRTSML` : "BRTSML";
+    const separator = i18n.language === "en" ? " | " : " | ";
+    document.title = title ? `${title}${separator}BRTSML` : "BRTSML";
 
     let metaDescription: HTMLMetaElement | null = null;
     if (description) {
@@ -26,5 +30,5 @@ export const usePageMeta = ({ title, description }: PageMetaOptions) => {
     return () => {
       document.title = previousTitle;
     };
-  }, [title, description]);
+  }, [title, description, i18n.language]);
 };

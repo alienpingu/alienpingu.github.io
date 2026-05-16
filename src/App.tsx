@@ -13,21 +13,35 @@ const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
     <div className="animate-pulse flex flex-col items-center gap-4">
       <div className="w-12 h-12 rounded-full bg-primary/20" />
-      <div className="text-muted-foreground text-sm">Caricamento...</div>
+      <div className="text-muted-foreground text-sm">Loading...</div>
     </div>
   </div>
 );
+
+const routeConfigs = [
+  { path: "/", element: <Index /> },
+  { path: "/services", element: <Services /> },
+  { path: "/services/:id", element: <ServiceDetail /> },
+  { path: "/projects", element: <Projects /> },
+  { path: "/about", element: <About /> },
+  { path: "/contact", element: <Contact /> },
+];
 
 const App = () => (
   <BrowserRouter>
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/:id" element={<ServiceDetail />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        {routeConfigs.map((route) => (
+          <Route key={route.path} path={route.path} element={route.element} />
+        ))}
+        {/* English routes */}
+        {routeConfigs.map((route) => (
+          <Route
+            key={`en-${route.path}`}
+            path={`/en${route.path === "/" ? "" : route.path}`}
+            element={route.element}
+          />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
