@@ -1,10 +1,14 @@
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
+import { useTheme } from "@/hooks/use-theme";
 
 const PARTICLE_COUNT = 800;
 
-function Particles() {
+const DARK_PARTICLE_COLOR = "#e8a020";
+const LIGHT_PARTICLE_COLOR = "#c47a10";
+
+function Particles({ color }: { color: string }) {
   const mesh = useRef<THREE.Points>(null);
   const mouse = useRef({ x: 0, y: 0 });
   const { viewport } = useThree();
@@ -73,7 +77,7 @@ function Particles() {
       </bufferGeometry>
       <pointsMaterial
         size={0.04}
-        color="#e8a020"
+        color={color}
         transparent
         opacity={0.7}
         sizeAttenuation
@@ -84,7 +88,7 @@ function Particles() {
   );
 }
 
-function Lines() {
+function Lines({ color }: { color: string }) {
   const ref = useRef<THREE.LineSegments>(null);
   const { pointer, viewport } = useThree();
 
@@ -123,22 +127,27 @@ function Lines() {
           itemSize={3}
         />
       </bufferGeometry>
-      <lineBasicMaterial color="#e8a020" transparent opacity={0.08} />
+      <lineBasicMaterial color={color} transparent opacity={0.08} />
     </lineSegments>
   );
 }
 
-const HeroScene = () => (
-  <div className="absolute inset-0">
-    <Canvas
-      camera={{ position: [0, 0, 5], fov: 60 }}
-      style={{ background: "transparent" }}
-      dpr={[1, 1.5]}
-    >
-      <Particles />
-      <Lines />
-    </Canvas>
-  </div>
-);
+const HeroScene = () => {
+  const { theme } = useTheme();
+  const particleColor = theme === "dark" ? DARK_PARTICLE_COLOR : LIGHT_PARTICLE_COLOR;
+
+  return (
+    <div className="absolute inset-0">
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 60 }}
+        style={{ background: "transparent" }}
+        dpr={[1, 1.5]}
+      >
+        <Particles color={particleColor} />
+        <Lines color={particleColor} />
+      </Canvas>
+    </div>
+  );
+};
 
 export default HeroScene;

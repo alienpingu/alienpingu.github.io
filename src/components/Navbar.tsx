@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 import { useLanguageSwitcher } from "@/hooks/use-language";
 
 const isActive = (pathname: string, path: string) => {
@@ -50,13 +51,15 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <div className="ml-2 pl-2 border-l border-border">
+          <div className="ml-2 pl-2 border-l border-border flex items-center gap-2">
             <LanguageSwitcher />
+            <ThemeToggle />
           </div>
         </div>
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
           <LanguageSwitcher />
           <button
             className="text-foreground"

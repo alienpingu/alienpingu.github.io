@@ -6,6 +6,44 @@
 
 @layer base {
   :root {
+    /* Light theme (default) */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.75rem;
+
+    --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(28, 95%, 45%));
+    --gradient-subtle: linear-gradient(135deg, hsl(220, 18%, 96%), hsl(220, 14%, 92%));
+    --shadow-glow: 0 0 40px -10px hsl(38 92% 50% / 0.25);
+  }
+
+  .dark {
+    /* Dark theme */
     --background: 220 20% 4%;
     --foreground: 40 10% 92%;
 
@@ -34,8 +72,6 @@
     --input: 220 14% 16%;
     --ring: 38 92% 55%;
 
-    --radius: 0.75rem;
-
     --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 55%), hsl(28, 95%, 50%));
     --gradient-subtle: linear-gradient(135deg, hsl(220, 18%, 7%), hsl(220, 14%, 12%));
     --shadow-glow: 0 0 40px -10px hsl(38 92% 55% / 0.2);
@@ -56,6 +92,10 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(38, 92%, 55%), hsl(28, 95%, 50%));
+  }
+
+  .dark .text-gradient {
     background-image: linear-gradient(135deg, hsl(38, 92%, 55%), hsl(28, 95%, 50%));
   }
 
