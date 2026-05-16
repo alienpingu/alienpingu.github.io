@@ -16,31 +16,25 @@ const simulationFragmentShader = /* glsl */ `
   uniform float uBounce;
   uniform float uFriction;
   uniform float uRepulsion;
-  
+
   void main() {
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-    
     vec4 posData = texture2D(texturePosition, uv);
     vec4 velData = texture2D(textureVelocity, uv);
-    
+
     vec3 pos = posData.xyz;
     vec3 vel = velData.xyz;
-    
-    // Gravity
+
     vel.y += uGravity * uDelta;
-    
-    // Update position
     pos += vel * uDelta;
-    
-    // Floor collision
+
     if (pos.y < 0.0) {
       pos.y = 0.0;
       vel.y = -vel.y * uBounce;
       vel.x *= 0.9;
       vel.z *= 0.9;
     }
-    
-    // Mouse repulsion
+
     if (uMouseActive > 0.5) {
       vec3 toMouse = pos - uMouse;
       float dist = length(toMouse);
@@ -50,11 +44,10 @@ const simulationFragmentShader = /* glsl */ `
         vel += normalize(toMouse) * force * uDelta;
       }
     }
-    
-    // Friction
+
     vel *= uFriction;
     vel = clamp(vel, vec3(-15.0), vec3(15.0));
-    
+
     gl_FragColor = vec4(pos, 1.0);
   }
 `;
@@ -67,27 +60,23 @@ const velocityFragmentShader = /* glsl */ `
   uniform float uBounce;
   uniform float uFriction;
   uniform float uRepulsion;
-  
+
   void main() {
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-    
     vec4 posData = texture2D(texturePosition, uv);
     vec4 velData = texture2D(textureVelocity, uv);
-    
+
     vec3 pos = posData.xyz;
     vec3 vel = velData.xyz;
-    
-    // Gravity
+
     vel.y += uGravity * uDelta;
-    
-    // Floor collision
+
     if (pos.y < 0.0) {
       vel.y = -vel.y * uBounce;
       vel.x *= 0.9;
       vel.z *= 0.9;
     }
-    
-    // Mouse repulsion
+
     if (uMouseActive > 0.5) {
       vec3 toMouse = pos - uMouse;
       float dist = length(toMouse);
@@ -97,40 +86,11 @@ const velocityFragmentShader = /* glsl */ `
         vel += normalize(toMouse) * force;
       }
     }
-    
-    // Friction
+
     vel *= uFriction;
     vel = clamp(vel, vec3(-15.0), vec3(15.0));
-    
+
     gl_FragColor = vec4(vel, 1.0);
-  }
-`;
-
-const vertexShader = /* glsl */ `
-  attribute vec2 uvParticle;
-  uniform sampler2D texturePosition;
-  uniform float pointSize;
-  
-  void main() {
-    vec4 posData = texture2D(texturePosition, uvParticle);
-    vec3 pos = posData.xyz;
-    
-    vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
-    gl_Position = projectionMatrix * mvPosition;
-    gl_PointSize = pointSize * (300.0 / -mvPosition.z);
-  }
-`;
-
-const fragmentShader = /* glsl */ `
-  uniform vec3 color;
-  uniform float opacity;
-  
-  void main() {
-    float dist = length(gl_PointCoord - vec2(0.5));
-    if (dist > 0.5) discard;
-    
-    float alpha = smoothstep(0.5, 0.1, dist) * opacity;
-    gl_FragColor = vec4(color, alpha);
   }
 `;
 
@@ -140,15 +100,11 @@ function getInitialPositionData(width: number, height: number): Float32Array {
   const separation = 0.25;
   const offsetX = (width * separation) / 2;
   const offsetZ = (height * separation) / 2;
-  
+
   for (let i = 0; i < count; i++) {
-    const x = (i % width) * separation - offsetX;
-    const z = Math.floor(i / width) * separation - offsetZ;
-    const y = Math.random() * 2 + 0.5;
-    
-    data[i * 4] = x;
-    data[i * 4 + 1] = y;
-    data[i * 4 + 2] = z;
+    data[i * 4] = (i % width) * separation - offsetX;
+    data[i * 4 + 1] = Math.random() * 2 + 0.5;
+    data[i * 4 + 2] = Math.floor(i / width) * separation - offsetZ;
     data[i * 4 + 3] = 1;
   }
   return data;
@@ -168,17 +124,28 @@ function getInitialVelocityData(width: number, height: number): Float32Array {
 
 const ParticleBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const errorRef = useRef<string | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
+    // Check WebGL2
+    const canvas = document.createElement("canvas");
+    const gl = canvas.getContext("webgl2");
+    if (!gl) {
+      console.error("WebGL2 not supported");
+      errorRef.current = "WebGL2 not supported";
+      return;
+    }
+
     const isMobile = window.innerWidth < 768;
     const particleCount = isMobile ? PARTICLE_COUNT_MOBILE : PARTICLE_COUNT_DESKTOP;
-    
     const textureWidth = Math.ceil(Math.sqrt(particleCount));
     const textureHeight = Math.ceil(particleCount / textureWidth);
     const actualCount = textureWidth * textureHeight;
+
+    console.log(`[Particles] Init: ${actualCount} particles, texture ${textureWidth}x${textureHeight}`);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -204,16 +171,15 @@ const ParticleBackground = () => {
     camera.position.set(0, 25, 0);
     camera.lookAt(0, 0, 0);
 
-    // GPU Computation Renderer
+    // GPU Computation
     const gpuCompute = new GPUComputationRenderer(textureWidth, textureHeight, renderer);
-    
     if (!renderer.capabilities.isWebGL2) {
       gpuCompute.setDataType(THREE.HalfFloatType);
     }
 
     const posTexture = gpuCompute.createTexture();
     posTexture.image.data.set(getInitialPositionData(textureWidth, textureHeight));
-    
+
     const velTexture = gpuCompute.createTexture();
     velTexture.image.data.set(getInitialVelocityData(textureWidth, textureHeight));
 
@@ -244,33 +210,36 @@ const ParticleBackground = () => {
     Object.assign(posVariable.material.uniforms, simUniforms);
     Object.assign(velVariable.material.uniforms, simUniforms);
 
-    const error = gpuCompute.init();
-    if (error !== null) {
-      console.error("GPUComputationRenderer init error:", error);
+    const initError = gpuCompute.init();
+    if (initError !== null) {
+      console.error("[Particles] GPUComputationRenderer init error:", initError);
+      errorRef.current = initError;
+      renderer.dispose();
+      if (container.contains(renderer.domElement)) {
+        container.removeChild(renderer.domElement);
+      }
+      return;
     }
 
-    // Particles rendering with texture lookup in vertex shader
+    console.log("[Particles] GPUComputationRenderer initialized successfully");
+
+    // Particle geometry
     const geometry = new THREE.BufferGeometry();
-    const uvs = new Float32Array(actualCount * 2);
-    
+    const positions = new Float32Array(actualCount * 3);
     for (let i = 0; i < actualCount; i++) {
-      uvs[i * 2] = (i % textureWidth) / textureWidth + (0.5 / textureWidth);
-      uvs[i * 2 + 1] = Math.floor(i / textureWidth) / textureHeight + (0.5 / textureHeight);
+      positions[i * 3] = 0;
+      positions[i * 3 + 1] = 0;
+      positions[i * 3 + 2] = 0;
     }
-    
-    geometry.setAttribute("uvParticle", new THREE.BufferAttribute(uvs, 2));
+    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
     const isDark = document.documentElement.classList.contains("dark");
-    const material = new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
-      uniforms: {
-        texturePosition: { value: null },
-        color: { value: isDark ? DARK_COLOR : LIGHT_COLOR },
-        pointSize: { value: isMobile ? 0.15 : 0.12 },
-        opacity: { value: 0.85 },
-      },
+    const material = new THREE.PointsMaterial({
+      color: isDark ? DARK_COLOR : LIGHT_COLOR,
+      size: isMobile ? 0.35 : 0.3,
+      sizeAttenuation: true,
       transparent: true,
+      opacity: 0.95,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
     });
@@ -281,7 +250,10 @@ const ParticleBackground = () => {
     // Invisible plane for raycasting
     const planeGeometry = new THREE.PlaneGeometry(200, 200);
     planeGeometry.rotateX(-Math.PI / 2);
-    const plane = new THREE.Mesh(planeGeometry, new THREE.MeshBasicMaterial({ visible: false }));
+    const plane = new THREE.Mesh(
+      planeGeometry,
+      new THREE.MeshBasicMaterial({ visible: false })
+    );
     scene.add(plane);
 
     const raycaster = new THREE.Raycaster();
@@ -292,10 +264,10 @@ const ParticleBackground = () => {
     const onPointerMove = (event: PointerEvent) => {
       pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
       pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
-      
+
       raycaster.setFromCamera(pointer, camera);
       const intersects = raycaster.intersectObject(plane, false);
-      
+
       if (intersects.length > 0) {
         mouseWorldPos.copy(intersects[0].point);
         mouseWorldPos.y = -1;
@@ -314,28 +286,29 @@ const ParticleBackground = () => {
     // Theme detection
     const updateThemeColor = () => {
       const dark = document.documentElement.classList.contains("dark");
-      material.uniforms.color.value = dark ? DARK_COLOR : LIGHT_COLOR;
+      material.color = dark ? DARK_COLOR : LIGHT_COLOR;
     };
-    
     updateThemeColor();
     const observer = new MutationObserver(updateThemeColor);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
     // Resize
     const onResize = () => {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
-      camera.aspect = w / h;
+      camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(w, h);
+      renderer.setSize(window.innerWidth, window.innerHeight);
     };
     window.addEventListener("resize", onResize);
 
-    // Animation loop
+    // Animation
     const clock = new THREE.Clock();
     let isVisible = true;
     let frameId = 0;
-    
+    const readBuffer = new Float32Array(textureWidth * textureHeight * 4);
+
     const onVisibilityChange = () => {
       isVisible = document.visibilityState === "visible";
     };
@@ -348,10 +321,28 @@ const ParticleBackground = () => {
       const delta = Math.min(clock.getDelta(), 0.05);
       simUniforms.uDelta.value = delta;
 
+      // Run GPU simulation
       gpuCompute.compute();
-      
-      material.uniforms.texturePosition.value = gpuCompute.getCurrentRenderTarget(posVariable).texture;
-      
+
+      // Read positions back from GPU
+      renderer.readRenderTargetPixels(
+        gpuCompute.getCurrentRenderTarget(posVariable),
+        0,
+        0,
+        textureWidth,
+        textureHeight,
+        readBuffer
+      );
+
+      // Update geometry
+      const posArray = geometry.attributes.position.array as Float32Array;
+      for (let i = 0; i < actualCount; i++) {
+        posArray[i * 3] = readBuffer[i * 4];
+        posArray[i * 3 + 1] = readBuffer[i * 4 + 1];
+        posArray[i * 3 + 2] = readBuffer[i * 4 + 2];
+      }
+      geometry.attributes.position.needsUpdate = true;
+
       renderer.render(scene, camera);
     };
 

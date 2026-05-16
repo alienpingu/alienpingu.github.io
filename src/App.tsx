@@ -28,7 +28,12 @@ const routeConfigs = [
 ];
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter
+    future={{
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    }}
+  >
     <Suspense fallback={<PageLoader />}>
       <Routes>
         {routeConfigs.map((route) => (
