@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Zap, Code2, Settings, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
-import { usePageMeta } from "@/hooks/use-page-meta";
 import { useInView } from "@/hooks/use-in-view";
 import { getServices } from "@/data/services";
 import { useLanguageSwitcher } from "@/hooks/use-language";
@@ -216,11 +215,6 @@ const Index = () => {
   const { t, i18n } = useTranslation(["home", "common"]);
   const { currentLang } = useLanguageSwitcher();
   const prefix = currentLang === "en" ? "/en" : "";
-
-  usePageMeta({
-    title: t("home:meta.title"),
-    description: t("home:meta.description"),
-  });
 
   const services = getServices(i18n.language as "it" | "en");
 
