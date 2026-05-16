@@ -214,14 +214,13 @@ const Index = () => {
 
   return (
     <Layout>
-      <ParticleBackground />
-      
-      <div className="relative z-10">
-        {/* Hero */}
-        <section className="relative min-h-screen flex items-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background pointer-events-none" />
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <ParticleBackground />
 
-          <div className="container relative mx-auto px-6 py-24 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background pointer-events-none" />
+
+        <div className="container relative mx-auto px-6 py-24 pointer-events-none">
             <div className="max-w-3xl">
               <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase animate-fade-up">
                 {t("home:hero.subtitle")}
@@ -331,7 +330,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-      </div>
     </Layout>
   );
 };
