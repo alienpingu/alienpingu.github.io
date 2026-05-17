@@ -40,6 +40,8 @@
     --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(28, 95%, 45%));
     --gradient-subtle: linear-gradient(135deg, hsl(220, 18%, 96%), hsl(220, 14%, 92%));
     --shadow-glow: 0 0 40px -10px hsl(38 92% 50% / 0.25);
+
+    --animation-time: 25ms;
   }
 
   .dark {
@@ -161,4 +163,55 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Norris text hover animation — inspired by landonorris.com */
+.norris-text {
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.norris-text span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+}
+
+.norris-text span::before,
+.norris-text span::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: attr(data-char);
+  color: hsl(var(--primary));
+  transition: all ease-in-out calc(var(--animation-time) * 10);
+  transition-delay: calc(var(--index) * var(--animation-time));
+}
+
+.norris-text span::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.norris-text span::after {
+  transform: translateY(1em);
+  opacity: 0;
+}
+
+.norris-text:hover span::before,
+.norris-text:hover span::after {
+  color: hsl(var(--primary));
+}
+
+.norris-text:hover span::before {
+  transform: translateY(-1em);
+  opacity: 0;
+}
+
+.norris-text:hover span::after {
+  transform: translateY(0);
+  opacity: 1;
 }

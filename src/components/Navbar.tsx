@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 import { useLanguageSwitcher } from "@/hooks/use-language";
+import NorrisText from "./NorrisText";
 
 const isActive = (pathname: string, path: string) => {
   if (path === "/") {
@@ -32,8 +33,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
-        <Link to={`${prefix}/`} className="text-xl font-bold tracking-tight text-gradient">
-          BRTSML
+        <Link to={`${prefix}/`} className="norris-text text-xl font-bold tracking-tight">
+          <NorrisText text="BRTSML" />
         </Link>
 
         {/* Desktop */}

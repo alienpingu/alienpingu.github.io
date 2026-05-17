@@ -168,7 +168,15 @@ const ParticleBackground = () => {
       0.1,
       200
     );
-    camera.position.set(0, 25, 0);
+    const orbitRadius = 25;
+    const scrollFactor = 0.0008;
+    const lerpFactor = 0.04;
+    const maxAngle = Math.PI / 5; // ~36deg small acute angle
+
+    let targetAngle = 0;
+    let currentAngle = 0;
+
+    camera.position.set(0, orbitRadius, 0);
     camera.lookAt(0, 0, 0);
 
     // GPU Computation
@@ -303,6 +311,12 @@ const ParticleBackground = () => {
     };
     window.addEventListener("resize", onResize);
 
+    // Scroll-driven orbit (clamped 0 -> maxAngle)
+    const onScroll = () => {
+      targetAngle = Math.min(Math.max(window.scrollY * scrollFactor, 0), maxAngle);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
     // Animation
     const clock = new THREE.Clock();
     let isVisible = true;
@@ -320,6 +334,13 @@ const ParticleBackground = () => {
 
       const delta = Math.min(clock.getDelta(), 0.05);
       simUniforms.uDelta.value = delta;
+
+      // Smoothly interpolate camera orbit angle based on scroll (orbit around X-axis)
+      currentAngle += (targetAngle - currentAngle) * lerpFactor;
+      camera.position.x = 0;
+      camera.position.y = orbitRadius * Math.cos(currentAngle);
+      camera.position.z = orbitRadius * Math.sin(currentAngle);
+      camera.lookAt(0, 0, 0);
 
       // Run GPU simulation
       gpuCompute.compute();
@@ -355,6 +376,7 @@ const ParticleBackground = () => {
       document.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibilityChange);
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onScroll);
       observer.disconnect();
       renderer.dispose();
       geometry.dispose();
@@ -372,7 +394,7 @@ const ParticleBackground = () => {
     <div
       ref={containerRef}
       style={{
-        position: "absolute",
+        position: "fixed",
         top: 0,
         left: 0,
         width: "100%",

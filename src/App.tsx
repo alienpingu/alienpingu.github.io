@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 
 const Services = lazy(() => import(/* webpackPrefetch: true */ "./pages/Services"));
@@ -34,6 +35,7 @@ const App = () => (
       v7_relativeSplatPath: true,
     }}
   >
+    <ScrollToTop />
     <Suspense fallback={<PageLoader />}>
       <Routes>
         {routeConfigs.map((route) => (

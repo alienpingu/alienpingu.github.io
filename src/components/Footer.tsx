@@ -8,7 +8,7 @@ const Footer = () => {
   const prefix = currentLang === "en" ? "/en" : "";
 
   return (
-    <footer className="border-t border-border bg-card/30">
+    <footer className="relative z-10 glass border-t border-border">
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
