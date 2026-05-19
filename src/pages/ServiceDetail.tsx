@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { getServices } from "@/data/services";
 import { useLanguageSwitcher } from "@/hooks/use-language";
+import AbstractBackground from "@/components/AbstractBackground";
 
 const ServiceDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,7 +24,8 @@ const ServiceDetail = () => {
   if (!service) {
     return (
       <Layout>
-        <section className="min-h-[60vh] flex items-center justify-center">
+        <AbstractBackground variant="serviceDetail" />
+        <section className="min-h-[60vh] flex items-center justify-center relative z-10">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">{t("serviceDetail:notFound.title")}</h1>
             <Link
@@ -42,8 +44,9 @@ const ServiceDetail = () => {
 
   return (
     <Layout>
+      <AbstractBackground variant="serviceDetail" />
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
         <div className="container mx-auto px-6 py-24 relative">
           <Link
@@ -71,7 +74,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* Process */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-16 relative z-10">
         <div className="max-w-4xl">
           <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
             {t("serviceDetail:process.label")}
@@ -95,7 +98,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* Features */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-16 relative z-10">
         <div className="max-w-4xl">
           <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
             {t("serviceDetail:features.label")}
@@ -127,7 +130,7 @@ const ServiceDetail = () => {
 
       {/* Technologies */}
       {service.technologies && (
-        <section className="container mx-auto px-6 py-16">
+        <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="max-w-4xl">
             <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
               {t("serviceDetail:technologies.label")}
@@ -148,7 +151,7 @@ const ServiceDetail = () => {
       )}
 
       {/* FAQ */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-16 relative z-10">
         <div className="max-w-3xl">
           <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
             {t("serviceDetail:faq.label")}
@@ -167,7 +170,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* CTA */}
-      <section className="container mx-auto px-6 py-24">
+      <section className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("serviceDetail:cta.title")}</h2>
           <p className="text-muted-foreground mb-10">{t("serviceDetail:cta.description")}</p>

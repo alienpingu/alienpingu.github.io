@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import AbstractBackground from "@/components/AbstractBackground";
 
 const projectsData = [
   {
@@ -65,7 +66,8 @@ const Projects = () => {
 
   return (
     <Layout>
-      <section className="container mx-auto px-6 py-24">
+      <AbstractBackground variant="projects" />
+      <section className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-2xl mb-16 animate-fade-up">
           <p className="text-primary font-medium text-sm tracking-widest uppercase">{t("label")}</p>
           <h1 className="text-4xl md:text-5xl font-bold mt-4">{t("title")}</h1>

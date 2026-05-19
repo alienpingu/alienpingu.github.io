@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { useLanguageSwitcher } from "@/hooks/use-language";
+import AbstractBackground from "@/components/AbstractBackground";
 
 const NotFound = () => {
   const { t } = useTranslation("notFound");
@@ -16,7 +17,8 @@ const NotFound = () => {
 
   return (
     <Layout>
-      <section className="min-h-[80vh] flex items-center justify-center">
+      <AbstractBackground variant="notFound" />
+      <section className="min-h-[80vh] flex items-center justify-center relative z-10">
         <div className="text-center max-w-lg mx-auto px-6">
           <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase mb-4">
             {t("label")}

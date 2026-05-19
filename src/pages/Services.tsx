@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { getServices } from "@/data/services";
 import { useLanguageSwitcher } from "@/hooks/use-language";
+import AbstractBackground from "@/components/AbstractBackground";
 
 const Services = () => {
   const { t, i18n } = useTranslation(["services", "common"]);
@@ -20,7 +21,8 @@ const Services = () => {
 
   return (
     <Layout>
-      <section className="container mx-auto px-6 py-24">
+      <AbstractBackground variant="services" />
+      <section className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-2xl mb-16 animate-fade-up">
           <p className="text-primary font-medium text-sm tracking-widest uppercase">{t("services:label")}</p>
           <h1 className="text-4xl md:text-5xl font-bold mt-4">{t("services:title")}</h1>

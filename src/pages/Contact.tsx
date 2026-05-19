@@ -3,6 +3,7 @@ import { Mail, MapPin, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import AbstractBackground from "@/components/AbstractBackground";
 
 const FORM_ACTION = "https://api.formbee.dev/formbee/48a6b226-43cd-4d23-9a9e-839fb95789a8";
 
@@ -38,7 +39,8 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="container mx-auto px-6 py-24">
+      <AbstractBackground variant="contact" />
+      <section className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="max-w-2xl mb-16 animate-fade-up">
             <p className="text-primary font-medium text-sm tracking-widest uppercase">{t("label")}</p>
