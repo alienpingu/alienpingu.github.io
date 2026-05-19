@@ -171,7 +171,7 @@ const ParticleBackground = () => {
     const orbitRadius = 25;
     const scrollFactor = 0.0008;
     const lerpFactor = 0.04;
-    const maxAngle = Math.PI / 5; // ~36deg small acute angle
+    const maxAngle = (80 * Math.PI) / 180; // ~80deg max inclination
 
     let targetAngle = 0;
     let currentAngle = 0;
