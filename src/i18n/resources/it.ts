@@ -165,6 +165,8 @@ export const it = {
       emailPlaceholder: "Email",
       subjectPlaceholder: "Oggetto",
       messagePlaceholder: "Il tuo messaggio...",
+      send: "Invia",
+      sending: "Invio...",
       successTitle: "Messaggio inviato!",
       successMessage: "Ti risponderò il prima possibile.",
     },
