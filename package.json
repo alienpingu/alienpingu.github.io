@@ -13,6 +13,7 @@
   "dependencies": {
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18",
+    "bad-apple-console": "^1.0.0",
     "i18next": "^26.2.0",
     "lucide-react": "^0.462.0",
     "react": "^18.3.1",
