@@ -8,6 +8,7 @@ const ServiceDetail = lazy(() => import(/* webpackPrefetch: true */ "./pages/Ser
 const Projects = lazy(() => import(/* webpackPrefetch: true */ "./pages/Projects"));
 const About = lazy(() => import(/* webpackPrefetch: true */ "./pages/About"));
 const Contact = lazy(() => import(/* webpackPrefetch: true */ "./pages/Contact"));
+const Privacy = lazy(() => import(/* webpackPrefetch: true */ "./pages/Privacy"));
 const NotFound = lazy(() => import(/* webpackPrefetch: true */ "./pages/NotFound"));
 
 const PageLoader = () => (
@@ -26,6 +27,7 @@ const routeConfigs = [
   { path: "/projects", element: <Projects /> },
   { path: "/about", element: <About /> },
   { path: "/contact", element: <Contact /> },
+  { path: "/privacy", element: <Privacy /> },
 ];
 
 const App = () => (

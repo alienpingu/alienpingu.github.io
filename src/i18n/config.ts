@@ -9,7 +9,7 @@ i18n.use(initReactI18next).init({
   lng: "it",
   fallbackLng: "it",
   defaultNS,
-  ns: ["common", "home", "services", "serviceDetail", "projects", "about", "contact", "notFound"],
+  ns: ["common", "home", "services", "serviceDetail", "projects", "about", "contact", "notFound", "privacy"],
   resources: { it, en },
   interpolation: {
     escapeValue: false, // React already escapes

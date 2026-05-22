@@ -20,6 +20,7 @@ const Footer = () => {
             <Link to={`${prefix}/projects`} className="hover:text-foreground transition-colors">{t("nav.projects")}</Link>
             <Link to={`${prefix}/about`} className="hover:text-foreground transition-colors">{t("nav.about")}</Link>
             <Link to={`${prefix}/contact`} className="hover:text-foreground transition-colors">{t("nav.contact")}</Link>
+            <Link to={`${prefix}/privacy`} className="hover:text-foreground transition-colors">{t("nav.privacy")}</Link>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border text-center text-xs text-muted-foreground">

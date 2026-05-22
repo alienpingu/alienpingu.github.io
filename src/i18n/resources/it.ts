@@ -6,6 +6,7 @@ export const it = {
       projects: "Projects",
       about: "About",
       contact: "Contact",
+      privacy: "Privacy",
     },
     footer: {
       tagline: "Technology Entrepreneur",
@@ -185,5 +186,76 @@ export const it = {
     title: "Oops!",
     message: "La pagina che stai cercando non esiste o è stata spostata.",
     backHome: "Torna alla Home",
+  },
+  privacy: {
+    label: "Privacy",
+    title: "Privacy Policy",
+    subtitle: "Come gestiamo i tuoi dati con trasparenza e rispetto.",
+    lastUpdated: "Ultimo aggiornamento: {{date}}",
+    banner: {
+      message: "Questo sito utilizza analytics rispettosi della privacy e memorizza preferenze essenziali in locale.",
+      noCookies: "Nessun cookie di terze parti. Nessun dato personale venduto.",
+      settings: "Impostazioni",
+      privacyLink: "Privacy Policy",
+      understood: "Ho capito",
+    },
+    settings: {
+      title: "Impostazioni Privacy",
+      description: "Di seguito una panoramica trasparente di tutte le pratiche dati su questo sito. Utilizziamo Cloudflare Web Analytics — non usa cookie e non raccoglie dati personali.",
+      alwaysActive: "Sempre attivo",
+      close: "Chiudi",
+      confirm: "Conferma",
+      categories: {
+        essential: {
+          label: "Essenziali",
+          description: "Preferenza tema (scuro/chiaro) e lingua (IT/EN) salvate in localStorage. Necessarie per il funzionamento del sito.",
+        },
+        analytics: {
+          label: "Analytics",
+          description: "Statistiche anonime di visualizzazione pagina tramite Cloudflare Web Analytics. Nessun cookie, nessun identificatore personale, nessun tracciamento cross-site.",
+        },
+      },
+    },
+    sections: {
+      overview: {
+        title: "Panoramica",
+        content: "BRTSML (Bertocco Samuele, P.IVA 14654430967) gestisce questo sito web. Questa privacy policy spiega quali informazioni vengono raccolte, come vengono utilizzate e i tuoi diritti in base al GDPR.",
+      },
+      collected: {
+        title: "Dati che Raccogliamo",
+        intro: "Minimizziamo la raccolta dati al minimo indispensabile:",
+        items: {
+          essential: "Preferenze essenziali: tema (scuro/chiaro) e lingua (IT/EN) salvate nel localStorage del browser.",
+          analytics: "Analytics anonime: visualizzazioni pagina, paese (a livello regionale), tipo dispositivo e browser tramite Cloudflare Web Analytics.",
+          noPersonal: "NON raccogliamo: nomi, email, indirizzi IP (Cloudflare li anonimizza) o qualsiasi informazione personale identificabile.",
+        },
+      },
+      cookies: {
+        title: "Cookie & Local Storage",
+        content: "Questo sito non utilizza cookie di terze parti. Utilizziamo localStorage solo per funzionalità essenziali:",
+        types: {
+          essential: {
+            label: "Essenziali (localStorage)",
+            description: "brtsml-theme, brtsml-consent — Memorizza la preferenza tema e se hai confermato questo avviso.",
+          },
+          analytics: {
+            label: "Analytics (Cloudflare)",
+            description: "Nessun cookie. Cloudflare Web Analytics opera senza cookie e in modo anonimo.",
+          },
+        },
+      },
+      thirdParties: {
+        title: "Servizi Terze Parti",
+        content: "Utilizziamo i seguenti servizi di terze parti rispettosi della privacy:",
+        cloudflare: "Fornisce analytics web anonime e senza cookie. I dati sono elaborati nell'UE. Nessun dato personale è condiviso.",
+      },
+      contact: {
+        title: "Contatti & Titolare del Trattamento",
+        content: "Per qualsiasi domanda sulla privacy, richiesta di accesso ai dati, o per esercitare i tuoi diritti GDPR (accesso, rettifica, cancellazione, portabilità), contatta:",
+        emailLabel: "Email",
+        addressLabel: "Indirizzo",
+        address: "Italia — Remote First",
+      },
+    },
   },
 } as const;

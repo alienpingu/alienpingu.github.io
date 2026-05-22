@@ -6,6 +6,7 @@ export const en = {
       projects: "Projects",
       about: "About",
       contact: "Contact",
+      privacy: "Privacy",
     },
     footer: {
       tagline: "Technology Entrepreneur",
@@ -185,5 +186,76 @@ export const en = {
     title: "Oops!",
     message: "The page you are looking for does not exist or has been moved.",
     backHome: "Back to Home",
+  },
+  privacy: {
+    label: "Privacy",
+    title: "Privacy Policy",
+    subtitle: "How we handle your data with transparency and respect.",
+    lastUpdated: "Last updated: {{date}}",
+    banner: {
+      message: "This site uses privacy-friendly analytics and stores essential preferences locally.",
+      noCookies: "No third-party cookies. No personal data sold.",
+      settings: "Settings",
+      privacyLink: "Privacy Policy",
+      understood: "Understood",
+    },
+    settings: {
+      title: "Privacy Settings",
+      description: "Below is a transparent overview of all data practices on this site. Cloudflare Web Analytics is used — it does not use cookies and does not collect personal data.",
+      alwaysActive: "Always active",
+      close: "Close",
+      confirm: "Confirm",
+      categories: {
+        essential: {
+          label: "Essential",
+          description: "Theme preference (dark/light) and language choice stored in localStorage. Required for the site to function correctly.",
+        },
+        analytics: {
+          label: "Analytics",
+          description: "Anonymous page view statistics via Cloudflare Web Analytics. No cookies, no personal identifiers, no cross-site tracking.",
+        },
+      },
+    },
+    sections: {
+      overview: {
+        title: "Overview",
+        content: "BRTSML (Bertocco Samuele, VAT 14654430967) operates this website. This privacy policy explains what information is collected, how it is used, and your rights under GDPR.",
+      },
+      collected: {
+        title: "Data We Collect",
+        intro: "We minimize data collection to the absolute necessary:",
+        items: {
+          essential: "Essential preferences: theme (dark/light) and language (IT/EN) stored in your browser's localStorage.",
+          analytics: "Anonymous analytics: page views, country (at region level), device type, and browser via Cloudflare Web Analytics.",
+          noPersonal: "We do NOT collect: names, emails, IP addresses (Cloudflare hashes them), or any personally identifiable information.",
+        },
+      },
+      cookies: {
+        title: "Cookies & Local Storage",
+        content: "This site does not use third-party cookies. We use localStorage for essential functionality only:",
+        types: {
+          essential: {
+            label: "Essential (localStorage)",
+            description: "brtsml-theme, brtsml-consent — Stores your theme preference and whether you've acknowledged this notice.",
+          },
+          analytics: {
+            label: "Analytics (Cloudflare)",
+            description: "No cookies. Cloudflare Web Analytics operates cookie-less and anonymously.",
+          },
+        },
+      },
+      thirdParties: {
+        title: "Third-Party Services",
+        content: "We use the following privacy-respecting third-party services:",
+        cloudflare: "Provides anonymous, cookie-less web analytics. Data is processed in the EU. No personal data is shared.",
+      },
+      contact: {
+        title: "Contact & Data Controller",
+        content: "For any privacy-related questions, data access requests, or to exercise your GDPR rights (access, rectification, erasure, portability), please contact:",
+        emailLabel: "Email",
+        addressLabel: "Address",
+        address: "Italy — Remote First",
+      },
+    },
   },
 } as const;
