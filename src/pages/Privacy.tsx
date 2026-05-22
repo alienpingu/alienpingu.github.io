@@ -11,7 +11,7 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="mb-12 scroll-animate">
+  <div className="mb-12">
     <div className="flex items-center gap-3 mb-4">
       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
         <Icon className="text-primary" size={20} />
@@ -31,7 +31,7 @@ const Privacy = () => {
     <Layout>
       <section className="container mx-auto px-6 py-24 relative">
         <div className="max-w-3xl mx-auto">
-          <div className="mb-16 scroll-animate">
+          <div className="mb-16">
             <p className="text-primary font-medium text-sm tracking-[0.3em] uppercase mb-4">
               {t("label")}
             </p>
