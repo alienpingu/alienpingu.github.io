@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Theme anti-flicker: apply before any render -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem('brtsml-theme');
+        const isDark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (isDark) document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRTSML — Technology Entrepreneur</title>
+    <meta name="description" content="BRTSML — Technology Entrepreneur. Costruisco il futuro digitale con prodotti innovativi e soluzioni tech per chi vuole crescere." />
+    <meta name="author" content="BRTSML" />
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Preconnect to common CDN domains -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="it" href="https://brts.ml/" />
+    <link rel="alternate" hreflang="en" href="https://brts.ml/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://brts.ml/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="BRTSML - Bertocco Samuele" />
+    <meta property="og:description" content="Portfolio, services, work, it consulting, software developer, and more" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brts.ml" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BRTSML - Bertocco Samuele" />
+    <meta name="twitter:description" content="Portfolio, services, work, it consulting, software developer, and more" />
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#0a0a0a" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <script type="module" crossorigin src="/assets/index-LB-Ze6iF.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-D1Kwvn_1.js">
+    <link rel="modulepreload" crossorigin href="/assets/three-DFWuc2g_.js">
+    <link rel="stylesheet" crossorigin href="/assets/css/index-B186gWJP.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
