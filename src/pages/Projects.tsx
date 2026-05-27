@@ -54,6 +54,20 @@ const projectsData = [
     status: "Live",
     website: "https://www.mypaper.kitchen/"
   },
+  {
+    name: "bad-apple-console",
+    description: "Play the Bad Apple! music video inside Chrome DevTools at 30fps with zero runtime overhead. A lightweight npm package that renders ASCII frames directly in the console.",
+    tags: ["nodejs", "console", "video", "easter-egg"],
+    status: "Live",
+    website: "https://www.npmjs.com/package/bad-apple-console"
+  },
+  {
+    name: "captcha-breaker",
+    description: "Traditional Computer Vision + OCR tool for extracting text from CAPTCHA-like images. No deep learning, no LLMs — just OpenCV, Tesseract, and clever preprocessing.",
+    tags: ["Python", "OpenCV", "OCR", "Tesseract"],
+    status: "Live",
+    website: "https://github.com/alienpingu/captcha-breaker"
+  },
 ];
 
 const Projects = () => {
