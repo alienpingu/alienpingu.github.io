@@ -8,7 +8,7 @@ import { useLanguageSwitcher } from "@/hooks/use-language";
 import NorrisText from "./NorrisText";
 
 const isActive = (pathname: string, path: string) => {
-  if (path === "/") {
+  if (path === "/" || path === "/en" || path === "/en/") {
     return pathname === "/" || pathname === "/en" || pathname === "/en/";
   }
   return pathname.startsWith(path) || pathname.startsWith(`/en${path}`);
