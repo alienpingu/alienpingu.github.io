@@ -3,93 +3,37 @@ import { ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import AbstractBackground from "@/components/AbstractBackground";
-
-const projectsData = [
-  {
-    name: "Picco CSS",
-    description: "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
-    tags: ["nodejs", "CSS", "Astro"],
-    status: "Live",
-    website: "https://picco-css.vercel.app/"
-  },
-  {
-    name: "Safe Now EU",
-    description: "The Eurozone version of the american safe-now.live",
-    tags: ["HTML"],
-    status: "Live",
-    website: "https://safe-now.eu/"
-  },
-  {
-    name: "Dodici",
-    description: "A logic-based game built with P5.js to challenge users' reasoning skills.",
-    tags: ["nodejs", "P5.js"],
-    status: "Live",
-    website: "https://dodici.vercel.app/"
-  },
-  {
-    name: "Acconciature Unisex",
-    description: "Created and optimized a scalable, SEO-focused website to enhance online visibility for AcconciatureUnisex.",
-    tags: ["Astro", "scss"],
-    status: "Live",
-    website: "https://acconciature-unisex.com"
-  },
-  {
-    name: "GLM Imperia",
-    description: "Developed and managed a high-performance website to improve user experience for GLM Imperia.",
-    tags: ["Astro", "TailwindCSS"],
-    status: "Live",
-    website: "https://glmimperia.com"
-  },
-  {
-    name: "CheckupDigitale",
-    description: "CTO for CheckupDigitale, leading a freelance team and defining the technology strategy for innovative digital solutions.",
-    tags: ["react"],
-    status: "Live",
-    website: "https://checkupdigitale.com"
-  },
-  {
-    name: "My Paper Kitchen",
-    description: "SSR blog about book and cooking",
-    tags: ["Astro", "RSS"],
-    status: "Live",
-    website: "https://www.mypaper.kitchen/"
-  },
-  {
-    name: "bad-apple-console",
-    description: "Play the Bad Apple! music video inside Chrome DevTools at 30fps with zero runtime overhead. A lightweight npm package that renders ASCII frames directly in the console.",
-    tags: ["nodejs", "console", "video", "easter-egg"],
-    status: "Live",
-    website: "https://www.npmjs.com/package/bad-apple-console"
-  },
-  {
-    name: "captcha-breaker",
-    description: "Traditional Computer Vision + OCR tool for extracting text from CAPTCHA-like images. No deep learning, no LLMs — just OpenCV, Tesseract, and clever preprocessing.",
-    tags: ["Python", "OpenCV", "OCR", "Tesseract"],
-    status: "Live",
-    website: "https://github.com/alienpingu/captcha-breaker"
-  },
-];
+import { getProjects } from "@/data/projects";
+import { useLanguageSwitcher } from "@/hooks/use-language";
 
 const Projects = () => {
-  const { t } = useTranslation("projects");
+  const { t } = useTranslation(["projects", "common"]);
+  const { currentLang } = useLanguageSwitcher();
+  const projects = getProjects(currentLang);
 
   usePageMeta({
-    title: t("meta.title"),
-    description: t("meta.description"),
+    title: t("projects:meta.title"),
+    description: t("projects:meta.description"),
   });
+
+  const statusLabel = (status: string) => {
+    if (status === "Live") return t("common:labels.live");
+    if (status === "Beta") return t("common:labels.beta");
+    return t("common:labels.comingSoon");
+  };
 
   return (
     <Layout>
       <AbstractBackground variant="projects" />
       <section className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-2xl mb-16 animate-fade-up">
-          <p className="text-primary font-medium text-sm tracking-widest uppercase">{t("label")}</p>
-          <h1 className="text-4xl md:text-5xl font-bold mt-4">{t("title")}</h1>
-          <p className="text-muted-foreground mt-4">{t("subtitle")}</p>
+          <p className="text-primary font-medium text-sm tracking-widest uppercase">{t("projects:label")}</p>
+          <h1 className="text-4xl md:text-5xl font-bold mt-4">{t("projects:title")}</h1>
+          <p className="text-muted-foreground mt-4">{t("projects:subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projectsData.map((project) => (
+          {projects.map((project) => (
             <a
               key={project.name}
               href={project.website}
@@ -103,7 +47,7 @@ const Projects = () => {
                   project.status === "Beta" ? "bg-secondary text-secondary-foreground" :
                   "bg-muted text-muted-foreground"
                 }`}>
-                  {project.status}
+                  {statusLabel(project.status)}
                 </span>
                 <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>

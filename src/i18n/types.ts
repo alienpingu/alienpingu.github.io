@@ -12,6 +12,7 @@ declare module "i18next" {
       about: typeof import("./resources/it").it.about;
       contact: typeof import("./resources/it").it.contact;
       notFound: typeof import("./resources/it").it.notFound;
+      privacy: typeof import("./resources/it").it.privacy;
     };
   }
 }

@@ -2,10 +2,10 @@ export const it = {
   common: {
     nav: {
       home: "Home",
-      services: "Services",
-      projects: "Projects",
-      about: "About",
-      contact: "Contact",
+      services: "Servizi",
+      projects: "Progetti",
+      about: "Chi sono",
+      contact: "Contatti",
       privacy: "Privacy",
     },
     footer: {
@@ -84,11 +84,11 @@ export const it = {
   },
   services: {
     meta: {
-      title: "Services",
+      title: "Servizi",
       description:
         "Consulenza strategica, sviluppo custom e coaching agile per startup, PMI e enterprise.",
     },
-    label: "Services",
+    label: "Servizi",
     title: "Come posso aiutarti",
     subtitle: "Servizi pensati per startup, PMI e enterprise che vogliono innovare.",
   },
@@ -127,22 +127,22 @@ export const it = {
   },
   projects: {
     meta: {
-      title: "Projects",
+      title: "Progetti",
       description:
         "Portfolio di progetti reali: da librerie CSS a applicazioni full-stack, passando per siti SEO e piattaforme SaaS.",
     },
-    label: "Projects",
-    title: "Projects",
+    label: "Progetti",
+    title: "Progetti",
     subtitle:
-      "A collection of projects I have built, from CSS libraries to full-stack applications.",
+      "Una raccolta di progetti che ho costruito, da librerie CSS ad applicazioni full-stack.",
   },
   about: {
     meta: {
-      title: "About",
+      title: "Chi sono",
       description:
         "La storia di Bertocco Samuele: da freelancer a technology entrepreneur, passando per Milano, SopraSteria e Bologna.",
     },
-    label: "About",
+    label: "Chi sono",
     title: "Bertocco Samuele",
     paragraphs: {
       p1: "Sono sempre stato ossessionato da internet e da come evolve. Alla mia età ho avuto il privilegio di viverlo in prima persona, da inizio 2000 fino a oggi.",
@@ -154,11 +154,11 @@ export const it = {
   },
   contact: {
     meta: {
-      title: "Contact",
+      title: "Contatti",
       description:
         "Contatta BRTSML per consulenza, sviluppo custom o partnership. Italia — Remote First.",
     },
-    label: "Contact",
+    label: "Contatti",
     title: "Parliamo",
     subtitle: "Hai un progetto in mente? Scrivimi e troviamo insieme la soluzione migliore.",
     form: {
@@ -173,16 +173,16 @@ export const it = {
     },
     info: {
       email: "Email",
-      location: "Location",
+      location: "Sede",
       locationValue: "Italia — Remote First",
     },
   },
-  notFound: {
-    meta: {
-      title: "404",
-      description: "Pagina non trovata — Torna alla home di BRTSML.",
-    },
-    label: "Error 404",
+    notFound: {
+      meta: {
+        title: "404",
+        description: "Pagina non trovata — Torna alla home di BRTSML.",
+      },
+      label: "Errore 404",
     title: "Oops!",
     message: "La pagina che stai cercando non esiste o è stata spostata.",
     backHome: "Torna alla Home",

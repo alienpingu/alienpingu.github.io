@@ -5,8 +5,10 @@ import { en } from "./resources/en";
 
 export const defaultNS = "common";
 
+const initialLang = window.location.pathname.startsWith("/en") ? "en" : "it";
+
 i18n.use(initReactI18next).init({
-  lng: "it",
+  lng: initialLang,
   fallbackLng: "it",
   defaultNS,
   ns: ["common", "home", "services", "serviceDetail", "projects", "about", "contact", "notFound", "privacy"],

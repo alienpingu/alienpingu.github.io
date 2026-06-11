@@ -11,7 +11,7 @@ const isActive = (pathname: string, path: string) => {
   if (path === "/" || path === "/en" || path === "/en/") {
     return pathname === "/" || pathname === "/en" || pathname === "/en/";
   }
-  return pathname.startsWith(path) || pathname.startsWith(`/en${path}`);
+  return pathname === path || pathname.startsWith(path + "/");
 };
 
 const Navbar = () => {

@@ -9,11 +9,11 @@ import AbstractBackground from "@/components/AbstractBackground";
 
 const ServiceDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const { t, i18n } = useTranslation(["serviceDetail", "common"]);
+  const { t } = useTranslation(["serviceDetail", "common"]);
   const { currentLang } = useLanguageSwitcher();
   const prefix = currentLang === "en" ? "/en" : "";
 
-  const services = getServices(i18n.language as "it" | "en");
+  const services = getServices(currentLang);
   const service = services.find((s) => s.id === id);
 
   usePageMeta({

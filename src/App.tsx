@@ -28,7 +28,17 @@ const routeConfigs = [
   { path: "/about", element: <About /> },
   { path: "/contact", element: <Contact /> },
   { path: "/privacy", element: <Privacy /> },
-];
+] as const;
+
+const localizeRoutes = (configs: typeof routeConfigs) =>
+  configs.flatMap(({ path, element }) => [
+    <Route key={path} path={path} element={element} />,
+    <Route
+      key={`en-${path}`}
+      path={`/en${path === "/" ? "" : path}`}
+      element={element}
+    />,
+  ]);
 
 const App = () => (
   <BrowserRouter
@@ -40,17 +50,7 @@ const App = () => (
     <ScrollToTop />
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        {routeConfigs.map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
-        ))}
-        {/* English routes */}
-        {routeConfigs.map((route) => (
-          <Route
-            key={`en-${route.path}`}
-            path={`/en${route.path === "/" ? "" : route.path}`}
-            element={route.element}
-          />
-        ))}
+        {localizeRoutes(routeConfigs)}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

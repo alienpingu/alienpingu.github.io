@@ -8,7 +8,7 @@ import { useLanguageSwitcher } from "@/hooks/use-language";
 import AbstractBackground from "@/components/AbstractBackground";
 
 const Services = () => {
-  const { t, i18n } = useTranslation(["services", "common"]);
+  const { t } = useTranslation(["services", "common"]);
   const { currentLang } = useLanguageSwitcher();
   const prefix = currentLang === "en" ? "/en" : "";
 
@@ -17,7 +17,7 @@ const Services = () => {
     description: t("services:meta.description"),
   });
 
-  const services = getServices(i18n.language as "it" | "en");
+  const services = getServices(currentLang);
 
   return (
     <Layout>

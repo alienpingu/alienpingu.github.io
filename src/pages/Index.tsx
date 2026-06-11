@@ -4,29 +4,9 @@ import { ArrowRight, Zap, Code2, Settings, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 import { useInView } from "@/hooks/use-in-view";
 import { getServices } from "@/data/services";
+import { getProjects } from "@/data/projects";
 import { useLanguageSwitcher } from "@/hooks/use-language";
 import ParticleBackground from "@/components/ParticleBackground";
-
-const featuredProjects = [
-  {
-    name: "Picco CSS",
-    description: "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
-    tags: ["nodejs", "CSS", "Astro"],
-    website: "https://picco-css.vercel.app/",
-  },
-  {
-    name: "CheckupDigitale",
-    description: "CTO for CheckupDigitale, leading a freelance team and defining the technology strategy for innovative digital solutions.",
-    tags: ["react", "Strategy", "Leadership"],
-    website: "https://checkupdigitale.com",
-  },
-  {
-    name: "GLM Imperia",
-    description: "Developed and managed a high-performance website to improve user experience for GLM Imperia.",
-    tags: ["Astro", "TailwindCSS", "Performance"],
-    website: "https://glmimperia.com",
-  },
-];
 
 /* ---------- Components ---------- */
 
@@ -102,10 +82,11 @@ const ProjectCard = ({
   project,
   delayClass,
 }: {
-  project: (typeof featuredProjects)[number];
+  project: ReturnType<typeof getProjects>[number];
   delayClass: string;
 }) => {
   const ref = useInView({ threshold: 0.15 });
+  const { t } = useTranslation("common");
 
   return (
     <a
@@ -117,7 +98,7 @@ const ProjectCard = ({
     >
       <div className="flex items-center justify-between mb-4">
         <span className="text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary">
-          Live
+          {t("labels.live")}
         </span>
         <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
       </div>
@@ -206,11 +187,12 @@ const AboutTeaser = () => {
 /* ---------- Page ---------- */
 
 const Index = () => {
-  const { t, i18n } = useTranslation(["home", "common"]);
+  const { t } = useTranslation(["home", "common"]);
   const { currentLang } = useLanguageSwitcher();
   const prefix = currentLang === "en" ? "/en" : "";
 
-  const services = getServices(i18n.language as "it" | "en");
+  const services = getServices(currentLang);
+  const featuredProjects = getProjects(currentLang).slice(0, 3);
 
   return (
     <Layout>

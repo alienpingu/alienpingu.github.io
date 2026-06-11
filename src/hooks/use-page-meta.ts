@@ -11,8 +11,7 @@ export const usePageMeta = ({ title, description }: PageMetaOptions) => {
 
   useEffect(() => {
     const previousTitle = document.title;
-    const separator = i18n.language === "en" ? " | " : " | ";
-    document.title = title ? `${title}${separator}BRTSML` : "BRTSML";
+    document.title = title ? `${title} | BRTSML` : "BRTSML";
 
     let metaDescription: HTMLMetaElement | null = null;
     if (description) {
