@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLanguageSwitcher } from "@/hooks/use-language";
+import TownSquare from "@/components/TownSquare";
 
 const Footer = () => {
   const { t } = useTranslation("common");
@@ -10,6 +11,7 @@ const Footer = () => {
   return (
     <footer className="relative z-10 glass border-t border-border">
       <div className="container mx-auto px-6 py-12">
+        <TownSquare />
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <Link to={`${prefix}/`} className="text-xl font-bold text-gradient">BRTSML</Link>
@@ -23,7 +25,7 @@ const Footer = () => {
             <Link to={`${prefix}/privacy`} className="hover:text-foreground transition-colors">{t("nav.privacy")}</Link>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-border text-center text-xs text-muted-foreground">
+        <div className="text-center text-xs text-muted-foreground">
           {t("footer.copyright", { year: new Date().getFullYear() })}
         </div>
       </div>

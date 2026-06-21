@@ -105,7 +105,7 @@ const TownSquare = () => {
   }, []);
 
   return (
-    <section className="container mx-auto px-6 py-24 relative">
+    <section className="container mx-auto px-6 pt-8 relative">
       <style>{THEME_CSS}</style>
       <div ref={rootRef} id="townsquare-root" />
     </section>
