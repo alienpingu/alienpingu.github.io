@@ -7,6 +7,7 @@ import { getServices } from "@/data/services";
 import { getProjects } from "@/data/projects";
 import { useLanguageSwitcher } from "@/hooks/use-language";
 import ParticleBackground from "@/components/ParticleBackground";
+import TownSquare from "@/components/TownSquare";
 
 /* ---------- Components ---------- */
 
@@ -318,6 +319,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <TownSquare />
+
     </Layout>
   );
 };
