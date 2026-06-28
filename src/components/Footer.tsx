@@ -11,7 +11,6 @@ const Footer = () => {
   return (
     <footer className="relative z-10 glass border-t border-border">
       <div className="container mx-auto px-6 py-12">
-        <TownSquare />
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <Link to={`${prefix}/`} className="text-xl font-bold text-gradient">BRTSML</Link>
