@@ -7,6 +7,7 @@
       "dependencies": {
         "@react-three/drei": "^9.122.0",
         "@react-three/fiber": "^8.18",
+        "bad-apple-console": "^1.0.0",
         "i18next": "^26.2.0",
         "lucide-react": "^0.462.0",
         "react": "^18.3.1",
@@ -301,6 +302,8 @@
     "argparse": ["argparse@2.0.1", "", {}, "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="],
 
     "autoprefixer": ["autoprefixer@10.5.0", "", { "dependencies": { "browserslist": "^4.28.2", "caniuse-lite": "^1.0.30001787", "fraction.js": "^5.3.4", "picocolors": "^1.1.1", "postcss-value-parser": "^4.2.0" }, "peerDependencies": { "postcss": "^8.1.0" }, "bin": { "autoprefixer": "bin/autoprefixer" } }, "sha512-FMhOoZV4+qR6aTUALKX2rEqGG+oyATvwBt9IIzVR5rMa2HRWPkxf+P+PAJLD1I/H5/II+HuZcBJYEFBpq39ong=="],
+
+    "bad-apple-console": ["bad-apple-console@1.0.2", "", {}, "sha512-JHekym/qA0bHJ0aExah6InzTyT3fDthKijlMMe8WPUKq025sgSGAsrKaioCZQCuTpXIe4+ePS4BT5ovnGPl6Bg=="],
 
     "balanced-match": ["balanced-match@1.0.2", "", {}, "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="],
 

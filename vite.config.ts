@@ -2,12 +2,17 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
+const target = process.env.EZEYE_BACKEND_URL || "http://localhost:3000";
+
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
     hmr: {
       overlay: false,
+    },
+    proxy: {
+      "/simplify": target,
     },
   },
   plugins: [react()],

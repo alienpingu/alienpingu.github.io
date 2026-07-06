@@ -10,6 +10,13 @@ export const getProjects = (lang: "it" | "en"): Project[] => {
   if (lang === "en") {
     return [
       {
+        name: "Yatzy",
+        description: "A clean, well-structured Yatzy dice game with both singleplayer and multiplayer modes, built in Go.",
+        tags: ["Go", "Multiplayer", "Game"],
+        status: "Live",
+        website: "https://yatzy.brtsml.com",
+      },
+      {
         name: "Picco CSS",
         description: "A lightweight CSS library designed for maximum efficiency and simplicity, created from scratch.",
         tags: ["nodejs", "CSS", "Astro"],
@@ -76,6 +83,13 @@ export const getProjects = (lang: "it" | "en"): Project[] => {
   }
 
   return [
+    {
+      name: "Yatzy",
+      description: "Un gioco di dadi Yatzy pulito e ben strutturato con modalità singleplayer e multiplayer, sviluppato in Go.",
+      tags: ["Go", "Multiplayer", "Game"],
+      status: "Live",
+      website: "https://yatzy.brtsml.com",
+    },
     {
       name: "Picco CSS",
       description: "Una libreria CSS leggera progettata per massima efficienza e semplicità, creata da zero.",
