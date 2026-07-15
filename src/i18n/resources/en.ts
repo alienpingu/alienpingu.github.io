@@ -9,7 +9,7 @@ export const en = {
       privacy: "Privacy",
     },
     footer: {
-      tagline: "Technology Entrepreneur",
+      tagline: "Made with love by brtsml",
       copyright: "© {{year}} BRTSML. All rights reserved. VAT: 14654430967",
     },
     loader: "Loading...",
