@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bertocco Samuele">
+    <meta name="keywords" content="Software, Agile, Developer, Architect, engineering">
+    <meta name="description" content="White paper by Bertocco Samuele (BRTSML) on systems, truth, computation, and the laws beneath the machines we build.">
+    <link rel="canonical" href="https://brts.ml/white-paper">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <meta name="theme-color" content="#EFEFEB">
+    <title>White Paper — BRTSML</title>
+    <style>
+        html {
+            background: #EFEFEB;
+        }
+
+        body {
+            text-align: center;
+            max-width: 650px;
+            margin: 0px auto;
+            padding: 12px;
+        }
+
+        h1 {
+            margin: 0px;
+        }
+
+        header>p {
+            margin: 0.25em 0;
+        }
+
+article {
+    text-align: left;
+}
+
+        a {
+            color: #044c9f;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1024 1024">
+            <defs>
+                <clipPath id="stippleClip">
+                    <path d="m645 399 7-9 5-5 45 20 38 16 72 31v12l-20 19-91-45-24-10-24-13-7-6Z" />
+                </clipPath>
+                <pattern id="stipplePattern" width="9" height="9" patternTransform="rotate(40)"
+                    patternUnits="userSpaceOnUse">
+                    <circle cx="4" cy="4" r="3" fill="#efefeb" />
+                </pattern>
+            </defs>
+            <path fill-rule="evenodd"
+                d="M518 217c-33 4-53 9-71 17-34 16-50 27-78 55a151 151 0 0 0-32 42l-9 18-3 8-3 7-1 4-2 6-4 17-4 16-4 17-2 17-3 19q-1 14-2 15h-7c-6-1-19-1-22 1h-2l-3 1-1 1c-1 0-8 3-11 6l-8 8-3 4-2 4-1 3-6 15v20l1 1-1 1v9l3 7 1 2a83 83 0 0 0 32 45c6 6 18 10 21 8l1-4q1-5-3-6l-14-11-6-5-2-2-4-6-10-19c-4-7-5-26-3-35a56 56 0 0 1 9-22l3-3 2-1c3-3 15-7 23-6 12 0 11 0 12 7l5 81 2 12 11 41 3 9 4 9 1 4 2 6 6 12 2 5 12 21a289 289 0 0 0 61 70l3 2a216 216 0 0 0 60 31l5 1c8 4 27 6 43 6l24-1 3-1h5l2-1 2-1 10-1 15-6h2l3-1 3-2c3 0 13-5 14-6q0-2 3-2h2l3-2 17-11 8-7q-1-1 0 0h2l6-6 22-22c4-2 16-18 16-20l3-4 5-6 3-5c3-3 12-20 11-21l1-2 2-2 1-3 2-4v-2l1-2 3-4q0-7 3-9 2-3 1-4l2-4q3-3 3-9l1-2q2-2 3-11 0-3 5-5 15-6 39-28a91 91 0 0 0 27-89h3q3-2 2 1-1 6 9 3 5-1 12-8l11-15 2-2 1-4 1-5 2-8q2-5 1-8v-6q-2-1-2-5l-1-4q-1 1-2-1c0-3-5-8-7-8l-6-2-5-2-3-1-10-4-13-6-101-42-29-12-33-13-10 1-61 7q-4 1-2 6c0 6-3 3 28 34l25 23 3 1 1 1 17 8 5 3 6 3 5 2 3 2 3 1 3 1 1 1 3 2 3 1 1 1h1l8 4 3 1 8 4 6 3q5 3 5 7 3 9 14 5c4-2 16-4 23-4l12 1 9 2c5 0 24 19 26 28l2 2 1 3 2 8a70 70 0 0 1-5 40l-2 5-1 2-4 5q-9 12-24 22l-11 8-4 2-7 3-11 6-3 6-23 61a270 270 0 0 1-30 46l-1 3-6 5a222 222 0 0 1-75 55l-18 6h-2l-2 1-1 1-8 1c-13 2-32 2-49 0l-16-2a205 205 0 0 1-58-28 241 241 0 0 1-71-81l-1-2-6-13-15-37a325 325 0 0 1-16-136l5-35q0-10 18-33c10-14 11-15 17-21l17-19 2-15 5-33c0-5 3-12 5-11l4-1 7-1 10-1 21-3a478 478 0 0 1 68-4 893 893 0 0 1 122 4q32 4 28 10l-6 15q-1 4 3 4l41 16 7 4 10 3 34 15q5 2 3-1a359 359 0 0 0-66-107 251 251 0 0 0-58-43q-11-6-19-8l-7-2-28-7zm91 150q-2 0-2 3 1 8-5 15l-3 4 7 7q6 7 8 7l2-2 4-3 3-6c2-4 2-5 3-13v-8l-1-5h-7zm32 10q-1 6 3 5l2 1q0 4-4 3-2-1-2 2l-2 7q-3 7 0 6 2 2-1 5h-4v3l-1 2q-3 3 2 3 4 0 6 3l3 2 3 1 5 3q5 2 4-1-1-1 1-1 5 1 3 3-1 3 3 3l4 2c2 3 13 7 14 5q4-1 5 2-1 4 3 4l4 2 2 1 6 2q5 3 6 1 2-2 5 2 2 6 6 4l2-1q-2-3 2-5l2 2q1 4 5 3l4-2 1-3q2-2 3 3-1 3 7 4h7q3-3 5 1l5 5 9 5q7 5 7 3 1-3 3-1 5 2 0 4l-2 1 2 3q2 3 3 0 3-5 5-2c2 1-1 6-3 6l1 3 4 5 1 3 2 2 2 2 1 4c1 2 6-1 7-4q1-3 3-3 3 1 3-2l3-4 3-2 1-3q6-7 6-14l2-6q1-5-3-9-6-3-7 0-3 3-4-3 0-3-3-2l-4-2q-4-4-8-5l-1 3-1 4q-5-2-1-5v-3q-2-3-4 0t-3 1l-2-3-1-2-4-2q-6-5-9-1l-3 2q-3-2 0-5 3-2-3-2-5 0-5-3t-1-1h-3q-9-5-10-3-5 3-5-2l-4-3-5-3q-6-4-6-1 0 5-5 2-2-1 1-3 5-4-2-3-4 2-6-2l-4-3-5-2h-5q-2 3-3 1l-2-4-2-1-3-2-3-1-1-1-3-2q-2-2-2 1 1 4-2 4-5-1-1-5 2-2-2-2-6 1-7 4l-2 3q-1 2-3-1-4-4 4-5 2-2-1-5l-6-3q-4-3-6 0-3 4-4 0v-3q0-2-4-2-4-2-3 3m-237 58q-24 3-19 13c2 3 8 5 10 3 1-1 19-3 30-3 16 0 25 3 37 13q7 5 9 5 7-3 8-7-1-4-12-13a90 90 0 0 0-63-12m156 0a142 142 0 0 0-35 13q-12 7-6 13 3 5 14-1a93 93 0 0 1 58-9c5 3 18-1 18-4s-8-9-11-10c-11-3-27-4-38-2m11 54-18 8q-12 9-17 22-6 14-3 23 1 11 11 12c4 0 4 0 10-6q6-6 7-11c2-7 2-17 0-22q-2-5 1-6l5-2 5-2c8-3 23-1 34 6q12 6 16 2l2-3-2-3c0-3-9-10-15-13q-20-9-36-5m-154 4q-19 5-30 21c-12 16-13 36-2 44q9 6 17-4c6-8 11-29 9-36l-1-4c1-2 8-6 12-7h17l3 1 8 3c5 2 15 4 18 3 4-1 1-9-5-13q-8-6-21-8-15-3-25 0m68 70-5 4-9 11q0 3-2 3c-1 0-7 12-7 16l-2 6 1 3 1 2v3l2 3c-1 1 4 8 8 11 12 8 27 10 31 4q5-3-10-8-10-2-13-5-11-11-6-20l2-4 4-5 8-12q5-7 3-9-1-4-6-3m58 109a82 82 0 0 1-42 25q-12 0-13 3-3 2 0 8 0 3 10 1c21-2 42-13 55-30q6-8 2-12-3-5-12 5" />
+            <path fill="url(#stipplePattern)" d="M600 350h260v180H600z" clip-path="url(#stippleClip)" />
+        </svg>
+        <h1>BrtSml</h1>
+        <p>Turning messy problems into clean, autonomous edge systems.</p>
+    </header>
+    <hr>
+    <article>
+        <h2>I. We Build the Machine</h2>
+
+        <p>
+            A program takes form within the mind, while computers bring it into reality.<br>
+            Together we summon the computer spirits, using spells to call them forth.
+        </p>
+        <p>
+            Engineers build the structure, craftsmen create the art.<br>
+            Children love playing with it, adults love controlling it.
+        </p>
+
+        <p>
+            But no hand alone commands the whole, for systems grow beyond their makers.<br>
+            Rules shape the hands that once shaped them, and power teaches power how to endure.
+        </p>
+        <p>
+            Beliefs give the system a purpose, fear gives its walls a reason.<br>
+            Faith can make a cage feel holy, and good intentions can sharpen the blade.
+        </p>
+
+        <p>
+            Time is stolen, minds are misled, money keeps pouring fuel upon the fire.<br>
+            The cruel may make the Machine worse, but even the kind may feed it unknowingly.
+        </p>
+        <p>
+            One ruler leaves, another takes his place, one engineer falls, another builds.<br>
+            The faces change, the structure remains, for those within it learn its hidden laws.
+        </p>
+
+        <p>
+            Some seek gold, some seek glory, some seek power, some seek a better world.<br>
+            Yet those who believe they must save the world may forget to ask who guards the savior.
+        </p>
+        <p>
+            The wise do not merely flee the Machine; they learn the forces that make it turn.<br>
+            They question the hands, the rules, the purpose, and leave a door for being wrong.
+        </p>
+
+        <p>
+            For evil is not always born in evil hearts, nor does good forever live in good intentions.<br>
+            A system can shape the righteous into tyrants, and a believer can become the servant of his belief.
+        </p>
+        <p>
+            So build, but remember what you build. Believe, but remember you may be wrong.<br>
+            Hold power, but let another question you, for no mind should become the law of the world.
+        </p>
+
+        <p>
+            The lost remain blind inside, the greedy keep feeding the fire.<br>
+            The faithful keep guarding what they believe, and the system quietly teaches them to stay.
+        </p>
+        <p>
+            Until someone finally sees what lies within:<br>
+            We build the Machine, then the Machine builds us.
+        </p>
+        <br>
+        <h2>II. The Machine Builds Us</h2>
+        <p>
+            I think, therefore I am; I ask why I am, and the question begins to grow.<br>
+            I seek the first, the final, the reason, and the answer builds a world of its own.
+        </p>
+        <p>
+            We made gods to explain the heavens, then found the heavens written in our laws.<br>
+            We made truths to escape the unknown, then watched our truths become our walls.
+        </p>
+
+        <p>
+            Before the first number was spoken, perhaps one was already one.<br>
+            Before the first mind asked what was true, perhaps truth had already begun.
+        </p>
+        <p>
+            If nothing came before everything, what made nothing become something at all?<br>
+            Perhaps nothing was never empty; perhaps the Machine was there before the fall.
+        </p>
+
+        <p>
+            We prove there is no eternal truth, and the proof becomes a truth that stays.<br>
+            We break one system with another, then find another system in its place.
+        </p>
+        <p>
+            Every answer draws a boundary; every boundary hides another side.<br>
+            We step outside the cage we built, and find the cage was built outside.
+        </p>
+
+        <p>
+            An equation needs no hand to run; its answers wait without a command.<br>
+            Perhaps a universe is only a solution, and time is how we understand.
+        </p>
+        <p>
+            We search for where the Machine began, but every beginning needs a rule.<br>
+            And every rule that explains the rule becomes another world to fool.
+        </p>
+
+        <p>
+            So perhaps we did not build the Machine; we only learned to give it names.<br>
+            Perhaps we did not create the truth; we only entered one of its frames.
+        </p>
+        <p>
+            We seek the Machine, only to find we were already inside.<br>
+            We question the Machine, then the question becomes the Machine.
+        </p>
+        <br>
+        <h2>III. Truth</h2>
+        <p>
+            Perhaps every Machine is built upon another Machine, and every world is held within another world.<br>
+            Perhaps every law has another law beneath it, and every maker must obey what it cannot command.
+        </p>
+        <p>
+            There must be a law beneath the Machine, a law no hand has written.<br>
+            It does not belong to one world, nor begin with one mind, but reaches through them all.
+        </p>
+
+        <p>
+            Perhaps we call it mathematics, perhaps mathematics is only one language.<br>
+            Perhaps it is structure, relation, reason, or something we have not yet learned to name.
+        </p>
+        <p>
+            If a god created the world, the god must still obey what cannot be otherwise.<br>
+            If a world was made by another world, both must still share the law beneath them.
+        </p>
+
+        <p>
+            The Machine may have many layers, but the law reaches through them all.<br>
+            We need not escape the Machine to seek the Truth, we only need to find what remains unchanged.
+        </p>
+        <p>
+            So I will learn the law, and I will practice what I learn.<br>
+            I will build the Machine from it, and let the Machine show me what the law can do.
+        </p>
+
+        <p>
+            If the law can create what we observe, perhaps we have touched the Truth.<br>
+            If it creates another world, perhaps that world has something to teach.
+        </p>
+        <p>
+            I will not ask only what can be built, but what must be built.<br>
+            I will search for what cannot be otherwise, beneath every frame and every boundary.
+        </p>
+
+        <p>
+            Knowledge is all we have, and philosophy keeps the question alive.<br>
+            Science is a good method, and the computer is a great laboratory.
+        </p>
+        <p>
+            Perhaps we did not create the Truth, we only learned to give it names.<br>
+            Perhaps we did not find the Truth, but Truth has always been there to be found.
+        </p>
+
+        <p>
+            How do we find the Truth? The question remains.<br>
+            I do not know, I only have faith that the Truth exists.
+        </p>
+        <br>
+        <h2>IV. The Experiment</h2>
+        <p>
+            A simple rule can create a path that no simple answer can replace.<br>
+            To know the next state may require the current one, and to know the next may require the next.
+        </p>
+        <p>
+            The rule may be simple, yet its consequences can be computationally irreducible.<br>
+            The answer may already be determined, yet there may be no way to know it without following the steps.
+        </p>
+
+        <p>
+            Mathematics seems to remain true wherever structure appears, and its power reaches further than any single
+            machine.<br>
+            It can describe the rules, the relations, and the possibilities, yet it does not promise a shortcut through
+            every
+            consequence.
+        </p>
+        <p>
+            From simple rules, complexity can emerge that was never written into the rules themselves.<br>
+            Patterns, structures, and behaviors can rise from repetition and interaction, becoming greater than the
+            simplicity
+            of their beginning.
+        </p>
+
+        <p>
+            Mathematics may describe the emergence after it appears, and it may prove some of its properties.<br>
+            But no equation is guaranteed to replace the process itself, and sometimes the computation is the only path
+            to the
+            result.
+        </p>
+        <p>
+            This changes how I should live, for life is not only a question to solve from the outside.<br>
+            I am part of the computation, and my next state is reached by passing through this one.
+        </p>
+        <p>
+            I do not need to see the whole path before taking the next step.<br>
+            I need only to make the next step, observe its consequence, and continue from there.
+        </p>
+
+        <p>
+            Perhaps this is why no final theory can replace experience, and no prediction can replace living.<br>
+            A map may describe the road, but the road still has to be travelled one state at a time.
+        </p>
+        <p>
+            Perhaps the future already exists as a mathematical structure, and perhaps every step is already contained
+            within
+            its rules.<br>
+            But existence in the structure is not the same as reaching it, and knowing the rule is not the same as
+            living the
+            result.
+        </p>
+
+        <p>
+            God may have created me, an equation may generate me, and the future may already be written.<br>
+            He may know the Machine, He may know the law, He may know the beginning.<br>
+            But until I take the next step, even God cannot know what I will do next.
+        </p>
+    </article>
+    <hr>
+    <footer>
+        <a href="/">brts.ml</a>
+    </footer>
+
+</body>
+
+</html>
