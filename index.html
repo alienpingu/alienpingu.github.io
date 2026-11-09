@@ -16,6 +16,7 @@
         html {
             background: #EFEFEB;
         }
+        
 
         body {
             text-align: center;
@@ -54,6 +55,32 @@
         a {
             color: #044c9f;
         }
+        .anim_text::after {
+            content: "⠇";
+            font-family: monospace;
+            animation: ascii_anim 2s linear infinite;
+        }
+
+        .type_writer {
+            font-family: monospace;
+            color: transparent;
+            /* color and style of displaying characters */
+            background:no-repeat left top / calc(var(--n)*1ch) 100% linear-gradient(#000);
+            background-clip: text;
+            /* speed and type of animation */
+            animation: show_symbols calc(var(--n)*.1s) steps(var(--n)) forwards;
+        }
+        @keyframes ascii_anim {
+            0%      { content: "⠇"; }
+            12.5%   { content: "⠋"; }
+            25%     { content: "⠙"; }
+            37.5%   { content: "⠸"; }
+            50%     { content: "⢰"; }
+            62.5%   { content: "⣠"; }
+            75%     { content: "⣄"; }
+            87.5%   { content: "⡆"; }
+        }
+        @keyframes show_symbols{from{background-size:0 100%}}
     </style>
 </head>
 
@@ -163,9 +190,9 @@
                 </tr>
                 <tr>
                     <td>Now</td>
-                    <td>...</td>
-                    <td><b>It’s time to build</b></td>
-                    <td>...</td>
+                    <td><span class="anim_text"></span></td>
+                    <td><b><span class="type_writer" style="--n:66">It’s time to build</span></b></td>
+                    <td><span class="anim_text"></span></td>
                 </tr>
             </tbody>
         </table>
