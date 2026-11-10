@@ -23,6 +23,18 @@ jobs:
           mkdir -p _site
           cp index.html white-paper.html favicon.ico robots.txt sitemap.xml manifest.json 404.html CNAME .nojekyll _site/
 
+      - name: Minify HTML
+        run: |
+          for f in _site/*.html; do
+            npx --yes html-minifier-terser@7 \
+              --collapse-whitespace --conservative-collapse \
+              --remove-comments --remove-redundant-attributes \
+              --use-short-doctype --sort-attributes \
+              --minify-css true \
+              -o "$f.min" "$f"
+            mv "$f.min" "$f"
+          done
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
