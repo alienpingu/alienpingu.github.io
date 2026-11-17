@@ -15,7 +15,7 @@
     <title>BRTSML — Bertocco Samuele</title>
     <style>
         html {
-            background: #EFEFEB;
+            background: #EFEFEF;
         }
 
         body {
@@ -25,7 +25,8 @@
             padding: 12px;
         }
 
-        h1 {
+        h1,
+        hr {
             margin: 0px;
         }
 
@@ -41,15 +42,13 @@
             padding: 4px;
         }
 
-        .projects,
-        nav,
-        .mentors div {
+
+        section div {
             display: inline-flex;
             flex-wrap: wrap;
             gap: 12px;
             padding: 16px 12px;
             justify-content: center;
-            border-bottom: 1.5px solid black;
         }
 
         a {
@@ -61,7 +60,7 @@
 <body>
     <main>
         <header>
-            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 1024 1024">
+            <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 1024 1024">
                 <defs>
                     <clipPath id="stippleClip">
                         <path d="m645 399 7-9 5-5 45 20 38 16 72 31v12l-20 19-91-45-24-10-24-13-7-6Z" />
@@ -76,31 +75,41 @@
                 <path fill="url(#stipplePattern)" d="M600 350h260v180H600z" clip-path="url(#stippleClip)" />
             </svg>
             <h1>BrtSml</h1>
-            <p>Turning messy problems into clean, autonomous edge systems.</p>
-            <nav>
+            <p>Turning messy problems into clean, <br>
+                autonomous edge systems.</p>
+        </header>
+        <br />
+        <section id="socials">
+            <p><b><a href="https://cal.com/samuele-bertocco-lynjxp/30min" target="_blank" rel="noopener noreferrer">Book
+                        a 30-min call</a></b></p>
+            <div>
                 <!-- <a target="_blank" rel="noopener noreferrer" href="/white-paper">White Paper</a> -->
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/alienpingu">Github</a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sbertocco/">Linkedin</a>
                 <a href="mailto:hello@brts.ml">Email</a>
-                <a target="_blank" rel="noopener noreferrer" href="https://t.me/brtsml">Telegram</a>
-            </nav>
-        </header>
-        <br/>
-        <section class="projects">
-            <a target="_blank" rel="noopener noreferrer" href="https://linkeon.app/">Lead Automation</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://realestate.solovera.it/">Assistants for any
-                use</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://safe-now.eu/">EU Emergency info</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://app.point2goal.workers.dev/">SaaS for sports
-                clubs</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://picco-css.vercel.app/#/">Light CSS library</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://polisland.vercel.app/">Isometric eco strategic
-                game</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/alienpingu">Codepen</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/bad-apple-console">Bad
-                Apple</a>
-        </section>
 
+            </div>
+        </section>
+        <hr>
+        <section class="projects">
+            <p><b>Recent projects</b></p>
+            <div>
+                <a target="_blank" rel="noopener noreferrer" href="https://linkeon.app/">Lead Automation</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://realestate.solovera.it/">Assistants for any
+                    use</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://safe-now.eu/">EU Emergency info</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://app.point2goal.workers.dev/">SaaS for sports
+                    clubs</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://picco-css.vercel.app/#/">Light CSS
+                    library</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://polisland.vercel.app/">Isometric eco
+                    strategic
+                    game</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/alienpingu">Codepen</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/bad-apple-console">Bad
+                    Apple</a>
+            </div>
+        </section>
         <section>
             <p><b>Choosing the hard path to build something real.</b></p>
             <table>
@@ -176,7 +185,7 @@
             </table>
         </section>
         <br>
-        <section class="mentors">
+        <section id="mentors">
             <p><b>Minds that shaped my thinking</b></p>
             <div>
                 <a href="https://www.antirez.com/" target="_blank" rel="noopener noreferrer">antirez</a>
@@ -197,7 +206,7 @@
                     Terry A.Devis</a>
             </div>
         </section>
-        <br>
+        <hr>
         <footer>
             <p><b>BRTSML di Bertocco Samuele</b></p>
             <p>VAT: <code>14654430967</code></p>
