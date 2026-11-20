@@ -1,0 +1,17 @@
+{
+  "name": "BRTSML — Bertocco Samuele",
+  "short_name": "BRTSML",
+  "description": "Turning messy problems into clean, autonomous edge systems.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#EFEFEB",
+  "theme_color": "#EFEFEB",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48"
+    }
+  ]
+}
